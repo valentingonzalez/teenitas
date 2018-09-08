@@ -1,0 +1,5 @@
+/* w3valitor */
+add_filter('rest_url','jwss_rest_url');
+function jwss_rest_url($url, $path, $blog_id, $scheme){
+	return '';
+}

@@ -1,0 +1,216 @@
+/* 
+ *  jws Carousel - Animate Plugin
+ */
+.jws-carousel .animated {
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.jws-carousel .jws-animated-in {
+  z-index: 0;
+}
+.jws-carousel .jws-animated-out {
+  z-index: 1;
+}
+.jws-carousel .fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* 
+ * 	jws Carousel - Auto Height Plugin
+ */
+.jws-height {
+  -webkit-transition: height 500ms ease-in-out;
+  -moz-transition: height 500ms ease-in-out;
+  -ms-transition: height 500ms ease-in-out;
+  -o-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out;
+}
+
+/* 
+ *  Core jws Carousel CSS File
+ */
+.jws-carousel {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: relative;
+  z-index: 1;
+}
+.jws-carousel .jws-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+}
+.jws-carousel .jws-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.jws-carousel .jws-stage-outer {
+  position: relative;
+  overflow: hidden;
+  /* fix for flashing background */
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+.jws-carousel .jws-controls .jws-nav .jws-prev,
+.jws-carousel .jws-controls .jws-nav .jws-next,
+.jws-carousel .jws-controls .jws-dot {
+  cursor: pointer;
+  cursor: hand;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.jws-carousel.jws-loaded {
+  display: block;
+}
+.jws-carousel.jws-loading {
+  opacity: 0;
+  display: block;
+}
+.jws-carousel.jws-hidden {
+  opacity: 0;
+}
+.jws-carousel .jws-refresh .jws-item {
+  display: none;
+}
+.jws-carousel .jws-item {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.jws-carousel .jws-item img {
+  display: block;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+}
+.jws-carousel.jws-text-select-on .jws-item {
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+.jws-carousel .jws-grab {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: -o-grab;
+  cursor: -ms-grab;
+  cursor: grab;
+}
+.jws-carousel.jws-rtl {
+  direction: rtl;
+}
+.jws-carousel.jws-rtl .jws-item {
+  float: right;
+}
+
+/* No Js */
+.no-js .jws-carousel {
+  display: block;
+}
+
+/* 
+ * 	jws Carousel - Lazy Load Plugin
+ */
+.jws-carousel .jws-item .jws-lazy {
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease;
+  -moz-transition: opacity 400ms ease;
+  -ms-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+.jws-carousel .jws-item img {
+  transform-style: preserve-3d;
+}
+
+/* 
+ * 	jws Carousel - Video Plugin
+ */
+.jws-carousel .jws-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000;
+}
+.jws-carousel .jws-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url("jws.video.play.png") no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: scale 100ms ease;
+  -moz-transition: scale 100ms ease;
+  -ms-transition: scale 100ms ease;
+  -o-transition: scale 100ms ease;
+  transition: scale 100ms ease;
+}
+.jws-carousel .jws-video-play-icon:hover {
+  -webkit-transition: scale(1.3, 1.3);
+  -moz-transition: scale(1.3, 1.3);
+  -ms-transition: scale(1.3, 1.3);
+  -o-transition: scale(1.3, 1.3);
+  transition: scale(1.3, 1.3);
+}
+.jws-carousel .jws-video-playing .jws-video-tn,
+.jws-carousel .jws-video-playing .jws-video-play-icon {
+  display: none;
+}
+.jws-carousel .jws-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  -webkit-transition: opacity 400ms ease;
+  -moz-transition: opacity 400ms ease;
+  -ms-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+.jws-carousel .jws-video-frame {
+  position: relative;
+  z-index: 1;
+}
