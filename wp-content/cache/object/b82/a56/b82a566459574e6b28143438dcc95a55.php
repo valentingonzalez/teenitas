@@ -1,0 +1,11 @@
+5∂ñ[<?php exit; ?>a:1:{s:7:"content";O:8:"stdClass":23:{s:2:"ID";s:4:"1888";s:11:"post_author";s:1:"1";s:9:"post_date";s:19:"2017-08-18 06:17:54";s:13:"post_date_gmt";s:19:"2017-08-18 06:17:54";s:12:"post_content";s:1300:"[vc_row][vc_column width="1/2"][vc_column_text]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum, justo vel congue lacinia, erat leo fringilla elit, nec porta risus urna in mi. Mauris et nibh aliquet, ornare eros a, gravida urna. Maecenas sed facilisis turpis, sit amet scelerisque erat. Etiam aliquet risus risus, quis egestas tellus auctor ut. Duis id blandit mi. Nam egestas et turpis a condimentum. Integer id sagittis nibh. Aliquam auctor ex ut ex semper semper. Sed congue dictum risus sed accumsan. Nulla blandit sem tellus, vitae pellentesque est consectetur sed. Integer elementum ex ac accumsan faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla elementum ullamcorper enim a tempus.
+<div>
+<h4 style="font-size: 14px; font-weight: 500;">Product measurements</h4>
+Height: 14‚Äù = 35.56 cm
+Width: 18‚Äù = 45.72 cm
+Depth: 5‚Äù = 12.7 cm
+
+</div>
+Praesent vel iaculis dolor. Etiam vitae erat a felis eleifend eleifend at vel magna. Pellentesque placerat nunc eget augue lacinia cursus. Curabitur eget nulla quis diam tincidunt commodo.[/vc_column_text][/vc_column][vc_column css_animation="fadeInUp" width="1/2"][vc_column_text blaazer_color_scheme="center"][woo_mapper id="2"][/vc_column_text][/vc_column][/vc_row]";s:10:"post_title";s:20:"La Boheme White/Grey";s:12:"post_excerpt";s:144:"Lorem ipsum dolor sit amet, consectetur adipiscing eli.
+Donec a blandit est. Vestibulum velit nulla, accumsan
+utpharetra vitae, euismod id erat.";s:11:"post_status";s:7:"publish";s:14:"comment_status";s:4:"open";s:11:"ping_status";s:6:"closed";s:13:"post_password";s:0:"";s:9:"post_name";s:19:"la-boheme-whitegrey";s:7:"to_ping";s:0:"";s:6:"pinged";s:0:"";s:13:"post_modified";s:19:"2017-08-18 06:17:54";s:17:"post_modified_gmt";s:19:"2017-08-18 06:17:54";s:21:"post_content_filtered";s:0:"";s:11:"post_parent";s:1:"0";s:4:"guid";s:60:"http://blaazer.jwsuperthemes.com/?post_type=product&amp;p=68";s:10:"menu_order";s:1:"0";s:9:"post_type";s:7:"product";s:14:"post_mime_type";s:0:"";s:13:"comment_count";s:1:"1";}}

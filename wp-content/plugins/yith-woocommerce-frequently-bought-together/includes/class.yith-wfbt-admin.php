@@ -100,7 +100,7 @@ if ( ! class_exists( 'YITH_WFBT_Admin' ) ) {
 
 			//Add action links
 			add_filter( 'plugin_action_links_' . plugin_basename( YITH_WFBT_DIR . '/' . basename( YITH_WFBT_FILE ) ), array( $this, 'action_links' ) );
-			add_filter( 'plugin_row_meta', array( $this, 'plugin_row_meta' ), 10, 4 );
+            add_filter( 'yith_show_plugin_row_meta', array( $this, 'plugin_row_meta' ), 10, 5 );
 
 			// Premium Tab
 			add_action( 'yith_wfbt_premium', array( $this, 'premium_tab' ) );
@@ -206,30 +206,33 @@ if ( ! class_exists( 'YITH_WFBT_Admin' ) ) {
 			}
 
 		}
+        /**
+         * plugin_row_meta
+         *
+         * add the action links to plugin admin page
+         *
+         * @param $plugin_meta
+         * @param $plugin_file
+         * @param $plugin_data
+         * @param $status
+         *
+         * @return   Array
+         * @since    1.0
+         * @author   Andrea Grillo <andrea.grillo@yithemes.com>
+         * @use plugin_row_meta
+         */
+        public function plugin_row_meta( $new_row_meta_args, $plugin_meta, $plugin_file, $plugin_data, $status ) {
 
-		/**
-		 * plugin_row_meta
-		 *
-		 * add the action links to plugin admin page
-		 *
-		 * @param $plugin_meta
-		 * @param $plugin_file
-		 * @param $plugin_data
-		 * @param $status
-		 *
-		 * @return   Array
-		 * @since    1.0
-		 * @author   Andrea Grillo <andrea.grillo@yithemes.com>
-		 * @use plugin_row_meta
-		 */
-		public function plugin_row_meta( $plugin_meta, $plugin_file, $plugin_data, $status ) {
+            if ( defined( 'YITH_WFBT_INIT' ) && YITH_WFBT_INIT == $plugin_file ) {
+                $new_row_meta_args['slug']   = YITH_WFBT_SLUG;
 
-			if ( defined( 'YITH_WFBT_INIT') && YITH_WFBT_INIT == $plugin_file ) {
-				$plugin_meta[] = '<a href="' . $this->doc_url . '" target="_blank">' . __( 'Plugin Documentation', 'yith-woocommerce-frequently-bought-together' ) . '</a>';
-			}
+                if( defined( 'YITH_WFBT_PREMIUM' ) ){
+                    $new_row_meta_args['is_premium'] = true;
+                }
+            }
 
-			return $plugin_meta;
-		}
+            return $new_row_meta_args;
+        }
 
 		/**
 		 * Add bought together tab in edit product page

@@ -4,7 +4,7 @@
  *
  * @author Your Inspiration Themes
  * @package YITH Woocommerce Compare
- * @version 1.1.4
+ * @version 2.3.2
  */
 
 // remove the style of woocommerce
@@ -12,8 +12,9 @@ if( defined('WOOCOMMERCE_USE_CSS') && WOOCOMMERCE_USE_CSS ) wp_dequeue_style('wo
 
 $is_iframe = (bool)( isset( $_REQUEST['iframe'] ) && $_REQUEST['iframe'] );
 
-wp_enqueue_script( 'jquery-fixedheadertable', YITH_WOOCOMPARE_ASSETS_URL . '/js/jquery.dataTables.min.js', array('jquery'), '1.3', true );
-wp_enqueue_script( 'jquery-fixedcolumns', YITH_WOOCOMPARE_ASSETS_URL . '/js/FixedColumns.min.js', array('jquery', 'jquery-fixedheadertable'), '1.3', true );
+wp_enqueue_script( 'jquery-imagesloaded', YITH_WOOCOMPARE_ASSETS_URL . '/js/imagesloaded.pkgd.min.js', array('jquery'), '3.1.8', true );
+wp_enqueue_script( 'jquery-fixedheadertable', YITH_WOOCOMPARE_ASSETS_URL . '/js/jquery.dataTables.min.js', array('jquery'), '1.10.19', true );
+wp_enqueue_script( 'jquery-fixedcolumns', YITH_WOOCOMPARE_ASSETS_URL . '/js/FixedColumns.min.js', array('jquery', 'jquery-fixedheadertable'), '3.2.6', true );
 
 $widths = array();
 foreach( $products as $product ) $widths[] = '{ "sWidth": "205px", resizeable:true }';
@@ -54,9 +55,9 @@ $localized_table_text = apply_filters ( 'wpml_translate_single_string', $table_t
     <?php do_action( 'yith_woocompare_popup_head' ) ?>    
     
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" />
-    <link rel="stylesheet" href="<?php echo $this->stylesheet_url() ?>" type="text/css" />
     <link rel="stylesheet" href="<?php echo YITH_WOOCOMPARE_URL ?>assets/css/colorbox.css"/>
     <link rel="stylesheet" href="<?php echo YITH_WOOCOMPARE_URL ?>assets/css/jquery.dataTables.css"/>
+    <link rel="stylesheet" href="<?php echo $this->stylesheet_url() ?>" type="text/css" />
 
     <style type="text/css">
         body.loading {
@@ -76,9 +77,11 @@ $localized_table_text = apply_filters ( 'wpml_translate_single_string', $table_t
     <?php if ( ! $is_iframe ) : ?><a class="close" href="#"><?php _e( 'Close window [X]', 'yith-woocommerce-compare' ) ?></a><?php endif; ?>
 </h1>
 
-<?php do_action( 'yith_woocompare_before_main_table' ); ?>
+<div id="yith-woocompare" class="woocommerce">
 
-<table class="compare-list" cellpadding="0" cellspacing="0"<?php if ( empty( $products ) ) echo ' style="width:100%"' ?>>
+    <?php do_action( 'yith_woocompare_before_main_table' ); ?>
+
+    <table class="compare-list" cellpadding="0" cellspacing="0"<?php if ( empty( $products ) ) echo ' style="width:100%"' ?>>
     <thead>
     <tr>
         <th>&nbsp;</th>
@@ -124,8 +127,7 @@ $localized_table_text = apply_filters ( 'wpml_translate_single_string', $table_t
             <tr class="<?php echo $field ?>">
 
                 <th>
-                    <?php echo $name ?>
-                    <?php if ( $field == 'image' ) echo '<div class="fixed-th"></div>'; ?>
+                    <?php if ( $field != 'image' ) echo $name ?>
                 </th>
 
                 <?php
@@ -196,7 +198,9 @@ $localized_table_text = apply_filters ( 'wpml_translate_single_string', $table_t
     </tbody>
 </table>
 
-<?php do_action( 'yith_woocompare_after_main_table' ); ?>
+    <?php do_action( 'yith_woocompare_after_main_table' ); ?>
+
+</div>
 
 <?php if( wp_script_is( 'responsive-theme', 'enqueued' ) ) wp_dequeue_script( 'responsive-theme' ) ?><?php if( wp_script_is( 'responsive-theme', 'enqueued' ) ) wp_dequeue_script( 'responsive-theme' ) ?>
 <?php print_footer_scripts(); ?>
@@ -208,21 +212,23 @@ $localized_table_text = apply_filters ( 'wpml_translate_single_string', $table_t
 
         var oTable;
         $('body').on( 'yith_woocompare_render_table', function(){
-            if( $( window ).width() > 767 ) {
-                oTable = $('table.compare-list').dataTable( {
-                    "sScrollX": "100%",
-                    //"sScrollXInner": "150%",
-                    "bScrollInfinite": true,
-                    "bScrollCollapse": true,
-                    "bPaginate": false,
-                    "bSort": false,
-                    "bInfo": false,
-                    "bFilter": false,
-                    "bAutoWidth": false
-                } );
 
-                new FixedColumns( oTable );
-                $('<table class="compare-list" />').insertAfter( $('h1') ).hide();
+            var t = $('table.compare-list');
+
+            if( typeof $.fn.DataTable != 'undefined' && typeof $.fn.imagesLoaded != 'undefined' && $(window).width() > 767 ) {
+                t.imagesLoaded( function(){
+                    oTable = t.DataTable( {
+                        'info': false,
+                        'scrollX': true,
+                        'scrollCollapse': true,
+                        'paging': false,
+                        'ordering': false,
+                        'searching': false,
+                        'autoWidth': false,
+                        'destroy': true,
+                        'fixedColumns': true
+                    });
+                });
             }
         }).trigger('yith_woocompare_render_table');
 
@@ -267,10 +273,7 @@ $localized_table_text = apply_filters ( 'wpml_translate_single_string', $table_t
             window.close();
         });
 
-        $(window).on( 'yith_woocompare_product_removed', function(){
-            if( $( window ).width() > 767 ) {
-                oTable.fnDestroy(true);
-            }
+        $(window).on( 'resize yith_woocompare_product_removed', function(){
             $('body').trigger('yith_woocompare_render_table');
         });
 

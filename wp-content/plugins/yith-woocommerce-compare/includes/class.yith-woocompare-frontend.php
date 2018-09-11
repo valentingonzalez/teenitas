@@ -173,9 +173,7 @@ if( !class_exists( 'YITH_Woocompare_Frontend' ) ) {
 
                 // check for deleted|private products
                 $product = wc_get_product( $product_id );
-                $post_status = yit_get_prop( $product, 'post_status' );
-
-                if( ! $product || $post_status !== 'publish' ) {
+                if( ! $product || yit_get_prop( $product, 'post_status' ) !== 'publish' ) {
                     continue;
                 }
 

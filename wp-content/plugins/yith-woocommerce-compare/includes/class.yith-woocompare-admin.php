@@ -79,7 +79,7 @@ if ( ! class_exists( 'YITH_Woocompare_Admin' ) ) {
 
 			//Add action links
 			add_filter( 'plugin_action_links_' . plugin_basename( YITH_WOOCOMPARE_DIR . '/' . basename( YITH_WOOCOMPARE_FILE ) ), array( $this, 'action_links' ) );
-			add_filter( 'plugin_row_meta', array( $this, 'plugin_row_meta' ), 10, 4 );
+			add_filter( 'yith_show_plugin_row_meta', array( $this, 'plugin_row_meta' ), 10, 5 );
 
 			add_action( 'yith_woocompare_premium', array( $this, 'premium_tab' ) );
 
@@ -196,29 +196,33 @@ if ( ! class_exists( 'YITH_Woocompare_Admin' ) ) {
 
 		}
 
-		/**
-		 * plugin_row_meta
-		 *
-		 * add the action links to plugin admin page
-		 *
-		 * @param $plugin_meta
-		 * @param $plugin_file
-		 * @param $plugin_data
-		 * @param $status
-		 *
-		 * @return   Array
-		 * @since    1.0
-		 * @author   Andrea Grillo <andrea.grillo@yithemes.com>
-		 * @use plugin_row_meta
-		 */
-		public function plugin_row_meta( $plugin_meta, $plugin_file, $plugin_data, $status ) {
+        /**
+         * plugin_row_meta
+         *
+         * add the action links to plugin admin page
+         *
+         * @param $plugin_meta
+         * @param $plugin_file
+         * @param $plugin_data
+         * @param $status
+         *
+         * @return   Array
+         * @since    1.0
+         * @author   Andrea Grillo <andrea.grillo@yithemes.com>
+         * @use plugin_row_meta
+         */
+        public function plugin_row_meta( $new_row_meta_args, $plugin_meta, $plugin_file, $plugin_data, $status ) {
 
-			if ( defined( 'YITH_WOOCOMPARE_INIT' ) && YITH_WOOCOMPARE_INIT == $plugin_file ) {
-				$plugin_meta[] = '<a href="' . $this->doc_url . '" target="_blank">' . __( 'Plugin Documentation', 'yith-woocommerce-compare' ) . '</a>';
-			}
+            if ( defined( 'YITH_WOOCOMPARE_INIT' ) && YITH_WOOCOMPARE_INIT == $plugin_file ) {
+                $new_row_meta_args['slug']   = YITH_WOOCOMPARE_SLUG;
 
-			return $plugin_meta;
-		}
+                if( defined( 'YITH_WOOCOMPARE_PREMIUM' ) ){
+                    $new_row_meta_args['is_premium'] = true;
+                }
+            }
+
+            return $new_row_meta_args;
+        }
 
 		/**
 		 * Register Pointer

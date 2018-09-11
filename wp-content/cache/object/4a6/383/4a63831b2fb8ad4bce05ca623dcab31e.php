@@ -1,0 +1,1 @@
+Çµ–[<?php exit; ?>a:1:{s:7:"content";a:6:{s:14:"order_pa_color";a:1:{i:0;s:1:"0";}s:12:"thumbnail_id";a:1:{i:0;s:1:"0";}s:10:"hoverimage";a:1:{i:0;s:1:"0";}s:12:"display_type";a:1:{i:0;s:5:"Color";}s:5:"color";a:1:{i:0;s:7:"#000000";}s:9:"textblock";a:1:{i:0;s:0:"";}}}

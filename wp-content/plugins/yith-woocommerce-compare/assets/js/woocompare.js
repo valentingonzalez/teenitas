@@ -152,8 +152,9 @@ jQuery(document).ready(function($) {
             success: function(response){
 
                 // in compare table
-                var table = $(response).filter('table.compare-list');
-                $('body > table.compare-list').replaceWith( table );
+                var content = $(response).filter('#yith-woocompare');
+                // replace content
+                $( '#yith-woocompare' ).replaceWith( content );
 
                 $('.compare[data-product_id="' + button.data('product_id') + '"]', window.parent.document).removeClass('added').html( yith_woocompare.button_text );
 

@@ -2,8 +2,8 @@
 Contributors: yithemes
 Tags: frequently bought together, bought together, bundles, frequently bought products, product group
 Requires at least: 4.0
-Tested up to: 4.9.6
-Stable tag: 1.2.1
+Tested up to: 4.9
+Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,13 @@ Full documentation is available [here](http://yithemes.com/docs-plugins/yith-woo
 3. The plugin tab in edit product
 
 == Changelog ==
+
+== 1.2.2 == Released on Sep 10, 2018
+
+* New: Support to WordPress 4.9.8.
+* New: Support to WooCommerce 3.4.5.
+* Update: Plugin core.
+* Dev: New action "yith_wfbt_group_added_to_cart" after add to cart process.
 
 == 1.2.1 == Released on May 31, 2018
 
@@ -138,11 +145,11 @@ Or, if you have created your own language pack, or have an update for an existin
 
 == Upgrade notice ==
 
-== 1.2.1 == Released on May 31, 2018
+== 1.2.2 == Released on Sep 10, 2018
 
-* New: Support to WordPress 4.9.6.
-* New: Support to WooCommerce 3.4.1.
+* New: Support to WordPress 4.9.8.
+* New: Support to WooCommerce 3.4.5.
 * Update: Plugin core.
-* Fix: Documentation url.
+* Dev: New action "yith_wfbt_group_added_to_cart" after add to cart process.
 
 

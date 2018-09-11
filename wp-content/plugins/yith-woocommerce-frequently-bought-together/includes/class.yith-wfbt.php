@@ -67,7 +67,7 @@ if ( ! class_exists( 'YITH_WFBT' ) ) {
 		public function __construct() {
 
             // Load Plugin Framework
-            add_action( 'after_setup_theme', array( $this, 'plugin_fw_loader' ), 1 );
+            add_action( 'plugins_loaded', array( $this, 'plugin_fw_loader' ), 15 );
 
 			// Class admin
 			if ( $this->is_admin() ) {
@@ -130,13 +130,18 @@ if ( ! class_exists( 'YITH_WFBT' ) ) {
 				return;
 			}
 
-			if( ! isset( $_POST['offeringID'] ) ) {
+            wc_nocache_headers();
+
+            $products_added = $message = array();
+			$offered        = $_POST['offeringID'];
+
+			if( empty( $offered ) ) {
 				return;
 			}
 
-			$mess = array();
+            $main_product   = isset( $_POST['yith-wfbt-main-product'] ) ? intval( $_POST['yith-wfbt-main-product'] ) : $_POST['offeringID'][0];
 
-			foreach( $_POST['offeringID'] as $id ) {
+			foreach( $offered as $id ) {
 
 				$product = wc_get_product( $id );
 
@@ -145,38 +150,36 @@ if ( ! class_exists( 'YITH_WFBT' ) ) {
 
 				if( $product->is_type( 'variation' ) ) {
 					$attr           = $product->get_variation_attributes();
-					$variation_id   = version_compare( WC()->version, '2.7.0', '<' ) ? $product->variation_id : $product->get_id();
+					$variation_id   = $product->get_id();
 					$product_id     = yit_get_base_product_id( $product );
 				}
 				else {
 				    $product_id = yit_get_prop( $product, 'id', true );
 				}
 
-				if( WC()->cart->add_to_cart( $product_id, 1, $variation_id, $attr ) ) {
-					if( version_compare( WC()->version, '2.6', '>=' ) ) {
-						$mess[$product_id] = 1;
-					}
-					else {
-						$mess[] = $product_id;
-					}
+                $cart_item_key = WC()->cart->add_to_cart( $product_id, 1, $variation_id, $attr );
+				if( $cart_item_key ) {
+				    $products_added[ $cart_item_key ]   = $variation_id ? $variation_id : $product_id;
+				    $message[$product_id]               = 1;
 				}
 			}
 
-			if( ! empty( $mess ) ) {
-				wc_add_to_cart_message( $mess );
+            do_action( 'yith_wfbt_group_added_to_cart', $products_added, $main_product, $offered );
+
+			if( ! empty( $message ) ) {
+				wc_add_to_cart_message( $message );
 			}
 
 			if( get_option( 'woocommerce_cart_redirect_after_add' ) == 'yes' ) {
-				$cart_url = function_exists('wc_get_cart_url') ? wc_get_cart_url() : WC()->cart->get_cart_url();
-				wp_safe_redirect( $cart_url );
-				exit;
+                $url = function_exists('wc_get_cart_url') ? wc_get_cart_url() : WC()->cart->get_cart_url();
 			}
 			else {
 				//redirect to product page
-				$dest = remove_query_arg( array( 'action', '_wpnonce' ) );
-				wp_redirect( esc_url( $dest ) );
-				exit;
+                $url = remove_query_arg( array( 'action', '_wpnonce' ) );
 			}
+
+            wp_redirect( esc_url( $url ) );
+            exit;
 
 		}
 	}

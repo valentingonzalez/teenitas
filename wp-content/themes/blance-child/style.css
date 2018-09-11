@@ -10,3 +10,23 @@ Version: 1.2.5
 Updated: 2018-01-02 11:27:28
 */
 
+
+
+
+/* FOOTER */
+
+#footer-jws .logo-footer {
+	width: 160px;
+}
+#footer-jws .widget_social-widget {
+	margin-top: 110px;
+}
+#footer-jws .widget_social-widget .widget-title {
+    margin: 0 0px 10px;
+    font-weight: normal;
+    font-size: 14px;
+    color: #878787;
+}
+#footer-jws .menu li a:hover, #footer-jws .email .social-wrap ul li a:hover {
+    color: #FFF;
+}

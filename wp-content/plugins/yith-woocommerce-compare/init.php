@@ -2,18 +2,18 @@
 /**
  * Plugin Name: YITH WooCommerce Compare
  * Plugin URI: https://yithemes.com/themes/plugins/yith-woocommerce-compare/
- * Description: YITH WooCommerce Compare allows you to compare more products with WooCommerce plugin, through product attributes.
- * Version: 2.3.1
+ * Description: The <code><strong>YITH WooCommerce Compare</strong></code> plugin allow you to compare in a simple and efficient way products on sale in your shop and analyse their main features in a single table. <a href="https://yithemes.com/" target="_blank">Find new awesome plugins on <strong>YITH</strong></a>.
+ * Version: 2.3.2
  * Author: YITHEMES
  * Author URI: https://yithemes.com/
  * Text Domain: yith-woocommerce-compare
  * Domain Path: /languages/
  * WC requires at least: 2.5.0
- * WC tested up to: 3.4.0
+ * WC tested up to: 3.4.5
  *
  * @author Yithemes
  * @package YITH WooCommerce Compare
- * @version 2.3.1
+ * @version 2.3.2
  */
 /*  Copyright 2013  Your Inspiration Themes  (email : plugins@yithemes.com)
 
@@ -58,7 +58,7 @@ if ( ! function_exists( 'yith_plugin_registration_hook' ) ) {
 register_activation_hook( __FILE__, 'yith_plugin_registration_hook' );
 
 if ( ! defined( 'YITH_WOOCOMPARE_VERSION' ) ){
-	define( 'YITH_WOOCOMPARE_VERSION', '2.3.1' );
+	define( 'YITH_WOOCOMPARE_VERSION', '2.3.2' );
 }
 if ( ! defined( 'YITH_WOOCOMPARE_FREE_INIT' ) ) {
 	define( 'YITH_WOOCOMPARE_FREE_INIT', plugin_basename( __FILE__ ) );
@@ -84,7 +84,9 @@ if ( ! defined( 'YITH_WOOCOMPARE_TEMPLATE_PATH' ) ) {
 if ( ! defined( 'YITH_WOOCOMPARE_ASSETS_URL' ) ) {
 	define( 'YITH_WOOCOMPARE_ASSETS_URL', YITH_WOOCOMPARE_URL . 'assets' );
 }
-
+if ( ! defined( 'YITH_WOOCOMPARE_SLUG' ) ) {
+    define( 'YITH_WOOCOMPARE_SLUG', 'yith-woocommerce-compare' );
+}
 /* Plugin Framework Version Check */
 if( ! function_exists( 'yit_maybe_plugin_fw_loader' ) && file_exists( YITH_WOOCOMPARE_DIR . 'plugin-fw/init.php' ) ) {
 	require_once( YITH_WOOCOMPARE_DIR . 'plugin-fw/init.php' );
