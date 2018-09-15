@@ -1,4 +1,4 @@
-# teenitas
+﻿# teenitas
 
 
 <h2>Security tasks</h2>
@@ -25,3 +25,8 @@
     <li>Prevent Hotlinking</li>
     <li>DDoS Protection</li>
 </ul>
+
+
+
+## Create SSL cert in xampp
+https://shellcreeper.com/how-to-create-valid-ssl-in-localhost-for-xampp/
