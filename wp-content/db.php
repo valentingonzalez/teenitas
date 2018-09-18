@@ -1,1 +1,0 @@
-C:/xampp/htdocs/teenitas/wp-content/plugins/query-monitor/wp-content/db.php

@@ -72,9 +72,15 @@ h2 {
     box-shadow: none;
 }
 .caldera-grid .btn-default {
+    transition: all .3s;
     color: #FFF;
     background-color: #FF3CB5;
     height: 51px;
+}
+.caldera-grid .btn-default:hover {
+    color: #FF3CB5;
+    border: 3px solid #FF3CB5;
+    background-color: #FFF;
 }
 .caldera-grid .btn {
     border-radius: 0;
@@ -153,4 +159,9 @@ h2 {
 .contact-info.contact-info-whatsapp {
     background: url('assets/images/contact-icon-whatsapp.png') 8px 0 no-repeat;
     font-size: 18px;
+}
+
+/* INSTAGRAM MODULE */
+.slick-slide {
+    height: auto;
 }
