@@ -2,7 +2,7 @@
 /**
  * Currency Switcher Functions - Exchange Rates
  *
- * @version 2.9.0
+ * @version 2.9.1
  * @since   2.8.0
  * @author  Tom Anbinder
  */
@@ -60,83 +60,30 @@ if ( ! function_exists( 'alg_wc_cs_get_exchange_rate_georgia' ) ) {
 	}
 }
 
-if ( ! function_exists( 'alg_wc_cs_get_exchange_rate_yahoo' ) ) {
-	/*
-	 * alg_wc_cs_get_exchange_rate_yahoo.
+if ( ! function_exists( 'alg_wc_cs_get_exchange_rate_free_currency_api' ) ) {
+	/**
+	 * Converts using the Free Currency Converter api
+	 * @link https://free.currencyconverterapi.com/
 	 *
-	 * @version 2.8.0
-	 * @since   2.2.0
-	 * @todo    use `alg_wc_cs_get_currency_exchange_rates_url_response()`
+	 * @version 2.9.1
+	 * @since   2.9.1
 	 */
-	function alg_wc_cs_get_exchange_rate_yahoo( $currency_from, $currency_to ) {
-		$currencies = array(
-			'currency_from' => array(
-				'name'     => $currency_from . '=X',
-				'usd_rate' => false,
-			),
-			'currency_to' => array(
-				'name'     => $currency_to . '=X',
-				'usd_rate' => false,
-			),
-		);
-		if ( ( $use_curl = function_exists( 'curl_version' ) ) || ini_get( 'allow_url_fopen' ) ) {
-			$url = 'https://finance.yahoo.com/webservice/v1/symbols/allcurrencies/quote?format=json';
-			if ( $use_curl ) {
-				$curl = curl_init( $url );
-				curl_setopt( $curl, CURLOPT_RETURNTRANSFER, 1 );
-				curl_setopt( $curl, CURLOPT_SSL_VERIFYPEER, false );
-				$response = curl_exec( $curl );
-				curl_close( $curl );
-			} else { // if ( ini_get( 'allow_url_fopen' ) )
-				$response = file_get_contents( $url );
-			}
-			$response = json_decode( $response );
-			if ( ! isset( $response->list->resources ) ) {
-				return 0;
-			}
-			foreach ( $currencies as &$currency ) {
-				foreach ( $response->list->resources as $resource ) {
-					if ( isset( $resource->resource->fields->symbol ) && $currency['name'] === $resource->resource->fields->symbol ) {
-						if ( ! isset( $resource->resource->fields->price ) ) {
-							return 0;
-						}
-						$currency['usd_rate'] = $resource->resource->fields->price;
-						break;
-					}
-				}
-			}
-		} elseif ( function_exists( 'simplexml_load_file' ) ) {
-			$response = simplexml_load_file( 'https://finance.yahoo.com/webservice/v1/symbols/allcurrencies/quote?format=xml' );
-			if ( ! isset( $response->resources->resource ) ) {
-				return 0;
-			}
-			foreach ( $currencies as &$currency ) {
-				foreach ( $response->resources->resource as $resource ) {
-					$price  = false;
-					$symbol = false;
-					foreach ( $resource->field as $field_obj ) {
-						$attributes = $field_obj->attributes();
-						switch ( $attributes->name ) {
-							case 'symbol':
-								$symbol = (string) $field_obj;
-								break;
-							case 'price':
-								$price = (float) $field_obj;
-								break;
-						}
-					}
-					if ( false != $symbol && $currency['name'] === $symbol ) {
-						if ( ! $price ) {
-							return 0;
-						}
-						$currency['usd_rate'] = $price;
-						break;
-					}
-				}
-			}
+	function alg_wc_cs_get_exchange_rate_free_currency_api( $currency_from, $currency_to ) {
+		if ( ! class_exists( "SoapClient" ) ) {
+			return 0;
 		}
-		return ( false == $currencies['currency_to']['usd_rate'] || false == $currencies['currency_from']['usd_rate'] ? 0 :
-			round( ( $currencies['currency_to']['usd_rate'] / $currencies['currency_from']['usd_rate'] ), ALG_WC_CS_EXCHANGE_RATES_PRECISION ) );
+
+		$url = add_query_arg( array(
+			'q'       => $currency_from . '_' . $currency_to,
+			'compact' => 'y',
+		), 'http://free.currencyconverterapi.com/api/v5/convert' );
+
+		$json = alg_wc_cs_get_currency_exchange_rates_url_response( $url );
+		if ( property_exists( $json, $currency_from . '_' . $currency_to ) ) {
+			return $json->{$currency_from . '_' . $currency_to}->val;
+		}else{
+			return 0;
+		}
 	}
 }
 
@@ -178,47 +125,20 @@ if ( ! function_exists( 'alg_wc_cs_get_exchange_rate_ecb' ) ) {
 	}
 }
 
-if ( ! function_exists( 'alg_wc_cs_get_exchange_rate_fixer_io' ) ) {
-	/*
-	 * alg_wc_cs_get_exchange_rate_fixer_io.
-	 *
-	 * @version 2.7.0
-	 * @since   2.7.0
-	 */
-	function alg_wc_cs_get_exchange_rate_fixer_io( $currency_from, $currency_to ) {
-		return alg_wc_cs_get_exchange_rate_fixer_io_by_date( $currency_from, $currency_to, 'latest' );
-	}
-}
-
-if ( ! function_exists( 'alg_wc_cs_get_exchange_rate_fixer_io_by_date' ) ) {
-	/*
-	 * alg_wc_cs_get_exchange_rate_fixer_io_by_date.
-	 *
-	 * @version 2.8.0
-	 * @since   2.7.0
-	 */
-	function alg_wc_cs_get_exchange_rate_fixer_io_by_date( $currency_from, $currency_to, $date ) {
-		$url = 'https://api.fixer.io/' . $date . '?base=' . $currency_from . '&symbols=' . $currency_to;
-		$response = alg_wc_cs_get_currency_exchange_rates_url_response( $url );
-		return ( isset( $response->rates->{$currency_to} ) ? $response->rates->{$currency_to} : 0 );
-	}
-}
-
 if ( ! function_exists( 'alg_wc_cs_get_exchange_rates_servers' ) ) {
 	/*
 	 * alg_wc_cs_get_exchange_rates_servers.
 	 *
-	 * @version 2.9.0
+	 * @version 2.9.1
 	 * @since   2.8.0
 	 */
 	function alg_wc_cs_get_exchange_rates_servers() {
 		return array(
 			'ecb'             => __( 'European Central Bank', 'currency-switcher-woocommerce' ),
-			'yahoo'           => __( 'Yahoo finance', 'currency-switcher-woocommerce' ),
-			'fixer'           => __( 'Fixer.io', 'currency-switcher-woocommerce' ),
-			'coinbase'        => __( 'Coinbase', 'currency-switcher-woocommerce' ),
-			'coinmarketcap'   => __( 'CoinMarketCap', 'currency-switcher-woocommerce' ),
+			'free_cur_api'    => __( 'Free Currency Converter', 'currency-switcher-woocommerce' ),
 			'georgia'         => __( 'National Bank of Georgia', 'currency-switcher-woocommerce' ),
+			'coinbase'        => __( 'Coinbase', 'currency-switcher-woocommerce' ),
+			'coinmarketcap'   => __( 'CoinMarketCap (for Cryptocurrencies)', 'currency-switcher-woocommerce' ),
 //			'google'          => __( 'Google', 'currency-switcher-woocommerce' ),
 		);
 	}
@@ -241,7 +161,7 @@ if ( ! function_exists( 'alg_wc_cs_get_exchange_rate' ) ) {
 	/*
 	 * alg_wc_cs_get_exchange_rate.
 	 *
-	 * @version 2.9.0
+	 * @version 2.9.1
 	 * @since   2.0.0
 	 * @return  float rate on success, else 0
 	 */
@@ -251,20 +171,17 @@ if ( ! function_exists( 'alg_wc_cs_get_exchange_rate' ) ) {
 		}
 		$return = 0;
 		switch ( $server ) {
-			case 'yahoo':
-				$return = alg_wc_cs_get_exchange_rate_yahoo( $currency_from, $currency_to );
-				break;
-			case 'fixer':
-				$return = alg_wc_cs_get_exchange_rate_fixer_io( $currency_from, $currency_to );
-				break;
+			case 'coinmarketcap':
+				$return = alg_wc_cs_get_exchange_rate_coinmarketcap( $currency_from, $currency_to );
+			break;
 			case 'coinbase':
 				$return = alg_wc_cs_get_exchange_rate_coinbase( $currency_from, $currency_to );
 				break;
-			case 'coinmarketcap':
-				$return = alg_wc_cs_get_exchange_rate_coinmarketcap( $currency_from, $currency_to );
-				break;
 			case 'georgia':
 				$return = alg_wc_cs_get_exchange_rate_georgia( $currency_from, $currency_to );
+			break;
+			case 'free_cur_api':
+				$return = alg_wc_cs_get_exchange_rate_free_currency_api( $currency_from, $currency_to );
 			break;
 			/* case 'google':
 				$return = alg_wc_cs_get_exchange_rate_google( $currency_from, $currency_to );
@@ -279,28 +196,6 @@ if ( ! function_exists( 'alg_wc_cs_get_exchange_rate' ) ) {
 			$offset = get_option( 'alg_currency_switcher_exchange_rate_offset_' . $currency_from . '_' . $currency_to, 0 );
 		}
 		return ( 0 != $offset ? ( $offset / 100 * $return + $return ) : $return );
-	}
-}
-
-if ( ! function_exists( 'alg_wc_cs_get_currency_exchange_rates_url_response' ) ) {
-	/*
-	 * alg_wc_cs_get_currency_exchange_rates_url_response.
-	 *
-	 * @version 2.8.2
-	 * @since   2.8.0
-	 */
-	function alg_wc_cs_get_currency_exchange_rates_url_response( $url, $do_json_decode = true ) {
-		$response = '';
-		if ( function_exists( 'curl_version' ) ) {
-			$curl = curl_init( $url );
-			curl_setopt( $curl, CURLOPT_RETURNTRANSFER, 1 );
-			curl_setopt( $curl, CURLOPT_SSL_VERIFYPEER, false );
-			$response = curl_exec( $curl );
-			curl_close( $curl );
-		} elseif ( ini_get( 'allow_url_fopen' ) ) {
-			$response = file_get_contents( $url );
-		}
-		return ( '' != $response ? ( $do_json_decode ? json_decode( $response ) : $response ): false );
 	}
 }
 
@@ -331,6 +226,28 @@ if ( ! function_exists( 'alg_wc_cs_get_exchange_rate_coinmarketcap' ) ) {
 			}
 		}
 		return $return;
+	}
+}
+
+if ( ! function_exists( 'alg_wc_cs_get_currency_exchange_rates_url_response' ) ) {
+	/*
+	 * alg_wc_cs_get_currency_exchange_rates_url_response.
+	 *
+	 * @version 2.8.2
+	 * @since   2.8.0
+	 */
+	function alg_wc_cs_get_currency_exchange_rates_url_response( $url, $do_json_decode = true ) {
+		$response = '';
+		if ( function_exists( 'curl_version' ) ) {
+			$curl = curl_init( $url );
+			curl_setopt( $curl, CURLOPT_RETURNTRANSFER, 1 );
+			curl_setopt( $curl, CURLOPT_SSL_VERIFYPEER, false );
+			$response = curl_exec( $curl );
+			curl_close( $curl );
+		} elseif ( ini_get( 'allow_url_fopen' ) ) {
+			$response = file_get_contents( $url );
+		}
+		return ( '' != $response ? ( $do_json_decode ? json_decode( $response ) : $response ): false );
 	}
 }
 

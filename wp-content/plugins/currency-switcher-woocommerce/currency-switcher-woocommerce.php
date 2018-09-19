@@ -3,7 +3,7 @@
 Plugin Name: Currency Switcher for WooCommerce
 Plugin URI: https://wpfactory.com/item/currency-switcher-woocommerce-wordpress-plugin/
 Description: Currency Switcher for WooCommerce.
-Version: 2.9.0
+Version: 2.9.3
 Author: Algoritmika Ltd
 Author URI: http://www.algoritmika.com
 Text Domain: currency-switcher-woocommerce
@@ -53,7 +53,7 @@ final class Alg_WC_Currency_Switcher {
 	 * @var   string
 	 * @since 1.0.0
 	 */
-	public $version = '2.8.9';
+	public $version = '2.9.3';
 
 	/**
 	 * @var   Alg_WC_Currency_Switcher The single instance of the class

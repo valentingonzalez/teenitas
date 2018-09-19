@@ -2,7 +2,7 @@
 /**
  * Currency Switcher - Currencies Section Settings
  *
- * @version 2.8.7
+ * @version 2.9.1
  * @since   1.0.0
  * @author  Tom Anbinder
  */
@@ -97,7 +97,6 @@ class Alg_WC_Currency_Switcher_Settings_Currencies extends Alg_WC_Currency_Switc
 	 * @version 2.8.7
 	 * @since   1.0.0
 	 * @todo    (maybe) add "generate all world currencies" - makes sense only for Pro version
-	 * @todo    (maybe) add "generate all currencies with Yahoo exchange rates" - makes sense only for Pro version
 	 */
 	function get_currencies_settings( $settings ) {
 		$currency_from  = get_option( 'woocommerce_currency' );

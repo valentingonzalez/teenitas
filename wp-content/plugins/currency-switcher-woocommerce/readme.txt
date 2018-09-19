@@ -3,7 +3,7 @@ Contributors: algoritmika, anbinder, karzin
 Tags: woocommerce, currency switcher, multicurrency, currency, switcher, woo commerce, algoritmika, wpfactory
 Requires at least: 4.4
 Tested up to: 4.9
-Stable tag: 2.9.0
+Stable tag: 2.9.3
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -84,7 +84,43 @@ add_action('woocommerce_single_product_summary', function(){
 });
 `
 
+= CoinMarketCap not working? =
+Please make sure you are using at least one Cryptocurrency on your Currency settings.
+You can install [All Currencies for WooCommerce](https://wordpress.org/plugins/woocommerce-all-currencies/) plugin to enable them
+
+= National Bank of Georgia =
+If you are trying the National Bank of Georgia server option with no success, make sure that your server has the SoapClient library installed and enabled
+
+= How to override rounding and pretty price per currency? =
+If you want for example to turn on the rounding for all products except for Bitcoin, supposing you've set to round and enabled pretty price on plugin's settings:
+`
+add_filter( 'alg_wc_currency_switcher_correction', function ( $correction, $currency ) {
+	if ( $currency == 'BTC' ) {
+		$correction['rounding'] = 'no_round';
+		$correction['pretty_price'] = 'no';
+	}
+
+	return $correction;
+}, 10, 2 );
+`
+
 == Changelog ==
+
+= 2.9.3 - 11/09/2018 =
+* Fix price filter widget currency format
+* Fix price filter rounding
+* Add 'alg_wc_currency_switcher_correction' filter to override 'Final Price Correction options'
+* Add FAQ question about override rounding with 'alg_wc_currency_switcher_correction' filter
+
+= 2.9.2 - 10/09/2018 =
+* Add CoinMarketCap exchange server
+* Add CoinMarketCap question on FAQ
+
+= 2.9.1 - 10/09/2018 =
+* Add Free Currency Converter API exchange server
+* Remove Yahoo exchange server
+* Remove Fixer.io exchange server
+* Remove CoinMarketCap exchange server
 
 = 2.9.0 - 21/08/2018 =
 * Add question on plugin's description about getting converted values
@@ -282,7 +318,8 @@ add_action('woocommerce_single_product_summary', function(){
 
 == Upgrade Notice ==
 
-= 2.9.0 =
-* Add question on plugin's description about getting converted values
-* Add 'alg_wc_cs_get_exchange_rate' filter allowing managing the exchange rate externally
-* Add 'National Bank of Georgia' exchange server
+= 2.9.3 =
+* Fix price filter widget currency format
+* Fix price filter rounding
+* Add 'alg_wc_currency_switcher_correction' filter to override 'Final Price Correction options'
+* Add FAQ question about override rounding with 'alg_wc_currency_switcher_correction' filter

@@ -29,10 +29,10 @@
         $regular_price = $variation ->get_regular_price();
         $sale_price = $variation ->get_sale_price();
     }
-    $sale = ceil(( ($regular_price - $sale_price) / $regular_price ) * 100);
 ?>
-<?php if ( !empty( $regular_price ) && !empty( $sale_price ) && $regular_price > $sale_price ) : ?>
-    <?php echo
-        apply_filters( 'woocommerce_sale_flash', '<div class="onsale"><span>' . $sale . '%</span><span>'.__('off' , 'blance').'</span></div>', $post, $product );
-    ?>
-<?php endif; ?>
+<?php 
+if ( !empty( $regular_price ) && !empty( $sale_price ) && $regular_price > $sale_price ) {
+    $sale = ceil(( ($regular_price - $sale_price) / $regular_price ) * 100);
+    echo apply_filters( 'woocommerce_sale_flash', '<div class="onsale"><span>' . $sale . '%</span><span>'.__('off' , 'blance').'</span></div>', $post, $product );
+}
+?>

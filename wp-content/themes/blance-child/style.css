@@ -48,10 +48,7 @@ h2 {
 }
 
 
-
-
 /* CALDERA FORMS */
-
 /* CONTACT FORM */
 #caldera_form_1 {
     margin: 0 150px;
@@ -164,4 +161,31 @@ h2 {
 /* INSTAGRAM MODULE */
 .slick-slide {
     height: auto;
+}
+
+
+/* PAGINATION */
+.woocommerce-pagination-number {
+    margin-top: 40px;
+}
+.woocommerce-pagination-number .page-numbers {
+    display: table;
+    margin: 0 auto;
+    
+}
+.woocommerce-pagination-number ul.page-numbers li {
+    display: inline-block;    
+}
+.woocommerce-pagination-number ul.page-numbers li .page-numbers {
+    width: 25px;
+    height: 25px;
+    display: block;
+    background: #CCC;
+    text-align: center;
+    line-height: 25px;
+    margin: 5px;
+}
+.woocommerce-pagination-number ul.page-numbers li .page-numbers.current {
+    background: #ff3cb5;
+    color: #FFF;
 }
