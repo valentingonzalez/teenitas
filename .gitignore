@@ -87,6 +87,7 @@ Thumbs.db
 # "themes" directory
 wp-content/*
 !wp-content/mu-plugins/
+!wp-content/uploads/
 !wp-content/plugins/
 !wp-content/themes/
 
