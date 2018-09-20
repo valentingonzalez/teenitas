@@ -20,3 +20,7 @@ function generate_move_scripts()
         wp_enqueue_style( 'generate-child', get_stylesheet_uri(), true, filemtime( get_stylesheet_directory() . '/style.css' ), 'all' );
     endif;
 }
+
+
+// CALL SOCIALS OVERRIDE WIDGET
+require_once('framework/widgets/socials.php');

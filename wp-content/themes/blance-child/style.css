@@ -25,6 +25,9 @@ h2 {
     border-bottom: 1px solid #efefef;
     box-shadow: 0 2px 2px rgba(0,0,0,.02);
 }
+.top-bar {
+    display: none;
+}
 
 
 
@@ -188,4 +191,31 @@ h2 {
 .woocommerce-pagination-number ul.page-numbers li .page-numbers.current {
     background: #ff3cb5;
     color: #FFF;
+}
+
+/* ABOUT US */
+.about-us-img .vc_single_image-wrapper {
+    max-height: 670px;
+    overflow: hidden;
+}
+#jws_header .menu_nav .mainmenu .nav > li.current-menu-item > a {
+    pointer-events: none;
+}
+#jws_header .menu_nav .mainmenu .nav > li.current-menu-item > a,
+#jws_header .menu_nav .mainmenu .nav > li:hover > a {
+    color: #ff3cb5;
+}
+#jws_header .menu_nav .mainmenu .nav > li > a {
+    transition: color .3s;
+}
+
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+    .rev_slider .tp-caption, .rev_slider .caption, .tp-simpleresponsive img {
+        display: none;
+    }
 }
