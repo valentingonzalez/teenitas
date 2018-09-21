@@ -528,7 +528,7 @@ class blance_WooCommerce {
 					$link = blance_get_page_base_url();
 
 					if ( $_GET ) {
-						printf( '<a  href="%s" id="remove-filter-actived" class="remove-filter-actived"><i class="icon-cross2"></i>%s</a>', esc_url( $link ), esc_html( 'Clear All Filter' ) );
+						printf( '<a  href="%s" id="remove-filter-actived" class="remove-filter-actived"><i class="icon-cross2"></i>%s</a>', esc_url( $link ), esc_html( 'Eliminar todos los filtros' ) );
 					}
 
 					?>

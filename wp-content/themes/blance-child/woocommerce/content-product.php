@@ -104,7 +104,7 @@ $classes[] = 'tb-product-items';
         <div class="inner">
         <div class="btn-inner-center">
             <?php 
-                echo '<a href="' . $product->get_permalink() . '"  class="product-quick-view">'.esc_html('Quick Look' , 'blance').'</a>';
+                echo '<a href="' . $product->get_permalink() . '"  class="product-quick-view">'.esc_html('Vista rápida' , 'blance').'</a>';
                 do_action('woocommerce_template_loop_add_to_cart'); 
              ?>
         </div>

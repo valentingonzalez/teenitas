@@ -70,7 +70,7 @@ $options2 = get_post_meta( get_the_ID(), '_custom_wc_options', true );
         <div class="inner">
         <div class="btn-inner-center">
             <?php 
-                echo '<a href="' . $product->get_permalink() . '"  class="product-quick-view">'.esc_html('Quick Look' , 'blance').'</a>';
+                echo '<a href="' . $product->get_permalink() . '"  class="product-quick-view">'.esc_html('Vista rápida' , 'blance').'</a>';
                 do_action('woocommerce_template_loop_add_to_cart'); 
              ?>
         </div>

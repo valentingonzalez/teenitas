@@ -18,6 +18,23 @@ h2 {
     font-size: 34px;
     font-weight: 200;
 }
+.single .page-header, .page .page-header, .archive .page-header {
+    background-color: #FFF;
+}
+
+.blas-filter-cat .jws-categories-filter ul li a {
+    color: #404040;
+}
+.blas-filter-cat .jws-categories-filter ul li a.selected {
+    border-bottom-color: #404040;
+    pointer-events: none;
+}
+#content .action-filter-swaper .shop-toolbar {
+    padding: 20px 0;
+}
+.product-container {
+    margin-top: -20px;
+}
 
 /* HEADER */
 
@@ -28,8 +45,6 @@ h2 {
 .top-bar {
     display: none;
 }
-
-
 
 /* FOOTER */
 
@@ -50,6 +65,32 @@ h2 {
     color: #FFF !important;
 }
 
+/* SINGLE PRODUCT */
+.woocommerce div.product .content-product-right .shop-bottom form .variations tr td .tawcvs-swatches .swatch-color {
+    margin: 2px 8px 0 2px;
+}
+.woocommerce div.product .content-product-right .shop-bottom form .variations tr td .tawcvs-swatches .swatch-color:after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: -3px;
+    left: -3px;
+    border-radius: 22px;
+    border: 1px solid #bbbbbb;
+}
+.woocommerce div.product .content-product-right .shop-bottom form .variations tr td .tawcvs-swatches .swatch-blanco:before {
+    border-color: #000;
+}
+span.sold-out.pa.db.left {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: 20px;
+    padding: 5px 15px;
+    background: #cc2d2d;
+    color: #FFF;
+}
 
 /* CALDERA FORMS */
 /* CONTACT FORM */
@@ -218,4 +259,21 @@ h2 {
     .rev_slider .tp-caption, .rev_slider .caption, .tp-simpleresponsive img {
         display: none;
     }
+}
+
+
+/* SHOPPING CART */
+.jws-push-menu .widget_shopping_cart_content .cart_list .mini_cart_item .quanty-ajax {
+    margin-right: 0;
+}
+.jws-push-menu .widget_shopping_cart_content .cart_list .mini_cart_item {
+    padding-right: 15px;
+}
+.jws-cart-panel-item-details dl {
+    margin-bottom: 0;
+}
+.jws-cart-panel-item-details dl.variation .variation-color, 
+.jws-cart-panel-item-details dl.variation .variation-color p {
+    display: inline;
+    font-size: 11px;
 }
