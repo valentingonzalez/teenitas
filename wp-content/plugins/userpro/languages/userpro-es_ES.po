@@ -3,19 +3,19 @@ msgstr ""
 "Project-Id-Version: userpro-es_ES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-18 13:58+0200\n"
-"PO-Revision-Date: 2017-12-20 12:01+0200\n"
-"Last-Translator: Said Santiago <specopssaido@gmail.com>\n"
-"Language-Team: WardsPlease <specopssaido@gmail.com>\n"
-"Language: es_MX\n"
+"PO-Revision-Date: 2018-09-24 14:50+0000\n"
+"Last-Translator: admin <gonzalezvalencho@gmail.com>\n"
+"Language-Team: Español\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __ngettext:1,2;__;_e\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.0.5\n"
+"X-Generator: Loco https://localise.biz/\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-0: ."
 
 #: addons/badges/admin/admin-functions.php:68
 msgid "Add a New Badge"
@@ -35,7 +35,6 @@ msgstr "Editar medallas de usuario"
 
 #: addons/badges/admin/admin.php:44
 #, fuzzy
-#| msgid "Edit User Badges"
 msgid "Edit Badges"
 msgstr "Editar medallas de usuario"
 
@@ -65,9 +64,6 @@ msgstr "Ajustes restablecidos a los de por defecto."
 
 #: addons/badges/admin/panels/achievement.php:3
 #, fuzzy
-#| msgid ""
-#| "You can find the achievement badges that you have created and edit the "
-#| "rules of achievement from this page."
 msgid ""
 "You can find the badges that you have created and edit it from this page."
 msgstr ""
@@ -152,9 +148,9 @@ msgstr "Ver perfil"
 #: addons/badges/admin/panels/manage.php:3
 #, php-format
 msgid ""
-"If you want to add more badges, please put your badges as PNG in <code>%s</"
-"code>. To give a new badge, or assign a new achievement, click on a badge "
-"below to start."
+"If you want to add more badges, please put your badges as PNG in <code>"
+"%s</code>. To give a new badge, or assign a new achievement, click on a "
+"badge below to start."
 msgstr ""
 "Si quiere añadir más medallas, por favor ponga sus medallas como PNG en "
 "<code>%s</code>. Para dar una nueva medalla, o asignar un nuevo logro, haga "
@@ -162,7 +158,6 @@ msgstr ""
 
 #: addons/badges/admin/panels/manage.php:24
 #, fuzzy
-#| msgid "Upload file"
 msgid "Upload Badge"
 msgstr "Subir fichero"
 
@@ -184,13 +179,11 @@ msgstr "¿Cómo pueden los usuarios obtener esta medalla?"
 
 #: addons/badges/admin/panels/manage.php:46
 #, fuzzy
-#| msgid "Give this badge to users (manual)"
 msgid "Give this badge to roles (manual)"
 msgstr "Dar esta medalla a usuarios (manual)"
 
 #: addons/badges/admin/panels/manage.php:47
 #, fuzzy
-#| msgid "Give this badge to users (manual)"
 msgid "Give this badge to roles (automatic)"
 msgstr "Dar esta medalla a usuarios (manual)"
 
@@ -204,13 +197,11 @@ msgstr "Requiere logro (automático)"
 
 #: addons/badges/admin/panels/manage.php:50
 #, fuzzy
-#| msgid "Delete Badge"
 msgid "Default Badge for All"
 msgstr "Borrar medalla"
 
 #: addons/badges/admin/panels/manage.php:65
 #, fuzzy
-#| msgid "Delete Badge"
 msgid "Enable Default Badge"
 msgstr "Borrar medalla"
 
@@ -305,7 +296,6 @@ msgstr "No"
 #: addons/badges/admin/panels/manage.php:77
 #: addons/badges/admin/panels/manage.php:99
 #, fuzzy
-#| msgid "Choose which users receive this badge"
 msgid "Choose which users should receive this badge"
 msgstr "Elija qué usuarios reciben esta medalla"
 
@@ -318,9 +308,6 @@ msgstr "Escoja..."
 #: addons/badges/admin/panels/manage.php:93
 #: addons/badges/admin/panels/manage.php:117
 #, fuzzy
-#| msgid ""
-#| "You can assign this badge to specific to the users you want by choosing "
-#| "them here."
 msgid ""
 "You can assign this badge to the users belonging to specified role you want "
 "by choosing them here."
@@ -358,7 +345,6 @@ msgstr "Comentarios"
 
 #: addons/badges/admin/panels/manage.php:152
 #, fuzzy
-#| msgid "Disable registration"
 msgid "Days (since registration)"
 msgstr "Desactivar registro"
 
@@ -384,7 +370,6 @@ msgstr ""
 
 #: addons/badges/admin/panels/user_badges.php:25
 #, fuzzy
-#| msgid "Select a user..."
 msgid "Select a badge..."
 msgstr "Seleccionar un usuario..."
 
@@ -589,18 +574,14 @@ msgstr "No hay usuarios que coincidan con sus criterios de búsqueda."
 
 #: addons/multiforms/admin/admin-functions.php:28
 #, fuzzy, php-format
-#| msgid ""
-#| "Done. You can use this seperate registration form by adding this to your "
-#| "register shortcode: <code>type=%1$s</code> Example: <strong>[userpro "
-#| "template=register type=%1$s]</strong>"
 msgid ""
 "Done. You can use this seperate registration form by adding this to your "
 "register shortcode: <code>type=\"%1$s\"</code> Example: <strong>[userpro "
 "template=register type=\"%1$s\"]</strong>"
 msgstr ""
 "Terminado. Puede usar este formulario de registro por separado añadiendo "
-"esto a su shortcode de registro: <code>type=%1$s</code> Ejemplo: "
-"<strong>[userpro template=register type=%1$s]</strong>"
+"esto a su shortcode de registro: <code>type=%1$s</code> Ejemplo: <strong>"
+"[userpro template=register type=%1$s]</strong>"
 
 #: addons/multiforms/admin/admin-functions.php:45
 #: addons/multiforms/admin/admin-functions.php:83
@@ -613,7 +594,6 @@ msgstr ""
 
 #: addons/multiforms/admin/admin-functions.php:121
 #, fuzzy, php-format
-#| msgid "This account has been deleted successfully."
 msgid "Form %1$s deleted succesfully"
 msgstr "Esta cuenta ha sido eliminada satisfactoriamente."
 
@@ -623,7 +603,6 @@ msgstr "Configurar múltiples formularios"
 
 #: addons/multiforms/admin/admin.php:33
 #, fuzzy
-#| msgid "Edit Field"
 msgid "Edit Forms"
 msgstr "Editar campo"
 
@@ -633,9 +612,6 @@ msgstr "Múltiples formularios de registro"
 
 #: addons/multiforms/admin/panels/edit_multifrm.php:3
 #, fuzzy
-#| msgid ""
-#| "You can find the achievement badges that you have created and edit the "
-#| "rules of achievement from this page."
 msgid ""
 "You can find the Multiple Forms that you have created and edit it from this "
 "page."
@@ -646,7 +622,6 @@ msgstr ""
 #: addons/multiforms/admin/panels/edit_multifrm.php:13
 #: addons/multiforms/admin/panels/edit_multifrm.php:21
 #, fuzzy
-#| msgid "Field Title"
 msgid "Form Title"
 msgstr "Título de campo"
 
@@ -657,7 +632,6 @@ msgstr ""
 
 #: addons/multiforms/admin/panels/edit_multifrm.php:15
 #, fuzzy
-#| msgid "Actions"
 msgid "Action"
 msgstr "Acciones"
 
@@ -696,8 +670,8 @@ msgid ""
 "field customizer (Registration Fields) <a href=\"%s\">here</a>"
 msgstr ""
 "Primero, configure todos los campos, incluido los múltiples campos de "
-"formularios en el configurador de campos (Campos de Registro) <a href=\"%s"
-"\">aquí</a>"
+"formularios en el configurador de campos (Campos de Registro) <a href=\"%s\">"
+"aquí</a>"
 
 #: addons/multiforms/admin/panels/settings.php:46
 msgid ""
@@ -738,7 +712,6 @@ msgstr "Comenzar"
 
 #: addons/multiforms/admin/panels/template.php:8
 #, fuzzy
-#| msgid "This account has been deleted successfully."
 msgid "Done! Form edited successfully"
 msgstr "Esta cuenta ha sido eliminada satisfactoriamente."
 
@@ -849,21 +822,22 @@ msgstr "&mdash; Para un campo personalizado &mdash;"
 #: addons/redirects/admin/panels/login_redirects.php:26
 #: addons/redirects/admin/panels/register_redirects.php:26
 msgid ""
-"If you want redirection based on specific <strong>custom field value</"
-"strong> enter the value here: (e.g. country or city) This is helpful if you "
-"wish to redirect users who have a specific city in profile, be redirected to "
-"a custom page after their login. If you wish to <strong>auto-map</strong> or "
+"If you want redirection based on specific <strong>custom field value</strong>"
+" enter the value here: (e.g. country or city) This is helpful if you wish to "
+"redirect users who have a specific city in profile, be redirected to a "
+"custom page after their login. If you wish to <strong>auto-map</strong> or "
 "redirect users automatically based on the custom field value you could use "
 "wildcards like this: <strong>{your_custom_field}</strong> in the redirection "
 "URL. The wildcard will also work on {username}"
 msgstr ""
-"Si quiere una redirección basada en un <strong>valor de campo personalizado</"
-"strong> concreto, introduzca el valor aquí. Por Ejemplo, país o ciudad. Esto "
-"es útil si desea redirigir usuarios de una ciudad concreta a una página "
-"personalizada tras su inicio de sesión. Si desea <strong>auto-mapear</"
-"strong> o redirigir a los usuarios automáticamente basado en su valor de "
-"campo personalizado, puede usar comodines como <strong>{your_custom_field}</"
-"strong> en la URL de redirección. El comodín también funcionará en {username}"
+"Si quiere una redirección basada en un <strong>valor de campo "
+"personalizado</strong> concreto, introduzca el valor aquí. Por Ejemplo, país "
+"o ciudad. Esto es útil si desea redirigir usuarios de una ciudad concreta a "
+"una página personalizada tras su inicio de sesión. Si desea <strong>auto-"
+"mapear</strong> o redirigir a los usuarios automáticamente basado en su "
+"valor de campo personalizado, puede usar comodines como <strong>"
+"{your_custom_field}</strong> en la URL de redirección. El comodín también "
+"funcionará en {username}"
 
 #: addons/redirects/admin/panels/login_redirects.php:27
 #: addons/redirects/admin/panels/register_redirects.php:27
@@ -876,14 +850,15 @@ msgid ""
 "You can use wildcards for automated mapping. For example, if you enter "
 "{username} that will be replaced automatically by the username in "
 "redirection url. If you want to map a custom field <strong>country</strong> "
-"then use the wildcart {country} to map the user to his country "
-"automatically. If you use wildcards, the field value is not required."
+"then use the wildcart {country} to map the user to his country automatically."
+" If you use wildcards, the field value is not required."
 msgstr ""
 "Puede usar comodines para el mapeado automático. Por ejemplo, si introduce "
 "{username}, será automáticamente reemplazado por el nombre de usuario en la "
-"URL de redirección. Si quiere mapear un campo personalizado <strong>country</"
-"strong>, entonces use el comodín {country} para mapear al usuario a este "
-"país en concreto. Si utiliza comodines, el valor del campo no es obligatorio."
+"URL de redirección. Si quiere mapear un campo personalizado <strong>"
+"country</strong>, entonces use el comodín {country} para mapear al usuario a "
+"este país en concreto. Si utiliza comodines, el valor del campo no es "
+"obligatorio."
 
 #: addons/redirects/admin/panels/login_redirects.php:32
 #: addons/redirects/admin/panels/register_redirects.php:32
@@ -905,7 +880,6 @@ msgstr "Redirecciones de registro existentes"
 
 #: addons/requests/admin/admin.php:27 addons/requests/admin/admin.php:87
 #, fuzzy
-#| msgid "%s Requests"
 msgid "User Requests"
 msgstr "%s peticiones"
 
@@ -916,7 +890,6 @@ msgstr "%d nuevas peticiones de verificación"
 
 #: addons/requests/admin/admin.php:85
 #, fuzzy, php-format
-#| msgid "%s Requests"
 msgid "User Requests %s"
 msgstr "%s peticiones"
 
@@ -936,7 +909,6 @@ msgstr ""
 #: addons/requests/admin/panels/settings.php:122 admin/panels/requests.php:18
 #: admin/panels/requests.php:64 admin/panels/requests.php:117
 #, fuzzy
-#| msgid "Default"
 msgid "Default Order"
 msgstr "Por defecto"
 
@@ -1073,7 +1045,6 @@ msgstr "Enviar notificaciones por e-mail cuando alguien siga a otro usuario"
 
 #: addons/social/admin/panels/settings.php:20
 #, fuzzy
-#| msgid "Send e-mail notification when someone follow another user"
 msgid "Send e-mail notification to followers when user creates post"
 msgstr "Enviar notificaciones por e-mail cuando alguien siga a otro usuario"
 
@@ -1151,7 +1122,6 @@ msgstr "ahora es una cuenta verificada."
 
 #: addons/social/functions/api.php:80
 #, fuzzy, php-format
-#| msgid "has published a <a href=\"%s\">new %s</a>."
 msgid "has published a <a href=\"%s\">post on socialwall</a>."
 msgstr "ha publicado un <a href=\"%s\">nuevo %s</a>."
 
@@ -1186,7 +1156,6 @@ msgstr "se acaba de registrar!"
 #: addons/social/functions/api.php:236 addons/social/functions/api.php:258
 #: addons/social/functions/api.php:279
 #, fuzzy
-#| msgid "you"
 msgid "You"
 msgstr "usted"
 
@@ -1228,7 +1197,6 @@ msgstr "Siguiendo"
 
 #: addons/social/functions/api.php:488
 #, fuzzy, php-format
-#| msgid "<span>%s</span> following"
 msgid "<span>%s</span>"
 msgstr "<span>%s</span> siguiendo"
 
@@ -1276,22 +1244,17 @@ msgstr "¡{USERPRO_FOLLOWER_NAME} ahora le sigue!"
 
 #: addons/social/functions/defaults.php:43
 #, fuzzy
-#| msgid ""
-#| "{USERPRO_USERNAME} has just created a new account at {USERPRO_BLOGNAME}."
 msgid "{USERPRO_FROM_NAME} has created a new post - "
 msgstr ""
 "{USERPRO_USERNAME} acaba de crear una nueva cuenta en {USERPRO_BLOGNAME}."
 
 #: addons/social/functions/defaults.php:44
 #, fuzzy
-#| msgid "Post Name"
 msgid "Post Name : {VAR1}"
 msgstr "Nombre de entrada"
 
 #: addons/social/functions/defaults.php:46
 #, fuzzy
-#| msgid ""
-#| "{USERPRO_USERNAME} has just created a new account at {USERPRO_BLOGNAME}."
 msgid "{USERPRO_FROM_NAME} has created a new post!"
 msgstr ""
 "{USERPRO_USERNAME} acaba de crear una nueva cuenta en {USERPRO_BLOGNAME}."
@@ -1373,38 +1336,32 @@ msgstr ""
 #: addons/timeline/admin/panels/settings.php:2
 #: addons/userpro-google-map/admin/panels/settings.php:3
 #, fuzzy
-#| msgid "Envato Settings"
 msgid "General Settings"
 msgstr "Ajustes de Envato"
 
 #: addons/timeline/admin/panels/settings.php:5
 #, fuzzy
-#| msgid "Enable Field Icons"
 msgid "Enable Timeline"
 msgstr "Habilitar iconos de campos"
 
 #: addons/timeline/templates/template-timeline-profilepic_update.php:14
 #, fuzzy
-#| msgid "External Profile Pictures"
 msgid "Changed profile picture"
 msgstr "Fotos de perfil externas"
 
 #: addons/timeline/templates/template-timeline-registered.php:10
 #, fuzzy
-#| msgid "Register"
 msgid "Got Registered"
 msgstr "Registrar"
 
 #: addons/timeline/templates/template-timeline-verified.php:9
 #, fuzzy
-#| msgid "Your account is now verified!"
 msgid "Account got verified"
 msgstr "¡Su cuenta se encuentra ahora verificada!"
 
 #: addons/userpro-google-map/admin/admin.php:17
 #: addons/userpro-google-map/admin/admin.php:29
 #, fuzzy
-#| msgid "Google Linked"
 msgid "Google Map"
 msgstr "Enlazado a Google"
 
@@ -1414,21 +1371,21 @@ msgstr ""
 
 #: addons/userpro-google-map/admin/panels/settings.php:15
 #, fuzzy
-#| msgid "MailChimp API Key"
 msgid "Google Map API Key"
 msgstr "MailChimp API Key"
 
 #: addons/userpro-google-map/admin/panels/settings.php:18
 msgid ""
-"Enter the Google map API key value. Generate your <a target=\"_blank\" href="
-"\"https://console.developers.google.com/flows/enableapi?apiid=maps_backend,"
-"geocoding_backend,directions_backend,distance_matrix_backend,"
-"elevation_backend,places_backend&reusekey=true\">API Key</a>"
+"Enter the Google map API key value. Generate your <a target=\"_blank\" "
+"href=\"https://console.developers.google.com/flows/enableapi?"
+"apiid=maps_backend,geocoding_backend,directions_backend,"
+"distance_matrix_backend,elevation_backend,places_backend&reusekey=true\">API "
+"Key</a>"
 msgstr ""
 
 #: addons/userpro-google-map/functions/defaults.php:30
 msgid "Hello,"
-msgstr ""
+msgstr "Hola,"
 
 #: addons/userpro-google-map/functions/defaults.php:31
 msgid "Thanks and Regards,"
@@ -1456,13 +1413,11 @@ msgstr "Esta copia no tiene licencia. Por favor, active su copia."
 
 #: admin/admin-functions.php:33
 #, fuzzy
-#| msgid "Need Support?"
 msgid "Email Support"
 msgstr "¿Necesita soporte?"
 
 #: admin/admin-functions.php:34
 #, fuzzy
-#| msgid "Username"
 msgid "User Manual"
 msgstr "Nombre de usuario"
 
@@ -1557,7 +1512,6 @@ msgstr ""
 
 #: admin/admin-functions.php:95
 #, fuzzy
-#| msgid "Replace Display Name with custom field"
 msgid "Displays value of custom field"
 msgstr "Reemplazar Nombre a mostrar por campo personalizado"
 
@@ -1567,13 +1521,11 @@ msgstr "Variable personalizada 1"
 
 #: admin/admin-functions.php:115
 #, fuzzy
-#| msgid "Displays blog URL"
 msgid "Displays Login Popup"
 msgstr "Muestra la URL del blog"
 
 #: admin/admin-functions.php:116
 #, fuzzy
-#| msgid "Displays the Username of user"
 msgid "Displays Register Popup"
 msgstr "Muestra el Nombre de usuario del usuario"
 
@@ -1629,7 +1581,6 @@ msgstr ""
 
 #: admin/admin-functions.php:376
 #, fuzzy
-#| msgid "Social Fields"
 msgid " Social Fields."
 msgstr "Campos sociales"
 
@@ -1703,7 +1654,6 @@ msgstr ""
 
 #: admin/admin-functions.php:554
 #, fuzzy
-#| msgid "Select %s"
 msgid "select"
 msgstr "Seleccionar %s"
 
@@ -1819,7 +1769,6 @@ msgstr "Invitación verificada"
 
 #: admin/admin-functions.php:1046 admin/admin-users.php:72
 #, fuzzy
-#| msgid "Account Details"
 msgid "Account Blocked"
 msgstr "Detalles de la cuenta"
 
@@ -1833,7 +1782,6 @@ msgstr "Sin restricción"
 
 #: admin/admin-metabox.php:14
 #, fuzzy
-#| msgid "Restricted Content / Members Only"
 msgid "Restricted to All Members"
 msgstr "Contenido restringiod / Sólo miembros"
 
@@ -1863,8 +1811,8 @@ msgstr ""
 
 #: admin/admin-pointers.php:36
 msgid ""
-"Add more features to your site by installing addons . Check out <a href="
-"\"admin.php?page=userpro-addons\">available addons</a> for UserPro"
+"Add more features to your site by installing addons . Check out <a "
+"href=\"admin.php?page=userpro-addons\">available addons</a> for UserPro"
 msgstr ""
 
 #: admin/admin-users.php:11
@@ -1877,7 +1825,6 @@ msgstr "Verificado"
 
 #: admin/admin-users.php:13
 #, fuzzy
-#| msgid "Select a user"
 msgid "Block user"
 msgstr "Seleccionar un usuario"
 
@@ -1900,7 +1847,6 @@ msgstr "Campos"
 
 #: admin/admin.php:83
 #, fuzzy
-#| msgid "Envato Username"
 msgid "Invite User"
 msgstr "Envato Username"
 
@@ -1914,7 +1860,6 @@ msgstr "Notificaciones de e-mail"
 
 #: admin/admin.php:86
 #, fuzzy
-#| msgid "Reset Options"
 msgid "Newsletter Options"
 msgstr "Restablecer opciones"
 
@@ -1936,7 +1881,6 @@ msgstr "Campos basados en roles"
 
 #: admin/admin.php:91
 #, fuzzy
-#| msgid "Import/Export"
 msgid "Import/Export Users"
 msgstr "Importar/Exportar"
 
@@ -1954,13 +1898,11 @@ msgstr "UserPro"
 
 #: admin/admin.php:180
 #, fuzzy
-#| msgid "Social Features"
 msgid "Add More Features"
 msgstr "Prestaciones sociales"
 
 #: admin/admin.php:181
 #, fuzzy
-#| msgid "%s Requests"
 msgid "Service Request"
 msgstr "%s peticiones"
 
@@ -2064,7 +2006,6 @@ msgstr ""
 
 #: admin/class-up-updates-plugin.php:95
 #, fuzzy
-#| msgid "An error has occured"
 msgid "An unknown error occurred"
 msgstr "Ha ocurrido un error"
 
@@ -2086,7 +2027,6 @@ msgstr ""
 
 #: admin/panels/exportusers.php:7
 #, fuzzy
-#| msgid "Number of results per page"
 msgid "Number of Users to export"
 msgstr "Número de resultados por página"
 
@@ -2114,9 +2054,6 @@ msgstr ""
 
 #: admin/panels/exportusers.php:38
 #, fuzzy
-#| msgid ""
-#| "Enter a comma seperated list of field keys to include in the maximum "
-#| "field length validation."
 msgid ""
 "A comma seperated list of fields to include only in the export. e.g. "
 "first_name,user_login,id,user_email"
@@ -2138,7 +2075,6 @@ msgstr ""
 
 #: admin/panels/exportusers.php:56
 #, fuzzy
-#| msgid "Send e-mail notification when someone follow another user"
 msgid "Send email notification to users on registration"
 msgstr "Enviar notificaciones por e-mail cuando alguien siga a otro usuario"
 
@@ -2155,8 +2091,8 @@ msgid ""
 msgstr ""
 "Aquí puede poner ciertos campos disponibles únicamente para ciertos roles. "
 "Por ejemplo, si desea hacer un conjunto de campos no visibles para el rol "
-"Suscriptor, o quiere hacer otros campos disponibles sólo para el rol "
-"Cliente, esto le resolverá el problema."
+"Suscriptor, o quiere hacer otros campos disponibles sólo para el rol Cliente,"
+" esto le resolverá el problema."
 
 #: admin/panels/fieldroles.php:5
 msgid "Setup Field / Role Relationships"
@@ -2277,11 +2213,11 @@ msgid ""
 "sync/recognize any meta key stored in your user database, so you could "
 "display the value of any existing meta data."
 msgstr ""
-"Puede añadir cualquier campo a sus formularios, tales como Ciudad, "
-"Dirección, o cualquier otra cosa haciendo clic en <strong>Añadir nuevo "
-"campo</strong>. El plugin automáticamente sincronizará/reconocerá cualquier "
-"clave meta almacenada en su base de datos de usuarios, así que puede mostrar "
-"el valor de cualquier dato meta existente."
+"Puede añadir cualquier campo a sus formularios, tales como Ciudad, Dirección,"
+" o cualquier otra cosa haciendo clic en <strong>Añadir nuevo campo</strong>. "
+"El plugin automáticamente sincronizará/reconocerá cualquier clave meta "
+"almacenada en su base de datos de usuarios, así que puede mostrar el valor "
+"de cualquier dato meta existente."
 
 #: admin/panels/fields.php:55
 msgid "Add New Field"
@@ -2293,11 +2229,11 @@ msgstr "Título de campo"
 
 #: admin/panels/fields.php:66
 msgid ""
-"Enter title for this data. example: City, How did you hear about us, "
-"Twitter, Personal Website, etc."
+"Enter title for this data. example: City, How did you hear about us, Twitter,"
+" Personal Website, etc."
 msgstr ""
-"Introduzca un título para este dato. Por ejemplo, Ciudad, Cómo nos "
-"conociste, Twitter, Website personal, etc."
+"Introduzca un título para este dato. Por ejemplo, Ciudad, Cómo nos conociste,"
+" Twitter, Website personal, etc."
 
 #: admin/panels/fields.php:70
 msgid "Field Type"
@@ -2413,7 +2349,6 @@ msgstr "Exportar ajustes"
 
 #: admin/panels/import_export.php:11
 #, fuzzy
-#| msgid "How to edit the field settings?"
 msgid "Download the file of userpro settings"
 msgstr "¿Cómo editar los ajustes de campos?"
 
@@ -2467,7 +2402,6 @@ msgstr "Importar grupos de campos"
 
 #: admin/panels/invite.php:21
 #, fuzzy
-#| msgid "Panic Key Setting"
 msgid "Invite Users Setting"
 msgstr "Ajustes de clave de pánico"
 
@@ -2486,7 +2420,6 @@ msgstr ""
 
 #: admin/panels/invite.php:48
 #, fuzzy
-#| msgid "Settings"
 msgid "Save Settings"
 msgstr "Ajustes"
 
@@ -2496,7 +2429,6 @@ msgstr ""
 
 #: admin/panels/invite.php:61
 #, fuzzy
-#| msgid "Displays the E-mail address of user"
 msgid "Enter Email addresses to Invite"
 msgstr "Muestra el e-mail del usuario"
 
@@ -2511,17 +2443,17 @@ msgstr ""
 #: admin/panels/licensing.php:3
 msgid ""
 "Please note: <strong>cURL must be enabled</strong> to successfully activate "
-"your license. If you want to find your purchase code, please look <a href="
-"\"http://userproplugin.com/userpro/docs/#install\">here</a>. If you cannot "
-"enable cURL or getting another error, please use the support forum link and "
-"we will activate your license manually."
+"your license. If you want to find your purchase code, please look <a "
+"href=\"http://userproplugin.com/userpro/docs/#install\">here</a>. If you "
+"cannot enable cURL or getting another error, please use the support forum "
+"link and we will activate your license manually."
 msgstr ""
 "Por favor, tenga en cuenta que: <strong>cURL debe estar habilitado</strong> "
 "para activar su licencia correctamente. Si quiere encontrar su código de "
-"compra, por favor mire <a href=\"http://userproplugin.com/userpro/docs/"
-"#install\">aquí</a>. Si no puede habilitar cURL, o recibe otro error, por "
-"favor utilice el enlace al foro de soporte y activaremos su licencia "
-"manualmente."
+"compra, por favor mire <a href=\"http://userproplugin."
+"com/userpro/docs/#install\">aquí</a>. Si no puede habilitar cURL, o recibe "
+"otro error, por favor utilice el enlace al foro de soporte y activaremos su "
+"licencia manualmente."
 
 #: admin/panels/licensing.php:5
 msgid "Activate UserPro"
@@ -2533,8 +2465,8 @@ msgstr "Introduzca su código de compra."
 
 #: admin/panels/mail.php:7
 msgid ""
-"The variables in {CURLY BRACKETS} are used to present data and info in "
-"email. You can use them to customize your email template."
+"The variables in {CURLY BRACKETS} are used to present data and info in email."
+" You can use them to customize your email template."
 msgstr ""
 "Las variables en {CURLY BRACKETS} se usan para presentar datos e información "
 "en el e-mail. Puede usarlos para personalizar sus plantillas de e-mail."
@@ -2553,7 +2485,6 @@ msgstr "La dirección que aparece en los e-mails enviados por UserPro"
 
 #: admin/panels/mail.php:27
 #, fuzzy
-#| msgid "Send an e-mail when user is verified"
 msgid "Send an Welcome e-mail to new user"
 msgstr "Enviar un e-mail cuando el usuario esté verificado"
 
@@ -2563,14 +2494,12 @@ msgstr ""
 
 #: admin/panels/mail.php:47
 #, fuzzy
-#| msgid "Send admin an e-mail when user updates profile"
 msgid "Send an e-mail for Update password"
 msgstr ""
 "Enviar un e-mail al administrador cuando el usuario actualice su perfil"
 
 #: admin/panels/mail.php:57
 #, fuzzy
-#| msgid "Reset Password"
 msgid "Reset password by email link"
 msgstr "Restablecer contraseña"
 
@@ -2584,7 +2513,6 @@ msgstr "Enviar un e-mail cuando el usuario deje de estar verificado"
 
 #: admin/panels/mail.php:87
 #, fuzzy
-#| msgid "Send an e-mail when user is verified"
 msgid "Send an e-mail when account is blocked"
 msgstr "Enviar un e-mail cuando el usuario esté verificado"
 
@@ -2600,7 +2528,6 @@ msgstr ""
 
 #: admin/panels/mail.php:116
 #, fuzzy
-#| msgid "Send an e-mail when user is unverified"
 msgid "Send an e-mail when account is unblocked"
 msgstr "Enviar un e-mail cuando el usuario deje de estar verificado"
 
@@ -2615,7 +2542,6 @@ msgstr "Enviar un e-mail al administrador cuando el usuario se elimine"
 
 #: admin/panels/mail.php:144
 #, fuzzy
-#| msgid "Send admin an e-mail when user updates profile"
 msgid "Send admin an e-mail when New Registration"
 msgstr ""
 "Enviar un e-mail al administrador cuando el usuario actualice su perfil"
@@ -2640,7 +2566,6 @@ msgstr "Perfil eliminado (notificación de administrador)"
 
 #: admin/panels/mail.php:274
 #, fuzzy
-#| msgid "New Registration Template (Admin Notification)"
 msgid "Notification email for verification request (Admin Notification)"
 msgstr "Plantilla de nuevo registro (notificación de administrador)"
 
@@ -2654,7 +2579,6 @@ msgstr "Personalizar e-mail de \"Validación de e-mail\""
 
 #: admin/panels/mail.php:358
 #, fuzzy
-#| msgid "Customize \"Email Validation\" Mail"
 msgid "Customize \"Email Validation after email change\" Mail"
 msgstr "Personalizar e-mail de \"Validación de e-mail\""
 
@@ -2668,13 +2592,11 @@ msgstr "Personalizar e-mail de \"Restablecer contraseña\""
 
 #: admin/panels/mail.php:448
 #, fuzzy
-#| msgid "Customize \"Reset Password\" Mail"
 msgid "Customize \"Reset Password by email link\" Mail"
 msgstr "Personalizar e-mail de \"Restablecer contraseña\""
 
 #: admin/panels/mail.php:478
 #, fuzzy
-#| msgid "Customize \"Reset Password\" Mail"
 msgid "Customize \"Password Change\" Mail"
 msgstr "Personalizar e-mail de \"Restablecer contraseña\""
 
@@ -2692,7 +2614,6 @@ msgstr "Personalizar e-mail de \"Cuenta no verificada\""
 
 #: admin/panels/mail.php:597
 #, fuzzy
-#| msgid "User Awaiting Manual Review Template (Admin Notification)"
 msgid "Customize \"Awaiting Manual Review\" Mail (User Notification)"
 msgstr ""
 "Plantilla de usuario esperando revisión manual (notificación de "
@@ -2700,13 +2621,11 @@ msgstr ""
 
 #: admin/panels/mail.php:629
 #, fuzzy
-#| msgid "Customize \"Account Verified\" Mail"
 msgid "Customize \"Account Blocked\" Mail"
 msgstr "Personalizar e-mail de \"Cuenta verificada\""
 
 #: admin/panels/mail.php:659
 #, fuzzy
-#| msgid "Customize \"Account Un-verified\" Mail"
 msgid "Customize \"Account Unblocked\" Mail"
 msgstr "Personalizar e-mail de \"Cuenta no verificada\""
 
@@ -2736,7 +2655,6 @@ msgstr ""
 
 #: admin/panels/newsletter_option.php:17
 #, fuzzy
-#| msgid "Settings"
 msgid "AWeber Settings"
 msgstr "Ajustes"
 
@@ -2746,9 +2664,6 @@ msgstr ""
 
 #: admin/panels/newsletter_option.php:23 admin/panels/settings.php:1548
 #, fuzzy
-#| msgid ""
-#| "Enter your MailChimp API key here to allow integration with MailChimp "
-#| "subscription."
 msgid ""
 "Enter your Aweber Authorization Code here to allow integration with Aweber "
 "subscription."
@@ -2762,7 +2677,6 @@ msgstr ""
 
 #: admin/panels/newsletter_option.php:36
 #, fuzzy
-#| msgid "Compatibility Settings"
 msgid "Campaign Monitor Settings"
 msgstr "Ajustes de compatibilidad"
 
@@ -2772,9 +2686,6 @@ msgstr ""
 
 #: admin/panels/newsletter_option.php:43
 #, fuzzy
-#| msgid ""
-#| "Enter your MailChimp API key here to allow integration with MailChimp "
-#| "subscription."
 msgid ""
 "Enter your CampaignMonitor Authorization Code here to allow integration with "
 "Campaignmonitor subscription."
@@ -2942,7 +2853,6 @@ msgstr "Limpiar subidas sin usar"
 
 #: admin/panels/settings.php:13 admin/panels/settings.php:15
 #, fuzzy
-#| msgid "Clear your Search"
 msgid "Clear Members Cache"
 msgstr "Limpiar su búsqueda"
 
@@ -3000,7 +2910,6 @@ msgstr "Estados En línea/Desconectado"
 
 #: admin/panels/settings.php:72
 #, fuzzy
-#| msgid "Online/Offline Status"
 msgid "To Display Online/Offline Status "
 msgstr "Estados En línea/Desconectado"
 
@@ -3018,7 +2927,6 @@ msgstr "Ajustes de compatibilidad"
 
 #: admin/panels/settings.php:102
 #, fuzzy
-#| msgid "External Profile Pictures"
 msgid "Profile Pictures Fix"
 msgstr "Fotos de perfil externas"
 
@@ -3039,7 +2947,6 @@ msgstr ""
 
 #: admin/panels/settings.php:112
 #, fuzzy
-#| msgid "URL Encoding"
 msgid "Url Encoding"
 msgstr "Codificación de URL"
 
@@ -3060,8 +2967,8 @@ msgid ""
 "Please switch off logging activity If you have host problems, your site "
 "crashes or cannot save a post, etc."
 msgstr ""
-"Por favor, desactive el registro de actividad si tiene problemas de "
-"servidor, su sitio se cae, o no puede guardar una entrada, etc."
+"Por favor, desactive el registro de actividad si tiene problemas de servidor,"
+" su sitio se cae, o no puede guardar una entrada, etc."
 
 #: admin/panels/settings.php:135
 msgid "Allow Dash for Display Names"
@@ -3108,7 +3015,6 @@ msgstr ""
 
 #: admin/panels/settings.php:166
 #, fuzzy
-#| msgid "Twitter Linked"
 msgid "Twitter Fix"
 msgstr "Enlazado a Twitter"
 
@@ -3122,8 +3028,8 @@ msgstr ""
 
 #: admin/panels/settings.php:172
 msgid ""
-"Try playing with this setting If you encounter issues with twitter Login/"
-"Register."
+"Try playing with this setting If you encounter issues with twitter "
+"Login/Register."
 msgstr ""
 
 #: admin/panels/settings.php:179
@@ -3164,7 +3070,6 @@ msgstr ""
 
 #: admin/panels/settings.php:213
 #, fuzzy
-#| msgid "Enable Field Icons"
 msgid "Enable Connections"
 msgstr "Habilitar iconos de campos"
 
@@ -3206,9 +3111,9 @@ msgstr "Nombre a mostrar"
 
 #: admin/panels/settings.php:251
 msgid ""
-"User profiles permalink structure setting e.g. /profile/34 or /profile/"
-"Username or /profile/FirstName+LastName If you have a problem with permalink "
-"structure, you can try to change this setting."
+"User profiles permalink structure setting e.g. /profile/34 or "
+"/profile/Username or /profile/FirstName+LastName If you have a problem with "
+"permalink structure, you can try to change this setting."
 msgstr ""
 "Ajuste de estructura de enlaces permanentes de los perfiles de usuarios. Por "
 "ejemplo, /profile/34 o /profile/Username o /profile/FirstName+LastName. Si "
@@ -3314,7 +3219,6 @@ msgstr ""
 
 #: admin/panels/settings.php:336
 #, fuzzy
-#| msgid "External Profile Pictures"
 msgid "Enable webcam to take profile Picture"
 msgstr "Fotos de perfil externas"
 
@@ -3352,7 +3256,6 @@ msgstr ""
 
 #: admin/panels/settings.php:383
 #, fuzzy
-#| msgid "Multiselect Box"
 msgid "Multi Select"
 msgstr "Caja de selección múltiple"
 
@@ -3374,15 +3277,11 @@ msgstr ""
 
 #: admin/panels/settings.php:422
 #, fuzzy
-#| msgid "Restrict Content"
 msgid "Text for Restricted Content"
 msgstr "Restringir contenido"
 
 #: admin/panels/settings.php:425
 #, fuzzy
-#| msgid ""
-#| "The variables in {CURLY BRACKETS} are used to present data and info in "
-#| "email. You can use them to customize your email template."
 msgid ""
 "The variables in {CURLY BRACKETS} are used to represent data and info in "
 "text. You can use them to customize your restricted content text."
@@ -3572,26 +3471,21 @@ msgstr ""
 
 #: admin/panels/settings.php:603
 #, fuzzy
-#| msgid "MailChimp Subscribe Text"
 msgid "Check the MailChimp Subscribe checkbox by default"
 msgstr "Texto de suscripción de MailChimp"
 
 #: admin/panels/settings.php:612
 #, fuzzy
-#| msgid "Maximum Field Length Validation"
 msgid "Minimum Field Length Validation"
 msgstr "Validación de la longitud máxima del campo"
 
 #: admin/panels/settings.php:622
 #, fuzzy
-#| msgid "Number of characters allowed"
 msgid "Minimum number of characters allowed"
 msgstr "Número de caracteres permitidos"
 
 #: admin/panels/settings.php:625
 #, fuzzy
-#| msgid ""
-#| "How many characters should be allowed if the above option is turned on."
 msgid ""
 "Minimum many characters should be allowed if the above option is turned on."
 msgstr ""
@@ -3599,15 +3493,11 @@ msgstr ""
 
 #: admin/panels/settings.php:630
 #, fuzzy
-#| msgid "Fields that need to be validated for maximum length"
 msgid "Fields that need to be validated for minimun length"
 msgstr "Campos que necesitan ser validados para una longitud máxima"
 
 #: admin/panels/settings.php:633
 #, fuzzy
-#| msgid ""
-#| "Enter a comma seperated list of field keys to include in the maximum "
-#| "field length validation."
 msgid ""
 "Enter a comma seperated list of field keys to include in the minimum field "
 "length validation."
@@ -3621,25 +3511,21 @@ msgstr "Ajustes de perfil"
 
 #: admin/panels/settings.php:643
 #, fuzzy
-#| msgid "Select a user"
 msgid "Select layout"
 msgstr "Seleccionar un usuario"
 
 #: admin/panels/settings.php:647
 #, fuzzy
-#| msgid "Fields Layout"
 msgid "Modern Layout"
 msgstr "Apariencia de los campos"
 
 #: admin/panels/settings.php:648
 #, fuzzy
-#| msgid "Fields Layout"
 msgid "Classic Layout"
 msgstr "Apariencia de los campos"
 
 #: admin/panels/settings.php:649
 #, fuzzy
-#| msgid "Fields Layout"
 msgid "Grand Layout"
 msgstr "Apariencia de los campos"
 
@@ -3653,7 +3539,6 @@ msgstr "Permitir a los miembros ver otros perfiles de miembros"
 
 #: admin/panels/settings.php:674
 #, fuzzy
-#| msgid "Roles that can view other profiles"
 msgid "Roles that can edit other users profile"
 msgstr "Roles que pueden ver otros perfiles"
 
@@ -3686,7 +3571,6 @@ msgstr ""
 
 #: admin/panels/settings.php:714
 #, fuzzy
-#| msgid "Select roles"
 msgid "Select role"
 msgstr "Seleccione roles"
 
@@ -3742,7 +3626,6 @@ msgstr "Mostrar la bandera del país del usuario en las medallas"
 
 #: admin/panels/settings.php:811
 #, fuzzy
-#| msgid "Display User Country Flag in Profile"
 msgid "Display badges on profile"
 msgstr "Mostrar la bandera del país del usuario en el perfil"
 
@@ -3767,8 +3650,8 @@ msgstr "Ajustes de clave de pánico"
 msgid ""
 "The panic key helps you access WP-admin screen If you enabled the hide "
 "backend setting below, and for some reason you cannot get back into your "
-"site. To enter your backend with the panic key use this URL: <strong>%s</"
-"strong>"
+"site. To enter your backend with the panic key use this URL: <strong>"
+"%s</strong>"
 msgstr ""
 "La clave de pánico te permite acceder a la pantalla del WP-admin si habilita "
 "la opción de ocultar los ajustes del backend a continuación, y por algún "
@@ -3893,11 +3776,11 @@ msgstr "Redirigir al usuario al perfil frontend"
 
 #: admin/panels/settings.php:954
 msgid ""
-"You can also redirect users to custom URL by passing <code>login_redirect</"
-"code> valid URL in your shortcode."
+"You can also redirect users to custom URL by passing <code>"
+"login_redirect</code> valid URL in your shortcode."
 msgstr ""
-"También puede redirigir a los usuarios a una URL personalizada pasando "
-"<code>login_redirect</code> con una URL válida en su shortcode."
+"También puede redirigir a los usuarios a una URL personalizada pasando <code>"
+"login_redirect</code> con una URL válida en su shortcode."
 
 #: admin/panels/settings.php:959
 msgid "Redirect admins to dashboard always"
@@ -3917,8 +3800,8 @@ msgstr "Tras un registro satisfactorio"
 
 #: admin/panels/settings.php:1000
 msgid ""
-"You can also redirect users to custom URL by passing "
-"<code>register_redirect</code> valid URL in your shortcode."
+"You can also redirect users to custom URL by passing <code>"
+"register_redirect</code> valid URL in your shortcode."
 msgstr "También puede redirigir"
 
 #: admin/panels/settings.php:1005
@@ -3932,9 +3815,6 @@ msgstr "Sin rol"
 
 #: admin/panels/settings.php:1017
 #, fuzzy
-#| msgid ""
-#| "New users will be assigned to this role automatically If you do not allow "
-#| "them to choose role."
 msgid ""
 "New users will be assigned to this role automatically ones admin approv the "
 "user."
@@ -3976,7 +3856,6 @@ msgstr "Texto/HTML de Términos y condiciones"
 
 #: admin/panels/settings.php:1071
 #, fuzzy
-#| msgid "Allow Terms & Conditions Text Before Registration"
 msgid "Allow Email Domains for Registration"
 msgstr "Permitir texto de Términos y Condiciones antes del registro"
 
@@ -4056,16 +3935,12 @@ msgstr ""
 
 #: admin/panels/settings.php:1153
 #, fuzzy
-#| msgid "Auto Post on users Facebook wall"
 msgid ""
 "Auto Post on users Facebook wall on post publish from frontend publisher"
 msgstr "Publicar automáticamente en el muro del usuario"
 
 #: admin/panels/settings.php:1164
 #, fuzzy
-#| msgid ""
-#| "When a user connect via Facebook, a post can be added automatically to "
-#| "his wall."
 msgid ""
 "When a user post a new post from frontend publisher, a post can be added "
 "automatically to his wall."
@@ -4123,15 +3998,11 @@ msgstr ""
 
 #: admin/panels/settings.php:1252
 #, fuzzy
-#| msgid "Auto Post on users Facebook wall"
 msgid "Auto Post on users Facebook wall when user follows someone"
 msgstr "Publicar automáticamente en el muro del usuario"
 
 #: admin/panels/settings.php:1264
 #, fuzzy
-#| msgid ""
-#| "When a user connect via Facebook, a post can be added automatically to "
-#| "his wall."
 msgid ""
 "When a user follows someone, a post can be added automatically to his "
 "facebook wall."
@@ -4141,13 +4012,11 @@ msgstr ""
 
 #: admin/panels/settings.php:1356
 #, fuzzy
-#| msgid "Twitter Integration"
 msgid "Linkedin Integration"
 msgstr "Integración con Twitter"
 
 #: admin/panels/settings.php:1360
 #, fuzzy
-#| msgid "Allow Google Social Connect"
 msgid "Allow linkedin Social Connect"
 msgstr "Permitir Google Social Connect"
 
@@ -4157,11 +4026,6 @@ msgstr ""
 
 #: admin/panels/settings.php:1373
 #, fuzzy
-#| msgid ""
-#| "Open <a href=\"https://developers.facebook.com/apps\">https://developers."
-#| "facebook.com/apps</a> create a new app and edit its settings to make it "
-#| "work on your domain. In App Settings, please paste the App ID or API Key "
-#| "into this field."
 msgid ""
 "Open <a href=\"https://www.linkedin.com/developer/apps\">https://www."
 "linkedin.com/developer/apps</a> create a new app and edit its settings to "
@@ -4175,38 +4039,29 @@ msgstr ""
 
 #: admin/panels/settings.php:1378
 #, fuzzy
-#| msgid "Request Secret Key"
 msgid "linkedin Secret Key"
 msgstr "Solicitar "
 
 #: admin/panels/settings.php:1385
 #, fuzzy
-#| msgid "Twitter Integration"
 msgid "Instagram Integration"
 msgstr "Integración con Twitter"
 
 #: admin/panels/settings.php:1389
 #, fuzzy
-#| msgid "Allow Twitter Social Connect"
 msgid "Allow Instagram Social Connect"
 msgstr "Permitir Twitter Social Connect"
 
 #: admin/panels/settings.php:1399
 #, fuzzy
-#| msgid "Client ID"
 msgid "Instagram Client ID"
 msgstr "Client ID"
 
 #: admin/panels/settings.php:1402
 #, fuzzy
-#| msgid ""
-#| "Open <a href=\"https://developers.facebook.com/apps\">https://developers."
-#| "facebook.com/apps</a> create a new app and edit its settings to make it "
-#| "work on your domain. In App Settings, please paste the App ID or API Key "
-#| "into this field."
 msgid ""
-"Open <a href=\"http://instagram.com/developer/\">http://instagram.com/"
-"developer/</a> create a new app and edit its settings to make it work on "
+"Open <a href=\"http://instagram.com/developer/\">http://instagram."
+"com/developer/</a> create a new app and edit its settings to make it work on "
 "your domain. In App Settings, please paste the Client ID into this field."
 msgstr ""
 "Abra <a href=\"https://developers.facebook.com/apps\">https://developers."
@@ -4216,7 +4071,6 @@ msgstr ""
 
 #: admin/panels/settings.php:1407
 #, fuzzy
-#| msgid "Client secret"
 msgid "Instagram Client Secret"
 msgstr "Client secret"
 
@@ -4234,12 +4088,12 @@ msgstr "Consumer key"
 
 #: admin/panels/settings.php:1433
 msgid ""
-"You must first create an app at <a href=\"https://dev.twitter.com/apps/"
-"\">https://dev.twitter.com/apps/</a> and enter your consumer keys to enable "
+"You must first create an app at <a href=\"https://dev.twitter.com/apps/\">"
+"https://dev.twitter.com/apps/</a> and enter your consumer keys to enable "
 "twitter connect."
 msgstr ""
-"Primero debe crear una app en <a href=\"https://dev.twitter.com/apps/"
-"\">https://dev.twitter.com/apps/</a> e introducir su consumer keys para "
+"Primero debe crear una app en <a href=\"https://dev.twitter.com/apps/\">"
+"https://dev.twitter.com/apps/</a> e introducir su consumer keys para "
 "permitir Twitter connect."
 
 #: admin/panels/settings.php:1438
@@ -4267,13 +4121,11 @@ msgstr ""
 
 #: admin/panels/settings.php:1464 admin/panels/settings.php:1515
 #, fuzzy
-#| msgid "Redirect to front-end registration"
 msgid "Custom Redirect URL After Registration"
 msgstr "Redirigir al registro frontend"
 
 #: admin/panels/settings.php:1471 admin/panels/settings.php:1522
 #, fuzzy
-#| msgid "Custom Redirects"
 msgid "Custom Redirect URL After Login"
 msgstr "Redirecciones personalizadas"
 
@@ -4307,7 +4159,6 @@ msgstr ""
 
 #: admin/panels/settings.php:1542
 #, fuzzy
-#| msgid "Settings"
 msgid "Aweber Settings"
 msgstr "Ajustes"
 
@@ -4321,7 +4172,6 @@ msgstr ""
 
 #: admin/panels/settings.php:1561
 #, fuzzy
-#| msgid "Compatibility Settings"
 msgid "Campaignmonitor Settings"
 msgstr "Ajustes de compatibilidad"
 
@@ -4331,9 +4181,6 @@ msgstr ""
 
 #: admin/panels/settings.php:1568
 #, fuzzy
-#| msgid ""
-#| "Enter your MailChimp API key here to allow integration with MailChimp "
-#| "subscription."
 msgid ""
 "Enter your Campaignmonitor Authorization Code here to allow integration with "
 "Campaignmonitor subscription."
@@ -4363,13 +4210,11 @@ msgstr "Sincronizar Nombres a mostrar de UserPro con BuddyPress"
 
 #: admin/panels/settings.php:1614
 #, fuzzy
-#| msgid "BuddyPress Compatibility"
 msgid "bbpress Compatibility"
 msgstr "Compatibilidad BuddyPress"
 
 #: admin/panels/settings.php:1618
 #, fuzzy
-#| msgid "Sync UserPro profile links with BuddyPress"
 msgid "Sync UserPro profile links with bbpress"
 msgstr "Sincronizar enlaces de perfiles de UserPro con BuddyPress"
 
@@ -4387,10 +4232,6 @@ msgstr "Envato Username"
 
 #: admin/panels/woo.php:3
 #, fuzzy
-#| msgid ""
-#| "Click on the next button to automatically add WooCommerce profile fields "
-#| "to UserPro fields and make users manage their WooCommerce profile data "
-#| "from one place, their UserPro profile!"
 msgid ""
 "Click on the button below to automatically add WooCommerce profile fields to "
 "UserPro fields and make users manage their WooCommerce profile data from one "
@@ -4427,25 +4268,21 @@ msgstr ""
 
 #: functions/ajax.php:170
 #, fuzzy
-#| msgid "Your request is sent!"
 msgid "Your request has been sent"
 msgstr "¡Su petición se ha enviado!"
 
 #: functions/ajax.php:350 functions/ajax.php:354
 #, fuzzy
-#| msgid "Your submission has been posted! You can view it %s."
 msgid "Your submission has been drafted!"
 msgstr "¡Su envío ha sido publicado! Puede verlo en %s."
 
 #: functions/ajax.php:377 functions/ajax.php:390
 #, fuzzy, php-format
-#| msgid "Your submission has been posted! You can view it %s."
 msgid "Your submission has been published! You can view it %s."
 msgstr "¡Su envío ha sido publicado! Puede verlo en %s."
 
 #: functions/ajax.php:383 functions/ajax.php:395
 #, fuzzy
-#| msgid "Your submission has been sent. It will be reviewed shortly."
 msgid "Your submission has been sent! It will be reviewed shortly."
 msgstr "Su envío ha sido enviado. Será supervisado en breves momentos."
 
@@ -4488,7 +4325,6 @@ msgstr "Deberá proporcionar su e-mail o nombre de usuario."
 
 #: functions/ajax.php:564 functions/ajax.php:622 functions/ajax.php:626
 #, fuzzy
-#| msgid "There is not such user in our system."
 msgid "There is no such user in our system."
 msgstr "Ese usuario no existe en nuestro sistema."
 
@@ -4510,7 +4346,6 @@ msgstr "La contraseña introducida no es correcta"
 
 #: functions/ajax.php:704
 #, fuzzy
-#| msgid "Your email is pending verification. Please activate your account."
 msgid ""
 "Your email is pending verification/Payment is Pending. Please activate your "
 "account."
@@ -4522,7 +4357,6 @@ msgstr "Su e-mail está pendiente de verificación. Por favor, active su cuenta.
 
 #: functions/ajax.php:715
 #, fuzzy
-#| msgid "Your account is currently being reviewed. Thanks for your patience."
 msgid ""
 "Your account is currently being reviewed/Payment is Pending. Thanks for your "
 "patience."
@@ -4554,8 +4388,8 @@ msgstr "Por favor, introduzca un e-mail válido."
 
 #: functions/ajax.php:1037
 msgid ""
-"Email is taken. Is that you? Try to <a href=\"#\" data-template=\"login"
-"\">login</a>"
+"Email is taken. Is that you? Try to <a href=\"#\" data-template=\"login\">"
+"login</a>"
 msgstr ""
 "Ese e-mail ya está siendo usado. ¿Es usted? Intente <a href=\"#\" data-"
 "template=\"login\">iniciar sesión</a>"
@@ -4681,13 +4515,11 @@ msgstr "Hay %s usuarios en línea dentro del sitio."
 
 #: functions/api.php:2984
 #, fuzzy, php-format
-#| msgid "<span>%s</span> following"
 msgid "<span>%s</span> Connection"
 msgstr "<span>%s</span> siguiendo"
 
 #: functions/api.php:2986
 #, fuzzy, php-format
-#| msgid "<span>%s</span> following"
 msgid "<span>%s</span> Connections"
 msgstr "<span>%s</span> siguiendo"
 
@@ -4709,13 +4541,11 @@ msgstr "Cuenta no verificada"
 
 #: functions/badge-functions.php:172
 #, fuzzy
-#| msgid "All accounts"
 msgid "Unblock account"
 msgstr "Todas las cuentas"
 
 #: functions/badge-functions.php:176
 #, fuzzy
-#| msgid "All accounts"
 msgid "Block account"
 msgstr "Todas las cuentas"
 
@@ -4741,13 +4571,11 @@ msgstr "Establecer nota personalizada..."
 
 #: functions/defaults.php:48
 #, fuzzy
-#| msgid "Your profile has been saved."
 msgid "Your password has been updated"
 msgstr "Su perfil ha sido guardado."
 
 #: functions/defaults.php:49
 #, fuzzy
-#| msgid "Your account password: {VAR1}"
 msgid "Your new Password:{VAR1}"
 msgstr "La contraseña de su cuenta: {VAR1}"
 
@@ -4802,12 +4630,9 @@ msgstr ""
 
 #: functions/defaults.php:67
 #, fuzzy
-#| msgid ""
-#| "Thanks for signing up at {USERPRO_BLOGNAME}. You must confirm/validate "
-#| "your account before logging in."
 msgid ""
-"You have changed your email address at {USERPRO_BLOGNAME}. You must confirm/"
-"validate your account before logging in."
+"You have changed your email address at {USERPRO_BLOGNAME}. You must "
+"confirm/validate your account before logging in."
 msgstr ""
 "Gracias por inscribirse en {USERPRO_BLOGNAME}. Debe confirmar/validar su "
 "cuenta antes de iniciar sesión."
@@ -4855,8 +4680,8 @@ msgstr ""
 #: functions/defaults.php:88 functions/defaults.php:93
 #: functions/defaults.php:98 functions/defaults.php:103
 msgid ""
-"If you have any further questions, please contact us at "
-"{USERPRO_ADMIN_EMAIL}."
+"If you have any further questions, please contact us at {USERPRO_ADMIN_EMAIL}"
+"."
 msgstr ""
 "Si tiene más preguntas, por favor contáctenos en {USERPRO_ADMIN_EMAIL}."
 
@@ -4874,27 +4699,22 @@ msgstr "Disculpe, su cuenta ya no está verificada en {USERPRO_BLOGNAME}."
 
 #: functions/defaults.php:107
 #, fuzzy
-#| msgid "Your account is now verified at {USERPRO_BLOGNAME}."
 msgid "Your account is now blocked at {USERPRO_BLOGNAME}."
 msgstr "Su cuenta está ahora verificada en {USERPRO_BLOGNAME}."
 
 #: functions/defaults.php:108 functions/defaults.php:113
 #: functions/defaults.php:118
 #, fuzzy
-#| msgid ""
-#| "If you have any problems, please contact us at {USERPRO_ADMIN_EMAIL}."
 msgid "If you have any query, please contact us at {USERPRO_ADMIN_EMAIL}."
 msgstr "Si tiene algún problema, contáctenos en {USERPRO_ADMIN_EMAIL}."
 
 #: functions/defaults.php:112
 #, fuzzy
-#| msgid "Your account is now verified!"
 msgid "Your account is now unblocked."
 msgstr "¡Su cuenta se encuentra ahora verificada!"
 
 #: functions/defaults.php:117
 #, fuzzy
-#| msgid "Your account is now verified at {USERPRO_BLOGNAME}."
 msgid "Your account is currently being reviewed at {USERPRO_BLOGNAME}."
 msgstr "Su cuenta está ahora verificada en {USERPRO_BLOGNAME}."
 
@@ -4915,8 +4735,6 @@ msgstr ""
 
 #: functions/defaults.php:128
 #, fuzzy
-#| msgid ""
-#| "{USERPRO_USERNAME} has just created a new account at {USERPRO_BLOGNAME}."
 msgid ""
 "{USERPRO_USERNAME} has just sent you account verify request at "
 "{USERPRO_BLOGNAME}."
@@ -4930,8 +4748,6 @@ msgstr "Puede comprobar su perfil en el siguiente enlace:"
 
 #: functions/defaults.php:134
 #, fuzzy
-#| msgid ""
-#| "{USERPRO_USERNAME} has just created a new account at {USERPRO_BLOGNAME}."
 msgid ""
 "{USERPRO_USERNAME} has just sent you connect request at {USERPRO_BLOGNAME}."
 msgstr ""
@@ -4961,8 +4777,6 @@ msgstr "Para ver su perfil:"
 
 #: functions/defaults.php:157
 #, fuzzy
-#| msgid ""
-#| "Please click on the following link to successfully activate your account:"
 msgid "Please click below link to reset your password,"
 msgstr ""
 "Por favor, haga clic sobre el siguiente link para activar su cuenta "
@@ -4974,9 +4788,6 @@ msgstr ""
 
 #: functions/defaults.php:161
 #, fuzzy
-#| msgid ""
-#| "{USERPRO_USERNAME} has just created a new account at {USERPRO_BLOGNAME}. "
-#| "The account is pending your manual review."
 msgid ""
 "{USERPRO_USERNAME} has just created a new account at {USERPRO_BLOGNAME}. The "
 "account is pending email verification."
@@ -4986,7 +4797,6 @@ msgstr ""
 
 #: functions/defaults.php:201
 #, fuzzy
-#| msgid "Password Field"
 msgid "Password Updated"
 msgstr "Campo de contraseña"
 
@@ -5000,7 +4810,6 @@ msgstr "Verificar su cuenta"
 
 #: functions/defaults.php:209
 #, fuzzy
-#| msgid "Verify your Account"
 msgid "Reverify your Account after Email change"
 msgstr "Verificar su cuenta"
 
@@ -5024,7 +4833,6 @@ msgstr "¡Solicite verificación en %s!"
 
 #: functions/defaults.php:224
 #, fuzzy
-#| msgid "%d new verification requests"
 msgid "New verification Request"
 msgstr "%d nuevas peticiones de verificación"
 
@@ -5038,19 +4846,16 @@ msgstr "¡Su cuenta ya no está verificada!"
 
 #: functions/defaults.php:232
 #, fuzzy
-#| msgid "Your account is no longer verified!"
 msgid "Your account is Pending for Manual Review"
 msgstr "¡Su cuenta ya no está verificada!"
 
 #: functions/defaults.php:235
 #, fuzzy
-#| msgid "Your account is now verified!"
 msgid "Your account is now blocked!"
 msgstr "¡Su cuenta se encuentra ahora verificada!"
 
 #: functions/defaults.php:238
 #, fuzzy
-#| msgid "Your account is now verified!"
 msgid "Your account is now unblocked!"
 msgstr "¡Su cuenta se encuentra ahora verificada!"
 
@@ -5072,7 +4877,6 @@ msgstr "[UserPro] ¡Un perfil ha sido actualizado!"
 
 #: functions/defaults.php:253
 #, fuzzy
-#| msgid "Reset Your Password"
 msgid "Reset your password"
 msgstr "Restablecer su contraseña"
 
@@ -5081,22 +4885,19 @@ msgid ""
 "To complete registration, you must read and agree to our <a href=\"#\">terms "
 "and conditions</a>. This text can be custom."
 msgstr ""
-"Para completar el registro, debe leer y aceptar nuestros <a href=\"#"
-"\">términos y condiciones</a>. Este texto se puede personalizar."
+"Para completar el registro, debe leer y aceptar nuestros <a href=\"#\">"
+"términos y condiciones</a>. Este texto se puede personalizar."
 
 #: functions/defaults.php:337
 #, fuzzy
-#| msgid ""
-#| "You cannot view this content because It is available to members only. "
-#| "Please <a href=\"#\" class=\"popup-login\" data-force_redirect_uri="
-#| "\"1\">login</a> or <a href=\"%s\">register</a> to view this area."
 msgid ""
 "You cannot view this content because It is available to members only. Please "
 "{LOGIN_POPUP} or {REGISTER_POPUP} to view this area."
 msgstr ""
 "No puede ver este contenido porque sólo está disponible para miembros. Por "
-"favor, Please <a href=\"#\" class=\"popup-login\" data-force_redirect_uri="
-"\"1\">inicie sesión</a> o <a href=\"%s\">regístrese</a> para ver este área."
+"favor, Please <a href=\"#\" class=\"popup-login\" data-"
+"force_redirect_uri=\"1\">inicie sesión</a> o <a href=\"%s\">regístrese</a> "
+"para ver este área."
 
 #: functions/defaults.php:401
 msgid "You are invited to register at "
@@ -5108,7 +4909,6 @@ msgstr ""
 
 #: functions/fields-filters.php:14
 #, fuzzy
-#| msgid "Please enter a purchase code."
 msgid "Please confirm the Captcha."
 msgstr "Por favor introduzca el código de compra."
 
@@ -5132,7 +4932,6 @@ msgstr ""
 
 #: functions/fields-filters.php:139
 #, fuzzy
-#| msgid "Incorrect answer. please try again."
 msgid "Incorrect Answer. please try again."
 msgstr "Respuesta incorrecta. Por favor, inténtelo de nuevo."
 
@@ -5150,7 +4949,6 @@ msgstr "Subir foto"
 
 #: functions/fields-functions.php:302
 #, fuzzy
-#| msgid "Photo"
 msgid "Take Photo"
 msgstr "Foto"
 
@@ -5187,7 +4985,6 @@ msgstr "Darse de baja de este boletín"
 
 #: functions/fields-functions.php:619
 #, fuzzy
-#| msgid "You have not started following anyone yet."
 msgid "You are currently receiving following email alerts."
 msgstr "Todavía no ha empezado a seguir a nadie."
 
@@ -5264,7 +5061,6 @@ msgstr "Ver foto del usuario"
 
 #: functions/initial-setup.php:36 profile-layouts/layout1/layout.php:67
 #, fuzzy
-#| msgid "Actions"
 msgid "Connections"
 msgstr "Acciones"
 
@@ -5297,7 +5093,6 @@ msgstr "Login"
 
 #: functions/invite_users_widgets.php:16
 #, fuzzy
-#| msgid "Reset online users"
 msgid "Userpro invite users"
 msgstr "Restablecer usuarios en línea"
 
@@ -5316,11 +5111,11 @@ msgstr ""
 #: functions/msg-functions.php:4
 #, php-format
 msgid ""
-"Congratulations! Your account is now %s <strong>Verified</strong>. <i class="
-"\"userpro-icon-remove\"></i>"
+"Congratulations! Your account is now %s <strong>Verified</strong>. <i "
+"class=\"userpro-icon-remove\"></i>"
 msgstr ""
-"¡Enhorabuena! Su cuenta está ahora %s <strong>verificada</strong>. <i class="
-"\"userpro-icon-remove\"></i>"
+"¡Enhorabuena! Su cuenta está ahora %s <strong>verificada</strong>. <i "
+"class=\"userpro-icon-remove\"></i>"
 
 #: functions/msg-functions.php:8
 msgid ""
@@ -5340,7 +5135,6 @@ msgstr "¡Su cuenta ha sido satisfactoriamente activada!"
 
 #: functions/msg-functions.php:20
 #, fuzzy
-#| msgid "Your email is pending verification. Please activate your account."
 msgid ""
 "Verification email resent on your email address. Please activate your "
 "account."
@@ -5348,7 +5142,6 @@ msgstr "Su e-mail está pendiente de verificación. Por favor, active su cuenta.
 
 #: functions/msg-functions.php:24
 #, fuzzy
-#| msgid "Your email is pending verification. Please activate your account."
 msgid ""
 "Verification email sent on your email address for reverification. Please "
 "activate your account."
@@ -5356,7 +5149,6 @@ msgstr "Su e-mail está pendiente de verificación. Por favor, active su cuenta.
 
 #: functions/msg-functions.php:31
 #, fuzzy
-#| msgid "Your email is pending verification. Please activate your account."
 msgid ""
 "Your email is pending verification/Your payment is Pending. Please activate "
 "your account."
@@ -5364,7 +5156,6 @@ msgstr "Su e-mail está pendiente de verificación. Por favor, active su cuenta.
 
 #: functions/msg-functions.php:44
 #, fuzzy
-#| msgid "Your account is currently being reviewed. Thanks for your patience."
 msgid ""
 "Your account is currently being reviewed/Pending For payment. Thanks for "
 "your patience."
@@ -5411,7 +5202,6 @@ msgstr ""
 
 #: functions/msg-functions.php:86
 #, fuzzy
-#| msgid "A secret key has been sent successfully."
 msgid "A reset link has been sent to your email successfully."
 msgstr "Una clave secreta ha sido enviada satisfactoriamente."
 
@@ -5455,7 +5245,6 @@ msgstr "¿Olvidó su contraseña?"
 
 #: functions/shortcode-main.php:56
 #, fuzzy
-#| msgid "%s Pending Verification"
 msgid "Resend verification email?"
 msgstr "%s Verificación pendiente"
 
@@ -5506,7 +5295,6 @@ msgstr ""
 
 #: functions/shortcode-main.php:82
 #, fuzzy
-#| msgid "Request Verification"
 msgid "Resend verification email"
 msgstr "Solicitar verificación"
 
@@ -5564,13 +5352,11 @@ msgstr ""
 
 #: functions/social-connect.php:172
 #, fuzzy
-#| msgid "Login with Twitter"
 msgid "Login with Linkedin"
 msgstr "Iniciar sesión con Twitter"
 
 #: functions/social-connect.php:182
 #, fuzzy
-#| msgid "Login with Twitter"
 msgid "Login with Instagram"
 msgstr "Iniciar sesión con Twitter"
 
@@ -5616,19 +5402,16 @@ msgstr "(Su %s no será visible al público)"
 #: profile-layouts/layout1/layout.php:187 templates/connections.php:50
 #: templates/connections.php:131
 #, fuzzy
-#| msgid "Remove WooCommerce Sync"
 msgid "Remove Connection"
 msgstr "Eliminar sincronización WooCommerce"
 
 #: profile-layouts/layout1/layout.php:206 templates/connections.php:153
 #, fuzzy
-#| msgid "You do not have anyone who started following you yet."
 msgid "You do not have anyone who started connection with you yet."
 msgstr "Todavía no tiene a nadie que le siga."
 
 #: profile-layouts/layout1/layout.php:208 templates/connections.php:155
 #, fuzzy
-#| msgid "This user does not have anyone who started following him/her yet."
 msgid "This user does not have anyone who started connection him/her yet."
 msgstr "Este usuario todavía no tiene a nadie que le haya empezado a seguir."
 
@@ -5716,7 +5499,6 @@ msgstr "El usuario no ha introducido una descripción todavía."
 
 #: templates/memberlist_v2.php:112
 #, fuzzy
-#| msgid "%s Requests"
 msgid "Pending Request"
 msgstr "%s peticiones"
 
@@ -5754,7 +5536,6 @@ msgstr ""
 
 #: templates/postsbyuser.php:113
 #, fuzzy
-#| msgid "This user have not started following anyone yet."
 msgid "This user has not published any posts"
 msgstr "Este usuario todavía no ha empezado a seguir a nadie."
 
@@ -5803,7 +5584,6 @@ msgstr "Usuario o e-mail"
 
 #: templates/reset.php:48
 #, fuzzy
-#| msgid "Request Secret Key"
 msgid "Request reset link"
 msgstr "Solicitar "
 
@@ -5821,144 +5601,9 @@ msgstr ""
 
 #: templates/view.php:8
 #, fuzzy
-#| msgid "Delete Profile"
 msgid "Restricted Profile"
 msgstr "Eliminar perfil"
 
 #: templates/view.php:14
 msgid "This profile is made hidden by the user"
 msgstr ""
-
-#~ msgid "Edit Achievement Badges"
-#~ msgstr "Editar medallas de logros"
-
-#~ msgid "Check for updates"
-#~ msgstr "Comprobar actualizaciones"
-
-#~ msgid "Restricted to logged in members only"
-#~ msgstr "Restringido sólo a miembros que han iniciado sesión"
-
-#~ msgid "UserPro %s"
-#~ msgstr "UserPro %s"
-
-#~ msgid "Disable"
-#~ msgstr "Desactivar"
-
-#~ msgid "Blocked Usernames / Addresses"
-#~ msgstr "Nombres de usuario / DIrecciones bloqueados/as"
-
-#~ msgid ""
-#~ "A list of usernames and/or emails to block from accessing or logging in "
-#~ "the site. Enter one username or email per line."
-#~ msgstr ""
-#~ "Una lista de nombres de usuarios y/o e-mails a bloquear el acceso o el "
-#~ "inicio de sesión al sitio. Introduzca un nombre de usuario o e-mail por "
-#~ "línea."
-
-#~ msgid "&mdash; Select account role &mdash;"
-#~ msgstr "&mdash; Seleccionar rol de cuenta &mdash;"
-
-#~ msgid "Advanced Redirection"
-#~ msgstr "Redirección avanzada"
-
-#~ msgid ""
-#~ "The top rules always have higher priority. So any new rule you add will "
-#~ "be higher in priority and checked first in the redirection rules during "
-#~ "login or registering (depending on where you set the redirection)."
-#~ msgstr ""
-#~ "Las reglas superiores suempre tienen una prioridad mas alta. Así que cada "
-#~ "nueva regla que agregue trendrá una prioridad mas alta y será revisada de "
-#~ "primera en las  reglas de redirección durante el inicio de sesión o "
-#~ "registro( dependiendo de donde se haya establecido la redirección)."
-
-#~ msgid "Customize Fields"
-#~ msgstr "Personalizar campos"
-
-#~ msgid "Global Options"
-#~ msgstr "Opciones globales"
-
-#~ msgid "Emails & Notifications"
-#~ msgstr "Correos y notificaciones"
-
-#~ msgid "Variables you can use to build your mail templates"
-#~ msgstr "Variables que puede utilizar para crear sus plantillas de correo"
-
-#~ msgid "Customize the New Registration e-mail sent to Admin"
-#~ msgstr ""
-#~ "Personalizar el nuevo correo electrónico de registro enviado al "
-#~ "administrador"
-
-#~ msgid ""
-#~ "By default, UserPro creates profile pages and front-end registration/"
-#~ "login pages automatically. However if for some reason, these pages were "
-#~ "removed or deleted you can rebuild them here."
-#~ msgstr ""
-#~ "Por defecto, UserPro crea páginas de perfil frontales y de registro/"
-#~ "inicio de sesión de forma automática. Sin embargo, si por alguna razón, "
-#~ "estas páginas se eliminaron o eliminarán puede reconstruirlas aquí."
-
-#~ msgid ""
-#~ "Mass restrict pages by allowing access to members only for full-content. "
-#~ "Unlike the UserPro shortcode which hides the content you specify only. "
-#~ "This will lock all content page until the user is logged in. You can also "
-#~ "bulk block/allow any pages you want."
-#~ msgstr ""
-#~ "Restringir páginas en masa, permitiendo el acceso solo para los miembro. "
-#~ "A diferencia del código corto UserPro oculta el contenido que usted "
-#~ "especifique solamente, esto bloqueará todos los contenidos de la página "
-#~ "hasta que el usuario esté conectado."
-
-#~ msgid "Choose one or more pages to restrict"
-#~ msgstr "Elija una o más páginas para restringir"
-
-#~ msgid "Redirection Settings (Hiding Dashboard)"
-#~ msgstr "Configuraciones De Redirección (Esconder Panel)"
-
-#~ msgid ""
-#~ "These settings help you hide the backend from normal users. You can "
-#~ "control backend redirection precisely, these settings will not affect "
-#~ "administrators."
-#~ msgstr ""
-#~ "Estas configuraciones le ayudan a ocultar el backend a usuarios normales. "
-#~ "Usted puede controlar la redirección del backend, estas configuraciones "
-#~ "no afectarán a los administradores. "
-
-#~ msgid "reCAPTCHA Settings"
-#~ msgstr "Configuraciones de reCAPTCHA"
-
-#~ msgid "reCAPTCHA Public API Key"
-#~ msgstr "Clave API pública de reCAPTCHA"
-
-#~ msgid ""
-#~ "You can obtain reCAPTCHA API keys from <a href=\"http://www.google.com/"
-#~ "recaptcha\">http://www.google.com/recaptcha</a> they are required to "
-#~ "activate reCAPTCHA verification on your forms."
-#~ msgstr ""
-#~ "Usted puede obtener la clave API del reCAPTCHA  desde <a href=\"http://"
-#~ "www.google.com/recaptcha\">http://www.google.com/recaptcha</a> Son "
-#~ "requeridas para activar la verificación del reCAPTCHA en su formulario"
-
-#~ msgid "reCAPTCHA Private API Key"
-#~ msgstr "Clave API privada de reCAPTCHA"
-
-#~ msgid "Enable reCAPTCHA on login by default"
-#~ msgstr "Habilitar reCAPTCHA en el inicio de sesión  "
-
-#~ msgid "Enable reCAPTCHA on registration by default"
-#~ msgstr "Habilitar reCAPTCHA en el registro "
-
-#~ msgid "Auto Sync Fields with WooCommerce"
-#~ msgstr "Sincronizar automáticamente los campos con WooCommerce"
-
-#~ msgid "Light"
-#~ msgstr "ligero"
-
-#~ msgid "The reCAPTCHA wasn't entered correctly. Please try again."
-#~ msgstr ""
-#~ "El reCAPTCHA no fue ingresado correctamente. Por favor intente de nuevo."
-
-#~ msgid "Click to unverify"
-#~ msgstr "Clic para anular la verficación"
-
-#~ msgid "Click to verify"
-#~ msgstr "Clic para verificar"

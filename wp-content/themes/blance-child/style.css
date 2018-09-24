@@ -18,6 +18,10 @@ h2 {
     font-size: 34px;
     font-weight: 200;
 }
+h3 {
+    font-weight: 100;
+    font-size: 22px;
+}
 .single .page-header, .page .page-header, .archive .page-header {
     background-color: #FFF;
 }
@@ -51,10 +55,10 @@ h2 {
 #footer-jws .logo-footer {
 	width: 160px;
 }
-#footer-jws .widget_social-widget {
+#footer-jws .widget_social-widget-2 {
 	margin-top: 110px;
 }
-#footer-jws .widget_social-widget .widget-title {
+#footer-jws .widget_social-widget-2 .widget-title {
     margin: 0 0px 10px;
     font-weight: normal;
     font-size: 14px;
@@ -92,8 +96,17 @@ span.sold-out.pa.db.left {
     color: #FFF;
 }
 
-/* CALDERA FORMS */
-/* CONTACT FORM */
+/* FORMS */
+legend {
+    width: 100% !important;
+    border: none;
+    margin-bottom: 30px;
+    color: #FF3CB5 !important;
+    font-weight: 100 !important;
+}
+fieldset {
+    margin-bottom: 30px;
+}
 #caldera_form_1 {
     margin: 0 150px;
 }
@@ -101,27 +114,39 @@ span.sold-out.pa.db.left {
 .caldera-grid label {
     color: #6A6A6A;
 }
-.caldera-grid .form-control {
+.caldera-grid .form-control,
+input:not([type=submit]):not([type=file]) {
     border: none;
     box-shadow: none;
     border-bottom: 2px solid #686868;
     padding-left: 0;
     color: #000;
+    transition: border .3s;
 }
-.caldera-grid .form-control:focus {
+.caldera-grid .form-control:focus,
+input:not([type=submit]):not([type=file]):focus {
     border-color: #FF3CB5;
     box-shadow: none;
 }
-.caldera-grid .btn-default {
+.caldera-grid .btn-default,
+input[type=submit].button,
+button[type=submit].button,
+input[type=button].button {
     transition: all .3s;
     color: #FFF;
-    background-color: #FF3CB5;
+    background-color: #FF3CB5 !important;
     height: 51px;
+    border: none !important;
+    padding: 0 22px;
 }
-.caldera-grid .btn-default:hover {
-    color: #FF3CB5;
-    border: 3px solid #FF3CB5;
-    background-color: #FFF;
+.caldera-grid .btn-default:hover,
+input[type=submit].button:hover,
+button[type=submit].button:hover,
+input[type=button].button:hover {
+    color: #FF3CB5 !important;
+    border: 3px solid #FF3CB5 !important;
+    background-color: #FFF !important;
+    opacity: 1 !important;
 }
 .caldera-grid .btn {
     border-radius: 0;
@@ -277,3 +302,85 @@ span.sold-out.pa.db.left {
     display: inline;
     font-size: 11px;
 }
+
+
+/* MY ACCOUNT */
+.woocommerce-MyAccount-content {
+    padding: 0 30px;
+}
+/*
+.woocommerce-account .woocommerce {
+    display: table;
+}
+.woocommerce-MyAccount-content,
+.jws-my-account-sidebar {
+    display: table-cell;
+}
+.jws-my-account-sidebar {
+    padding: 0;
+    width: 20%;
+}
+.jws-my-account-sidebar .woocommerce-MyAccount-title {
+}
+.jws-my-account-sidebar .woocommerce-MyAccount-navigation {}
+.jws-my-account-sidebar .woocommerce-MyAccount-navigation ul {
+    border: none;
+}
+.jws-my-account-sidebar .woocommerce-MyAccount-navigation ul li {}
+.jws-my-account-sidebar .woocommerce-MyAccount-navigation ul li a {
+}
+.jws-my-account-sidebar .woocommerce-MyAccount-navigation ul li.is-active > a, .jws-my-account-sidebar .woocommerce-MyAccount-navigation ul li:hover > a {
+
+}
+.woocommerce-MyAccount-content {
+}
+.woocommerce-MyAccount-content strong {
+}
+.woocommerce-MyAccount-content .woocommerce-orders-table tr td {}
+.woocommerce-MyAccount-content .woocommerce-orders-table tr td .view {}
+.woocommerce-MyAccount-content .edit-account p {}}
+.woocommerce-MyAccount-content .edit-account legend {
+}
+.woocommerce-MyAccount-content .edit-account .woocommerce-Button {
+}
+.woocommerce-MyAccount-content .edit-account .woocommerce-Button:hover {
+    
+}
+.woocommerce-MyAccount-content .woocommerce-Addresses .woocommerce-Address address {
+}
+.woocommerce-MyAccount-content .woocommerce-Addresses .woocommerce-Address .title {
+
+}
+.woocommerce-MyAccount-content .woocommerce-Addresses .woocommerce-Address .title h3 {
+}
+.woocommerce-MyAccount-content .woocommerce-Addresses .woocommerce-Address .title .edit {
+}
+.woocommerce-MyAccount-content .woocommerce-Addresses .u-column1 {
+}
+.woocommerce-MyAccount-content .woocommerce-Addresses .u-column2 {
+}
+.woocommerce-MyAccount-content > p:not(.woocommerce-info):first-child { font-size:16px; }
+.woocommerce-MyAccount-content > p:not(.woocommerce-info) {
+}
+.woocommerce-MyAccount-content > p:not(.woocommerce-info) a {
+}
+
+/* PINK GRADIENT */
+/*
+.gradient {
+    background-color: #f3a4b7;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIHN0b3AtY29sb3I9IiNmZTllOTYiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iI2U4YWFkNyIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%,color-stop(0, rgb(254, 158, 150)),color-stop(1, rgb(232, 170, 215)));
+    background-image: -webkit-repeating-linear-gradient(top left,rgb(254, 158, 150) 0%,rgb(232, 170, 215) 100%);
+    background-image: repeating-linear-gradient(to bottom right,rgb(254, 158, 150) 0%,rgb(232, 170, 215) 100%);
+    background-image: -ms-repeating-linear-gradient(top left,rgb(254, 158, 150) 0%,rgb(232, 170, 215) 100%);
+}
+@media \0screen\,screen\9 {
+    .gradient {
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fffe9e96",endColorstr="#ffe8aad7",GradientType=0);
+    }
+}
+*/
+
+
+
