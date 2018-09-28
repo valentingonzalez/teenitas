@@ -595,7 +595,7 @@ table.form-table-fieldroles label span {
 .upadmin-pending-verify {
 	display: inline-block;
 	text-align: center !important;
-	padding: 20px;
+	padding: 40px 20px;
 	width: 200px;
 }
 

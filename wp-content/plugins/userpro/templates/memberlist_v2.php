@@ -68,9 +68,10 @@
 			global  $userpro_social;
 			?>
 				<?php if ( userpro_get_option('lightbox') && userpro_get_option('profile_lightbox') ) { ?>
-				<a href="<?php echo $userpro->profile_photo_url($user_id); ?>" class="lightview" data-lightview-caption="<?php echo $userpro->profile_photo_title( $user_id ); ?>" title="<?php echo userpro_profile_data('display_name', $user_id); ?>"><?php echo get_avatar( $user_id, $memberlist_v2_pic_size ); ?></a>
-				<?php } else { ?>
-				<a href="<?php echo $userpro->permalink($user_id); ?>"><?php echo get_avatar( $user_id, $memberlist_v2_pic_size ); ?></a>
+				<a href="<?php echo $userpro->profile_photo_url($user_id); ?>" class="lightview" data-lightview-caption="<?php echo $userpro->profile_photo_title( $user_id ); ?>" title="<?php echo userpro_profile_data('display_name', $user_id); ?>">
+                    <img src="<?php echo $userpro->profile_photo_url($user_id); ?>" alt="profile-pic">
+                <?php } else { ?>
+				<a href="<?php echo $userpro->permalink($user_id); ?>"><img src="<?php echo $userpro->profile_photo_url($user_id); ?>" alt="profile-pic"></a>
 				<?php } ?>
 			</div>
 			<?php if ($memberlist_v2_showname) { ?>

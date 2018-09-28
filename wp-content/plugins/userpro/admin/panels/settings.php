@@ -1381,6 +1381,17 @@
 			
 		</td>
 	</tr>
+
+    <tr valign="top">
+        <th scope="row"><label for="linkedin_redirect_url"><?php _e('linkedin Redirect URL','userpro'); ?></label></th>
+        <td>
+            <input type="text" name="linkedin_redirect_url" id="linkedin_redirect_url" value="<?php echo userpro_get_option('linkedin_redirect_url'); ?>" class="regular-text" />
+            <span class="description"><?php _e('This URL must be in the allowed Redirect URL in your linkedin app. example : ','userpro'); ?> <?php echo get_site_url().'?upslug=linkedin'  ?></span>
+
+
+        </td>
+    </tr>
+
 </table>	
 <h3><i class="userpro-icon-instagram"></i><?php _e('Instagram Integration','userpro'); ?></h3>
 <table class="form-table">
@@ -1410,6 +1421,15 @@
 			
 		</td>
 	</tr>
+
+    <tr valign="top">
+        <th scope="row"><label for="instagram_redirect_url"><?php _e('Instagram Redirect URL','userpro'); ?></label></th>
+        <td>
+            <input type="text" name="instagram_redirect_url" id="instagram_redirect_url" value="<?php echo userpro_get_option('instagram_redirect_url'); ?>" class="regular-text" />
+            <span class="description"><?php _e('This URL must be in the allowed Redirect URL in your instagram app. example : ','userpro'); ?> <?php echo get_site_url().'/wp-content/plugins/userpro/lib/instagram/auth.php'  ?></span>
+        </td>
+    </tr>
+
 	
 	
 </table>
@@ -1459,18 +1479,11 @@
 			<span class="description"><?php _e('If you enabled the above option to automatically post on users timeline.','userpro'); ?></span>
 		</td>
 	</tr>
-	
-	<tr valign="top">
-		<th scope="row"><label for="twitter_signup_redirect"><?php _e('Custom Redirect URL After Registration','userpro'); ?></label></th>
-		<td>
-			<input type="text" name="twitter_signup_redirect" id="twitter_signup_redirect" value="<?php echo userpro_get_option('twitter_signup_redirect'); ?>" class="regular-text" />
-		</td>
-	</tr>
-	
 	<tr valign="top">
 		<th scope="row"><label for="twitter_signin_redirect"><?php _e('Custom Redirect URL After Login','userpro'); ?></label></th>
 		<td>
 			<input type="text" name="twitter_signin_redirect" id="twitter_signin_redirect" value="<?php echo userpro_get_option('twitter_signin_redirect'); ?>" class="regular-text" />
+            <span class="description"><?php _e('This redirect URL must be same like Twitter callback URL. example : ','userpro'); ?> <?php echo get_site_url().'?upslug=twitter'  ?></span>
 		</td>
 	</tr>
 	
@@ -1507,7 +1520,7 @@
 		<th scope="row"><label for="google_redirect_uri"><?php _e('Callback / Redirect URL','userpro'); ?></label></th>
 		<td>
 			<input type="text" name="google_redirect_uri" id="google_redirect_uri" value="<?php echo userpro_get_option('google_redirect_uri'); ?>" class="regular-text" />
-			<span class="description"><?php _e('This URL must be in the allowed Redirect URIs for this app in your Google Console.','userpro'); ?></span>
+            <span class="description"><?php _e('This URL must be in the allowed Redirect URIs for this app in your Google Console. example : ','userpro'); ?> <?php echo get_site_url().'?upslug=gplus'  ?></span>
 		</td>
 	</tr>
 	

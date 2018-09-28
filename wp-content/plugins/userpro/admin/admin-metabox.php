@@ -1,6 +1,7 @@
 <?php
 
 add_action( 'post_submitbox_misc_actions', 'userpro_edit_restrict' );
+
 add_action( 'save_post', 'save_userpro_edit_restrict' );
 
 function userpro_edit_restrict() {
@@ -35,7 +36,7 @@ function save_userpro_edit_restrict($post_id) {
     if (!isset($_POST['post_type']) )
         return $post_id;
 
-    if ( !wp_verify_nonce( $_POST['userpro_edit_restrict_nonce'], plugin_basename(__FILE__) ) )
+    if ( !isset($_POST['userpro_edit_restrict_nonce']) || !wp_verify_nonce( $_POST['userpro_edit_restrict_nonce'], plugin_basename(__FILE__) ) )
         return $post_id;
 
     if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) 

@@ -268,6 +268,18 @@ class userpro_admin {
 	
 	function save() {               	
 		/* restrict tab */
+
+
+		/* Delete settings if not selected
+		 @todo : create check function for this.
+		*/
+		if(!isset($_POST['roles_can_view_profiles']))
+		    $this->options['roles_can_view_profiles'] = array();
+
+        if(!isset($_POST['roles_can_edit_profiles']))
+	        $this->options['roles_can_edit_profiles'] = array();
+
+        /* Delete settings end */
         
 		if (isset($_GET['tab']) && $_GET['tab'] == 'restrict'){
 			$this->options['userpro_restricted_pages'] = '';
@@ -314,7 +326,6 @@ class userpro_admin {
 				}
 			}
 		}
-		
 		update_option('userpro', $this->options);
 		
 		echo '<div class="updated"><p><strong>'.__('Settings saved.','userpro').'</strong></p></div>';

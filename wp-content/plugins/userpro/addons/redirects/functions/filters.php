@@ -16,7 +16,6 @@
 					if ($user_id == $rule['user'] || $rule['user'] == 'all') { 
 						$arg = $userpro_redirection->map_url( $rule['url'], $user );
 						return $arg;
-						exit;
 					}
 				}
 				
@@ -24,7 +23,6 @@
 				if ($rule['field'] != '' && userpro_profile_data($rule['field'], $user_id) != '' ){ 
 					$arg = $userpro_redirection->map_url( $rule['url'], $user );
 					return $arg;
-					exit;
 				}
 			
 				/* Check role */
@@ -35,7 +33,6 @@
 					if ($user_role == $rule['role']) {
 						$arg = $userpro_redirection->map_url( $rule['url'], $user );
 						return $arg;
-						exit;
 					}
 				  }
 				}
@@ -63,7 +60,6 @@
 					if ($user_id == $rule['user'] || $rule['user'] == 'all') {
 						$arg = $userpro_redirection->map_url( $rule['url'], $user );
 						return $arg;
-						exit;
 					}
 				}
 				
@@ -73,7 +69,6 @@
 					if ($test == $rule['field_value'] ) {
 						$arg = $userpro_redirection->map_url( $rule['url'], $user );
 						return $arg;
-						exit;
 					}
 				}
 			
@@ -84,7 +79,6 @@
 					if ($user_role == $rule['role']) {
 						$arg = $userpro_redirection->map_url( $rule['url'], $user );
 						return $arg;
-						exit;
 					}
 				}
 		

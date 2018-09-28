@@ -37,7 +37,7 @@ if ($emd_state == 1) { ?>
 		<div class="emd-user">
 			
 			<div class="emd-user-img">
-				<a href="<?php echo $userpro->permalink( $user_id ); ?>"><?php echo get_avatar( $user_id, $args['emd_thumb'] ); ?></a>
+				<a href="<?php echo $userpro->permalink( $user_id ); ?>"><img src="<?php echo $userpro->profile_photo_url($user_id); ?>" alt="profile-pic"></a>
 			</div>
 			
 			<div class="emd-user-info">

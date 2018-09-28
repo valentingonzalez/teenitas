@@ -1,9 +1,11 @@
-<?php 
+<?php
 if(isset($args['i'])){
 	$i = $args['i'];
 }
+
 $layout = $args['layout'];
 ?>
+
 <?php  $_SESSION['form_role']=''; 
 $pid = get_the_ID();
 $current_page_uri = get_permalink($pid);

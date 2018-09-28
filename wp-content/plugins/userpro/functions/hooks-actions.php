@@ -258,25 +258,23 @@ function add_usermeta_userpro( $user_id ) {
 		$userpro->clear_cache();
 	}
 
-/**
- * My Profile Is Changed To UserName Starts
- * Added By Rahul
- * On 24 NOV 2014
- */
 function userpro_replace_profile_title($title , $id=null) {
  	global $current_user;
-	$current_user=wp_get_current_user();
+	$current_user= wp_get_current_user();
 
  if($id != null) {
 
 		$post = get_post($id);
 		$other_username = '';
 		$other_username = get_query_var('up_username');
-	 	if($post->post_name == userpro_get_option('slug') && !is_admin()) {
+
+
+	 	if($post->post_name == userpro_get_option('slug') && !empty($other_username) ) {
 			if($other_username != ''){
 				//$title = $other_username.__("'s Profile",'userpro');
 				$title = sprintf(__("%s's Profile",'userpro'), $other_username);
-			}else {
+			}
+			else {
 	 			//$title = $current_user->display_name.__("'s Profile",'userpro');
 				$title = sprintf(__("%s's Profile",'userpro'), $current_user->display_name);
 	 		}
@@ -324,8 +322,6 @@ function userpro_replace_profile_name() {
 	add_action('the_post' , 'userpro_replace_profile_name');
  /**
  * My Profile Is Changed To UserName END
- * Added By Rahul
- * On 24 NOV 2014
  */
 	add_action('wp_logout' , 'userpro_remove_online_badge');
 	function userpro_remove_online_badge() {

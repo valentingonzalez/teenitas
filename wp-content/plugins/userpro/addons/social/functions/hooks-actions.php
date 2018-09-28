@@ -8,7 +8,9 @@
 	
 		wp_register_script('userpro_sc', userpro_sc_url . 'scripts/userpro-social.min.js');
 		wp_enqueue_script('userpro_sc');
-		
+		wp_enqueue_script('userpro_encrypt_js', userpro_url . 'scripts/userpro.encrypt.js', '' , '' ,FALSE);
+
+
 	}
 	
 	/* Hook after name in user list compact */

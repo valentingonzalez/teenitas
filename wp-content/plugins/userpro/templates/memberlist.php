@@ -35,7 +35,7 @@
         <div class="userpro-user" data-pic_size="<?php echo $memberlist_pic_size; ?>">
             
             <a href="<?php echo $userpro->permalink($user_id); ?>" class="<?php userpro_user_via_popup($args); ?> userpro-user-img" data-up_username="<?php echo $userpro->id_to_member($user_id); ?>">
-                <?php echo get_avatar($user_id, $memberlist_pic_size); ?>
+                <img src="<?php echo $userpro->profile_photo_url($user_id); ?>" alt="profile-pic">
                 <span><i class="userpro-icon-plus"></i></span>
             </a>
             

@@ -1,5 +1,48 @@
 <?php
+
+
+function auto_badge_for_user($user_id){
+
+	$auto_badges = get_user_meta($user_id, '_userpro_badges', true);
+
+	// find if that badge exists
+
+	$user_info = get_userdata($user_id);
+	$user_role=implode(', ', $user_info->roles);
+	$autobadges=get_option('_userpro_badges_auto');
+
+
+
+	if(is_array($autobadges))
+
+		foreach ($autobadges as $badges)
+		{
+
+			foreach($badges as $badge)
+			{
+				if(isset($badge['auto_badge_to_role']) && in_array($user_role,$badge['auto_badge_to_role'])) {
+					if (empty($auto_badges['badge_role']) && in_array($auto_badges['badge_role'], $user_role)  ) {
+						$auto_badges[] = array(
+							'badge_url' => $badge['badge_url'],
+							'badge_title' => $badge['badge_title'],
+							'badge_role' => $badge['auto_badge_to_role'][0],
+						);
+						update_user_meta($user_id, '_userpro_badges', $auto_badges);
+
+						break 2;
+
+					} else {
+
+					}
+				}
+
+			}
+
+		}
+}
+
 add_action('userpro_after_new_registration','add_auto_badge');
+
 function add_auto_badge($user_id)
 	{
 		$auto_badges = get_user_meta($user_id, '_userpro_badges', true);
@@ -11,7 +54,6 @@ function add_auto_badge($user_id)
 		$user_info = get_userdata($user_id);
 		$user_role=implode(', ', $user_info->roles);
 		$autobadges=get_option('_userpro_badges_auto');
-
 		
 		
 		if(is_array($autobadges))
@@ -36,10 +78,9 @@ function add_auto_badge($user_id)
 				}
 				update_user_meta($user_id, '_userpro_badges', true);
 				}
-					$auto_badges[] = array(
+					$auto_badges = array(
 					'badge_url' => $badge['badge_url'],
 					'badge_title' => $badge['badge_title'],
-					
 					);
 					
 					update_user_meta($user_id, '_userpro_badges', $auto_badges);
@@ -58,9 +99,10 @@ function add_auto_badge($user_id)
 	function userpro_badges_show($user_id){
 		global $userpro_badges;
 		$output = null;
-		
+
 		/* Find user badges (get_user_meta - _userpro_badges) */
 		$get_badges = $userpro_badges->get_badges($user_id);
+
 		if (is_array($get_badges)){
 			foreach($get_badges as $key => $badge) {
 				if (isset($badge['badge_url'])) {
@@ -77,6 +119,10 @@ function add_auto_badge($user_id)
 add_action('userpro_after_new_registration', "default_badge_for_registration");
 	function default_badge_for_registration($user_id)
 	{
+		$user_info = get_userdata($user_id);
+		$user_role=implode(', ', $user_info->roles);
+		$autobadges=get_option('_userpro_badges_auto');
+
 		$result=get_option( 'userpro_defaultbadge' );
 		if($result['defaultbadge']=='1')
 		{

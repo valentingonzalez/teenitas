@@ -33,6 +33,8 @@ function userpro_mail( $id, $template = null, $var1 = null, $form = null, $from_
 		'{USERPRO_VALIDATE_URL}' => $userpro->create_validate_url( $user->ID ), 
 		'{USERPRO_PENDING_REQUESTS_URL}' => admin_url() . '?page=userpro&tab=requests', 
 		'{USERPRO_ACCEPT_VERIFY_INVITE}' => $userpro->accept_invite_to_verify( $user->ID ) );
+
+
 	if ( isset( $var1 ) && ! empty( $var1 ) ) {
 		$builtin['{VAR1}'] = $var1;
 	}

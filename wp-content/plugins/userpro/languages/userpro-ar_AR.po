@@ -3,20 +3,20 @@ msgstr ""
 "Project-Id-Version: العضوية المطورة الاصدار الكامل\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-18 13:58+0200\n"
-"PO-Revision-Date: 2018-09-20 22:45+0000\n"
-"Last-Translator: admin <gonzalezvalencho@gmail.com>\n"
-"Language-Team: Arabic (Argentina)\n"
-"Language: ar_AR\n"
+"PO-Revision-Date: 2017-12-20 11:58+0200\n"
+"Last-Translator: emarkaaa.net <albwba@gmail.com>\n"
+"Language-Team: ماركة emarkaa.net\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __ngettext:1,2;__;_e\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Loco https://localise.biz/\n"
+"X-Generator: Poedit 2.0.5\n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
-"X-Poedit-SearchPath-0: ."
+"X-Poedit-SearchPath-0: .\n"
 
 #: addons/badges/admin/admin-functions.php:68
 #, fuzzy
@@ -149,13 +149,14 @@ msgstr "عرض الملف الشخصي"
 #: addons/badges/admin/panels/manage.php:3
 #, php-format
 msgid ""
-"If you want to add more badges, please put your badges as PNG in <code>"
-"%s</code>. To give a new badge, or assign a new achievement, click on a "
-"badge below to start."
+"If you want to add more badges, please put your badges as PNG in <code>%s</"
+"code>. To give a new badge, or assign a new achievement, click on a badge "
+"below to start."
 msgstr ""
 
 #: addons/badges/admin/panels/manage.php:24
 #, fuzzy
+#| msgid "Upload Button Text"
 msgid "Upload Badge"
 msgstr "تحميل نص الزر"
 
@@ -333,6 +334,7 @@ msgstr ""
 
 #: addons/badges/admin/panels/manage.php:152
 #, fuzzy
+#| msgid "Disable registration"
 msgid "Days (since registration)"
 msgstr "تعطيل التسجيل"
 
@@ -590,6 +592,7 @@ msgstr ""
 
 #: addons/multiforms/admin/admin.php:33
 #, fuzzy
+#| msgid "Edit Field"
 msgid "Edit Forms"
 msgstr "تعديل الحقل "
 
@@ -607,6 +610,7 @@ msgstr ""
 #: addons/multiforms/admin/panels/edit_multifrm.php:13
 #: addons/multiforms/admin/panels/edit_multifrm.php:21
 #, fuzzy
+#| msgid "Field Title"
 msgid "Form Title"
 msgstr "عنوان الحقل"
 
@@ -790,10 +794,10 @@ msgstr "&mdash;حقل مخصص&mdash;"
 #: addons/redirects/admin/panels/login_redirects.php:26
 #: addons/redirects/admin/panels/register_redirects.php:26
 msgid ""
-"If you want redirection based on specific <strong>custom field value</strong>"
-" enter the value here: (e.g. country or city) This is helpful if you wish to "
-"redirect users who have a specific city in profile, be redirected to a "
-"custom page after their login. If you wish to <strong>auto-map</strong> or "
+"If you want redirection based on specific <strong>custom field value</"
+"strong> enter the value here: (e.g. country or city) This is helpful if you "
+"wish to redirect users who have a specific city in profile, be redirected to "
+"a custom page after their login. If you wish to <strong>auto-map</strong> or "
 "redirect users automatically based on the custom field value you could use "
 "wildcards like this: <strong>{your_custom_field}</strong> in the redirection "
 "URL. The wildcard will also work on {username}"
@@ -817,8 +821,8 @@ msgid ""
 "You can use wildcards for automated mapping. For example, if you enter "
 "{username} that will be replaced automatically by the username in "
 "redirection url. If you want to map a custom field <strong>country</strong> "
-"then use the wildcart {country} to map the user to his country automatically."
-" If you use wildcards, the field value is not required."
+"then use the wildcart {country} to map the user to his country "
+"automatically. If you use wildcards, the field value is not required."
 msgstr ""
 "يمكنك استخدام الاحرف البديلة لتوليد خرائط ألية. على سبيل المثال,اذا "
 "ادخلت{username}سوف يتم استبداله اتوماتيكيا عن طريق اسم المستخدم في روابط "
@@ -1014,6 +1018,7 @@ msgstr "ارسل اشعار بريديا عندما يتابع احدهم شخص
 
 #: addons/social/admin/panels/settings.php:20
 #, fuzzy
+#| msgid "Send e-mail notification when someone follow another user"
 msgid "Send e-mail notification to followers when user creates post"
 msgstr "ارسل اشعار بريديا عندما يتابع احدهم شخصا ما "
 
@@ -1089,6 +1094,7 @@ msgstr "أصبح الأن حساب نشط "
 
 #: addons/social/functions/api.php:80
 #, fuzzy, php-format
+#| msgid "has published a <a href=\"%s\">new %s</a>."
 msgid "has published a <a href=\"%s\">post on socialwall</a>."
 msgstr "قام بنشر  <a href=\"%s\">new %s</a>."
 
@@ -1123,6 +1129,7 @@ msgstr "سجلت موخرأ ؟"
 #: addons/social/functions/api.php:236 addons/social/functions/api.php:258
 #: addons/social/functions/api.php:279
 #, fuzzy
+#| msgid "you"
 msgid "You"
 msgstr "انت "
 
@@ -1164,6 +1171,7 @@ msgstr "متابَعين"
 
 #: addons/social/functions/api.php:488
 #, fuzzy, php-format
+#| msgid "<span>%s</span> following"
 msgid "<span>%s</span>"
 msgstr "<span>%s</span> متابَعين"
 
@@ -1300,6 +1308,7 @@ msgstr ""
 #: addons/timeline/admin/panels/settings.php:2
 #: addons/userpro-google-map/admin/panels/settings.php:3
 #, fuzzy
+#| msgid "Aweber Settings"
 msgid "General Settings"
 msgstr "إعدادات أوبر"
 
@@ -1309,11 +1318,13 @@ msgstr ""
 
 #: addons/timeline/templates/template-timeline-profilepic_update.php:14
 #, fuzzy
+#| msgid "External Profile Pictures"
 msgid "Changed profile picture"
 msgstr "صور الملف الشخصي الخارجي"
 
 #: addons/timeline/templates/template-timeline-registered.php:10
 #, fuzzy
+#| msgid "has just registered!"
 msgid "Got Registered"
 msgstr "سجلت موخرأ ؟"
 
@@ -1336,11 +1347,10 @@ msgstr ""
 
 #: addons/userpro-google-map/admin/panels/settings.php:18
 msgid ""
-"Enter the Google map API key value. Generate your <a target=\"_blank\" "
-"href=\"https://console.developers.google.com/flows/enableapi?"
-"apiid=maps_backend,geocoding_backend,directions_backend,"
-"distance_matrix_backend,elevation_backend,places_backend&reusekey=true\">API "
-"Key</a>"
+"Enter the Google map API key value. Generate your <a target=\"_blank\" href="
+"\"https://console.developers.google.com/flows/enableapi?apiid=maps_backend,"
+"geocoding_backend,directions_backend,distance_matrix_backend,"
+"elevation_backend,places_backend&reusekey=true\">API Key</a>"
 msgstr ""
 
 #: addons/userpro-google-map/functions/defaults.php:30
@@ -1373,6 +1383,7 @@ msgstr ""
 
 #: admin/admin-functions.php:33
 #, fuzzy
+#| msgid "Email Content"
 msgid "Email Support"
 msgstr "محتوى البريد"
 
@@ -1471,6 +1482,7 @@ msgstr ""
 
 #: admin/admin-functions.php:95
 #, fuzzy
+#| msgid "Displays the Username of user"
 msgid "Displays value of custom field"
 msgstr "اعرض اسم المستخدم للعضو"
 
@@ -1485,6 +1497,7 @@ msgstr "أعرض اسم المدونة"
 
 #: admin/admin-functions.php:116
 #, fuzzy
+#| msgid "Displays the Username of user"
 msgid "Displays Register Popup"
 msgstr "اعرض اسم المستخدم للعضو"
 
@@ -1540,6 +1553,7 @@ msgstr ""
 
 #: admin/admin-functions.php:376
 #, fuzzy
+#| msgid "Social Fields"
 msgid " Social Fields."
 msgstr "حقول الشبكات الأجتماعية"
 
@@ -1613,6 +1627,7 @@ msgstr ""
 
 #: admin/admin-functions.php:554
 #, fuzzy
+#| msgid "Select %s"
 msgid "select"
 msgstr "اختار %s"
 
@@ -1741,6 +1756,7 @@ msgstr "تقييد المحتوى"
 
 #: admin/admin-metabox.php:14
 #, fuzzy
+#| msgid "All Registered Members"
 msgid "Restricted to All Members"
 msgstr "كل الأعضاء المسجلين"
 
@@ -1767,8 +1783,8 @@ msgstr ""
 
 #: admin/admin-pointers.php:36
 msgid ""
-"Add more features to your site by installing addons . Check out <a "
-"href=\"admin.php?page=userpro-addons\">available addons</a> for UserPro"
+"Add more features to your site by installing addons . Check out <a href="
+"\"admin.php?page=userpro-addons\">available addons</a> for UserPro"
 msgstr ""
 
 #: admin/admin-users.php:11
@@ -1819,6 +1835,7 @@ msgstr "الأشعارات البريدية"
 
 #: admin/admin.php:86
 #, fuzzy
+#| msgid "Reset Options"
 msgid "Newsletter Options"
 msgstr "استعادة الخيارات "
 
@@ -1841,6 +1858,7 @@ msgstr "حقول دور القائمة"
 
 #: admin/admin.php:91
 #, fuzzy
+#| msgid "Export Users"
 msgid "Import/Export Users"
 msgstr "تصدير المستخدمين"
 
@@ -1858,6 +1876,7 @@ msgstr "العضوية المطورة"
 
 #: admin/admin.php:180
 #, fuzzy
+#| msgid "Social Features"
 msgid "Add More Features"
 msgstr "الشبكات الاجتماعيه"
 
@@ -1983,11 +2002,13 @@ msgstr ""
 
 #: admin/panels/exportusers.php:3
 #, fuzzy
+#| msgid "Export Users"
 msgid "Export Users to CSV"
 msgstr "تصدير المستخدمين"
 
 #: admin/panels/exportusers.php:7
 #, fuzzy
+#| msgid "Number of results per page"
 msgid "Number of Users to export"
 msgstr "عدد النتائج في كل صفحة"
 
@@ -2026,6 +2047,7 @@ msgstr ""
 
 #: admin/panels/exportusers.php:47
 #, fuzzy
+#| msgid "Export Users"
 msgid "Import Users from CSV"
 msgstr "تصدير المستخدمين"
 
@@ -2035,6 +2057,7 @@ msgstr ""
 
 #: admin/panels/exportusers.php:56
 #, fuzzy
+#| msgid "Send e-mail notification when someone follow another user"
 msgid "Send email notification to users on registration"
 msgstr "ارسل اشعار بريديا عندما يتابع احدهم شخصا ما "
 
@@ -2177,8 +2200,8 @@ msgstr "عنوان الحقل"
 
 #: admin/panels/fields.php:66
 msgid ""
-"Enter title for this data. example: City, How did you hear about us, Twitter,"
-" Personal Website, etc."
+"Enter title for this data. example: City, How did you hear about us, "
+"Twitter, Personal Website, etc."
 msgstr ""
 "أدخل عنوان حقل البيانات . على سبيل المثال : المدينة . كيف سمعت عن موقعنا . "
 "تويتر. موقعك الشخصي .الخ ....."
@@ -2296,6 +2319,7 @@ msgstr "إعدادات التمديد"
 
 #: admin/panels/import_export.php:11
 #, fuzzy
+#| msgid "How to edit the field settings?"
 msgid "Download the file of userpro settings"
 msgstr "كيف تستطيع تعديل اعدادات الحقول ؟ "
 
@@ -2352,6 +2376,7 @@ msgstr ""
 
 #: admin/panels/invite.php:21
 #, fuzzy
+#| msgid "Aweber Settings"
 msgid "Invite Users Setting"
 msgstr "إعدادات أوبر"
 
@@ -2379,6 +2404,7 @@ msgstr ""
 
 #: admin/panels/invite.php:61
 #, fuzzy
+#| msgid "Displays the E-mail address of user"
 msgid "Enter Email addresses to Invite"
 msgstr " اعرض البريد الألكتروني  للعضو"
 
@@ -2393,10 +2419,10 @@ msgstr ""
 #: admin/panels/licensing.php:3
 msgid ""
 "Please note: <strong>cURL must be enabled</strong> to successfully activate "
-"your license. If you want to find your purchase code, please look <a "
-"href=\"http://userproplugin.com/userpro/docs/#install\">here</a>. If you "
-"cannot enable cURL or getting another error, please use the support forum "
-"link and we will activate your license manually."
+"your license. If you want to find your purchase code, please look <a href="
+"\"http://userproplugin.com/userpro/docs/#install\">here</a>. If you cannot "
+"enable cURL or getting another error, please use the support forum link and "
+"we will activate your license manually."
 msgstr ""
 
 #: admin/panels/licensing.php:5
@@ -2410,8 +2436,8 @@ msgstr ""
 
 #: admin/panels/mail.php:7
 msgid ""
-"The variables in {CURLY BRACKETS} are used to present data and info in email."
-" You can use them to customize your email template."
+"The variables in {CURLY BRACKETS} are used to present data and info in "
+"email. You can use them to customize your email template."
 msgstr ""
 "المتغيرات في {CURLY BRACKETS}تستخدم لتقديم البيانات والمعلومات في البريد "
 "الإلكتروني. يمكنك استخدامها لتخصيص قالب البريد الإلكتروني الخاص بك."
@@ -2439,6 +2465,7 @@ msgstr ""
 
 #: admin/panels/mail.php:47
 #, fuzzy
+#| msgid "Send admin an e-mail when user updates profile"
 msgid "Send an e-mail for Update password"
 msgstr "أرسل بريدا للمدير عند قيام احد الأعضاء بتحديث ملفه الشخصي"
 
@@ -2486,6 +2513,7 @@ msgstr "ارسل بريدا للمدير عندما يقوم أحد الأعضا
 
 #: admin/panels/mail.php:144
 #, fuzzy
+#| msgid "Send admin an e-mail when user updates profile"
 msgid "Send admin an e-mail when New Registration"
 msgstr "أرسل بريدا للمدير عند قيام احد الأعضاء بتحديث ملفه الشخصي"
 
@@ -2519,6 +2547,7 @@ msgstr "Customize \"التحقق من صحة البريد الالكتروني\"
 
 #: admin/panels/mail.php:358
 #, fuzzy
+#| msgid "Customize \"Email Validation\" Mail"
 msgid "Customize \"Email Validation after email change\" Mail"
 msgstr "Customize \"التحقق من صحة البريد الالكتروني\" Mail"
 
@@ -2532,11 +2561,13 @@ msgstr "Customize \"استعادة كلمة المرور\" Mail"
 
 #: admin/panels/mail.php:448
 #, fuzzy
+#| msgid "Customize \"Reset Password\" Mail"
 msgid "Customize \"Reset Password by email link\" Mail"
 msgstr "Customize \"استعادة كلمة المرور\" Mail"
 
 #: admin/panels/mail.php:478
 #, fuzzy
+#| msgid "Customize \"Reset Password\" Mail"
 msgid "Customize \"Password Change\" Mail"
 msgstr "Customize \"استعادة كلمة المرور\" Mail"
 
@@ -2593,6 +2624,7 @@ msgstr ""
 
 #: admin/panels/newsletter_option.php:17
 #, fuzzy
+#| msgid "Aweber Settings"
 msgid "AWeber Settings"
 msgstr "إعدادات أوبر"
 
@@ -2612,6 +2644,7 @@ msgstr ""
 
 #: admin/panels/newsletter_option.php:36
 #, fuzzy
+#| msgid "Compatibility Settings"
 msgid "Campaign Monitor Settings"
 msgstr "إعدادات التوافق"
 
@@ -2832,6 +2865,7 @@ msgstr "حالة المتصلين/ غير المتصلين"
 
 #: admin/panels/settings.php:72
 #, fuzzy
+#| msgid "Online/Offline Status"
 msgid "To Display Online/Offline Status "
 msgstr "حالة المتصلين/ غير المتصلين"
 
@@ -2849,6 +2883,7 @@ msgstr "إعدادات التوافق"
 
 #: admin/panels/settings.php:102
 #, fuzzy
+#| msgid "External Profile Pictures"
 msgid "Profile Pictures Fix"
 msgstr "صور الملف الشخصي الخارجي"
 
@@ -2869,6 +2904,7 @@ msgstr ""
 
 #: admin/panels/settings.php:112
 #, fuzzy
+#| msgid "URL Encoding"
 msgid "Url Encoding"
 msgstr "رابط ترميز"
 
@@ -2946,8 +2982,8 @@ msgstr ""
 
 #: admin/panels/settings.php:172
 msgid ""
-"Try playing with this setting If you encounter issues with twitter "
-"Login/Register."
+"Try playing with this setting If you encounter issues with twitter Login/"
+"Register."
 msgstr ""
 
 #: admin/panels/settings.php:179
@@ -3030,9 +3066,9 @@ msgstr "أعرض اسم المدونة"
 
 #: admin/panels/settings.php:251
 msgid ""
-"User profiles permalink structure setting e.g. /profile/34 or "
-"/profile/Username or /profile/FirstName+LastName If you have a problem with "
-"permalink structure, you can try to change this setting."
+"User profiles permalink structure setting e.g. /profile/34 or /profile/"
+"Username or /profile/FirstName+LastName If you have a problem with permalink "
+"structure, you can try to change this setting."
 msgstr ""
 "التشكيلات الجانبية للعضو تحدد هيكل الرابط الثابت على سبيل المثال /الملف "
 "الشخصي أو / ملف / اسم المستخدم أو / ملف / الاسم الأول اسم العائلة + إذا كان "
@@ -3129,6 +3165,7 @@ msgstr ""
 
 #: admin/panels/settings.php:336
 #, fuzzy
+#| msgid "External Profile Pictures"
 msgid "Enable webcam to take profile Picture"
 msgstr "صور الملف الشخصي الخارجي"
 
@@ -3164,6 +3201,7 @@ msgstr ""
 
 #: admin/panels/settings.php:383
 #, fuzzy
+#| msgid "Multiselect Box"
 msgid "Multi Select"
 msgstr "مربع الخيارات المتعددة"
 
@@ -3185,11 +3223,15 @@ msgstr ""
 
 #: admin/panels/settings.php:422
 #, fuzzy
+#| msgid "Restrict Content"
 msgid "Text for Restricted Content"
 msgstr "تقييد المحتوى"
 
 #: admin/panels/settings.php:425
 #, fuzzy
+#| msgid ""
+#| "The variables in {CURLY BRACKETS} are used to present data and info in "
+#| "email. You can use them to customize your email template."
 msgid ""
 "The variables in {CURLY BRACKETS} are used to represent data and info in "
 "text. You can use them to customize your restricted content text."
@@ -3364,6 +3406,7 @@ msgstr ""
 
 #: admin/panels/settings.php:603
 #, fuzzy
+#| msgid "MailChimp Subscribe Text"
 msgid "Check the MailChimp Subscribe checkbox by default"
 msgstr "نص  اشتراك قائمة البريد"
 
@@ -3403,16 +3446,19 @@ msgstr "اختار %s"
 
 #: admin/panels/settings.php:647
 #, fuzzy
+#| msgid "Fields Layout"
 msgid "Modern Layout"
 msgstr "تخطيط الحقول"
 
 #: admin/panels/settings.php:648
 #, fuzzy
+#| msgid "Fields Layout"
 msgid "Classic Layout"
 msgstr "تخطيط الحقول"
 
 #: admin/panels/settings.php:649
 #, fuzzy
+#| msgid "Fields Layout"
 msgid "Grand Layout"
 msgstr "تخطيط الحقول"
 
@@ -3426,6 +3472,7 @@ msgstr ""
 
 #: admin/panels/settings.php:674
 #, fuzzy
+#| msgid "Send admin an e-mail when user updates profile"
 msgid "Roles that can edit other users profile"
 msgstr "أرسل بريدا للمدير عند قيام احد الأعضاء بتحديث ملفه الشخصي"
 
@@ -3456,6 +3503,7 @@ msgstr ""
 
 #: admin/panels/settings.php:714
 #, fuzzy
+#| msgid "Select %s"
 msgid "Select role"
 msgstr "اختار %s"
 
@@ -3506,6 +3554,7 @@ msgstr "عرض صفحة دخول العضوية المطورة "
 
 #: admin/panels/settings.php:811
 #, fuzzy
+#| msgid "Displays blog name"
 msgid "Display badges on profile"
 msgstr "أعرض اسم المدونة"
 
@@ -3530,8 +3579,8 @@ msgstr ""
 msgid ""
 "The panic key helps you access WP-admin screen If you enabled the hide "
 "backend setting below, and for some reason you cannot get back into your "
-"site. To enter your backend with the panic key use this URL: <strong>"
-"%s</strong>"
+"site. To enter your backend with the panic key use this URL: <strong>%s</"
+"strong>"
 msgstr ""
 
 #: admin/panels/settings.php:854
@@ -3644,8 +3693,8 @@ msgstr ""
 
 #: admin/panels/settings.php:954
 msgid ""
-"You can also redirect users to custom URL by passing <code>"
-"login_redirect</code> valid URL in your shortcode."
+"You can also redirect users to custom URL by passing <code>login_redirect</"
+"code> valid URL in your shortcode."
 msgstr ""
 
 #: admin/panels/settings.php:959
@@ -3666,8 +3715,8 @@ msgstr ""
 
 #: admin/panels/settings.php:1000
 msgid ""
-"You can also redirect users to custom URL by passing <code>"
-"register_redirect</code> valid URL in your shortcode."
+"You can also redirect users to custom URL by passing "
+"<code>register_redirect</code> valid URL in your shortcode."
 msgstr ""
 
 #: admin/panels/settings.php:1005
@@ -3889,13 +3938,14 @@ msgstr ""
 
 #: admin/panels/settings.php:1402
 msgid ""
-"Open <a href=\"http://instagram.com/developer/\">http://instagram."
-"com/developer/</a> create a new app and edit its settings to make it work on "
+"Open <a href=\"http://instagram.com/developer/\">http://instagram.com/"
+"developer/</a> create a new app and edit its settings to make it work on "
 "your domain. In App Settings, please paste the Client ID into this field."
 msgstr ""
 
 #: admin/panels/settings.php:1407
 #, fuzzy
+#| msgid "Instagram Integration"
 msgid "Instagram Client Secret"
 msgstr "التكامل إينستاجرام"
 
@@ -3913,8 +3963,8 @@ msgstr ""
 
 #: admin/panels/settings.php:1433
 msgid ""
-"You must first create an app at <a href=\"https://dev.twitter.com/apps/\">"
-"https://dev.twitter.com/apps/</a> and enter your consumer keys to enable "
+"You must first create an app at <a href=\"https://dev.twitter.com/apps/"
+"\">https://dev.twitter.com/apps/</a> and enter your consumer keys to enable "
 "twitter connect."
 msgstr ""
 
@@ -3985,6 +4035,7 @@ msgstr ""
 
 #: admin/panels/settings.php:1554
 #, fuzzy
+#| msgid "Aweber Settings"
 msgid "Aweber List Id"
 msgstr "إعدادات أوبر"
 
@@ -4192,8 +4243,8 @@ msgstr ""
 
 #: functions/ajax.php:1037
 msgid ""
-"Email is taken. Is that you? Try to <a href=\"#\" data-template=\"login\">"
-"login</a>"
+"Email is taken. Is that you? Try to <a href=\"#\" data-template=\"login"
+"\">login</a>"
 msgstr ""
 
 #: functions/ajax.php:1051
@@ -4317,11 +4368,13 @@ msgstr ""
 
 #: functions/api.php:2984
 #, fuzzy, php-format
+#| msgid "<span>%s</span> following"
 msgid "<span>%s</span> Connection"
 msgstr "<span>%s</span> متابَعين"
 
 #: functions/api.php:2986
 #, fuzzy, php-format
+#| msgid "<span>%s</span> following"
 msgid "<span>%s</span> Connections"
 msgstr "<span>%s</span> متابَعين"
 
@@ -4343,11 +4396,13 @@ msgstr ""
 
 #: functions/badge-functions.php:172
 #, fuzzy
+#| msgid "All accounts"
 msgid "Unblock account"
 msgstr "جميع الحسابات"
 
 #: functions/badge-functions.php:176
 #, fuzzy
+#| msgid "All accounts"
 msgid "Block account"
 msgstr "جميع الحسابات"
 
@@ -4423,8 +4478,8 @@ msgstr ""
 
 #: functions/defaults.php:67
 msgid ""
-"You have changed your email address at {USERPRO_BLOGNAME}. You must "
-"confirm/validate your account before logging in."
+"You have changed your email address at {USERPRO_BLOGNAME}. You must confirm/"
+"validate your account before logging in."
 msgstr ""
 
 #: functions/defaults.php:74
@@ -4466,8 +4521,8 @@ msgstr ""
 #: functions/defaults.php:88 functions/defaults.php:93
 #: functions/defaults.php:98 functions/defaults.php:103
 msgid ""
-"If you have any further questions, please contact us at {USERPRO_ADMIN_EMAIL}"
-"."
+"If you have any further questions, please contact us at "
+"{USERPRO_ADMIN_EMAIL}."
 msgstr ""
 
 #: functions/defaults.php:92
@@ -4561,6 +4616,7 @@ msgstr ""
 
 #: functions/defaults.php:201
 #, fuzzy
+#| msgid "Password Field"
 msgid "Password Updated"
 msgstr "حقل كلمة السر"
 
@@ -4596,6 +4652,7 @@ msgstr ""
 
 #: functions/defaults.php:224
 #, fuzzy
+#| msgid "%d new verification requests"
 msgid "New verification Request"
 msgstr "%d طلبات التحقق الجديدة"
 
@@ -4736,6 +4793,7 @@ msgstr ""
 
 #: functions/fields-functions.php:619
 #, fuzzy
+#| msgid "You have not started following anyone yet."
 msgid "You are currently receiving following email alerts."
 msgstr "لم تقم بالبدا في متَابعة أي احد لحد الأن "
 
@@ -4843,6 +4901,7 @@ msgstr ""
 
 #: functions/invite_users_widgets.php:16
 #, fuzzy
+#| msgid "Reset online users"
 msgid "Userpro invite users"
 msgstr "اعادة تعيين الاعضاء المتصلين"
 
@@ -4861,8 +4920,8 @@ msgstr ""
 #: functions/msg-functions.php:4
 #, php-format
 msgid ""
-"Congratulations! Your account is now %s <strong>Verified</strong>. <i "
-"class=\"userpro-icon-remove\"></i>"
+"Congratulations! Your account is now %s <strong>Verified</strong>. <i class="
+"\"userpro-icon-remove\"></i>"
 msgstr ""
 
 #: functions/msg-functions.php:8
@@ -4941,6 +5000,7 @@ msgstr ""
 
 #: functions/msg-functions.php:86
 #, fuzzy
+#| msgid "Your plugin pages have been rebuilt successfully."
 msgid "A reset link has been sent to your email successfully."
 msgstr "أعيد بناء صفحات البرنامج المساعد الخاص بك بنجاح"
 
@@ -4984,6 +5044,7 @@ msgstr ""
 
 #: functions/shortcode-main.php:56
 #, fuzzy
+#| msgid "%s Pending Verification"
 msgid "Resend verification email?"
 msgstr "%s بانتظار التحقق"
 
@@ -5034,6 +5095,7 @@ msgstr ""
 
 #: functions/shortcode-main.php:82
 #, fuzzy
+#| msgid "%s Pending Verification"
 msgid "Resend verification email"
 msgstr "%s بانتظار التحقق"
 
@@ -5143,11 +5205,13 @@ msgstr ""
 
 #: profile-layouts/layout1/layout.php:206 templates/connections.php:153
 #, fuzzy
+#| msgid "You do not have anyone who started following you yet."
 msgid "You do not have anyone who started connection with you yet."
 msgstr "لاتمتلك أحد قام بالبدأ في متَابعتك  موخرا"
 
 #: profile-layouts/layout1/layout.php:208 templates/connections.php:155
 #, fuzzy
+#| msgid "This user does not have anyone who started following him/her yet."
 msgid "This user does not have anyone who started connection him/her yet."
 msgstr "ها العضو لايمتلك أحد قام  بالبد في متَابعته موخرا "
 
@@ -5268,6 +5332,7 @@ msgstr ""
 
 #: templates/postsbyuser.php:113
 #, fuzzy
+#| msgid "This user have not started following anyone yet."
 msgid "This user has not published any posts"
 msgstr "هذا العضو لم يبدأ بمتَابعة أي أحد للان"
 
@@ -5309,7 +5374,7 @@ msgstr ""
 
 #: templates/resend.php:27 templates/reset.php:27
 msgid "Username or Email"
-msgstr "Nombre de usuario o E-mail"
+msgstr ""
 
 #: templates/reset.php:48
 msgid "Request reset link"
@@ -5327,9 +5392,69 @@ msgstr ""
 
 #: templates/view.php:8
 #, fuzzy
+#| msgid "View Profile"
 msgid "Restricted Profile"
 msgstr "عرض الملف الشخصي"
 
 #: templates/view.php:14
 msgid "This profile is made hidden by the user"
 msgstr ""
+
+#~ msgid "Support UserPro with your 5-star rating"
+#~ msgstr "دعم UserPro الخاص بك مع تصنيف 5 نجوم"
+
+#~ msgid "UserPro %s"
+#~ msgstr "العضوية المطورة %s"
+
+#~ msgid "Disable"
+#~ msgstr "تعطيل"
+
+#~ msgid "Advanced Redirection"
+#~ msgstr "اعادة توجيه متقدمة"
+
+#~ msgid ""
+#~ "The top rules always have higher priority. So any new rule you add will "
+#~ "be higher in priority and checked first in the redirection rules during "
+#~ "login or registering (depending on where you set the redirection)."
+#~ msgstr ""
+#~ "القوانين الاساسية دائما تحميل الاولوية . لكن أي قوانين تضيفها تستصبح ذات "
+#~ "أولولية وتحقق أولا عند أي عملية تسجيل دخول أو عملية تسجيل جديدة ( تعتمد "
+#~ "على مكان وضع اعادة التوجيه )"
+
+#~ msgid "Customize Fields"
+#~ msgstr "تخصيص الحقول"
+
+#~ msgid "Global Options"
+#~ msgstr "الخيارات العالمية"
+
+#~ msgid "Emails & Notifications"
+#~ msgstr "رسائل البريد الإلكتروني والتبليغات"
+
+#~ msgid "Variables you can use to build your mail templates"
+#~ msgstr "المتغيرات التي يمكن استخدامها لبناء قوالب البريد الخاص بك"
+
+#~ msgid "Customize the New Registration e-mail sent to Admin"
+#~ msgstr "ارسال بريد الكتروني للمدير عند حصول تسجيل جديد "
+
+#~ msgid ""
+#~ "By default, UserPro creates profile pages and front-end registration/"
+#~ "login pages automatically. However if for some reason, these pages were "
+#~ "removed or deleted you can rebuild them here."
+#~ msgstr ""
+#~ "افتراضيا، اضافة العضوية المطورة تكون صفحات الملف الشخصي والواجهة الأمامية "
+#~ "لصفحات التسجيل / تسجيل الدخول تلقائيا. ولكن إذا كان لسبب ما، أزيلت هذه "
+#~ "الصفحات أو حذفها يمكنك إعادة بنائها هنا."
+
+#~ msgid ""
+#~ "Mass restrict pages by allowing access to members only for full-content. "
+#~ "Unlike the UserPro shortcode which hides the content you specify only. "
+#~ "This will lock all content page until the user is logged in. You can also "
+#~ "bulk block/allow any pages you want."
+#~ msgstr ""
+#~ "الوصول الكامل لكامل المحتوى للاعضاء  المسجلين. اضافة العضوية المطورة "
+#~ "لاتحبذ الاكواد المختصرة  لاخفاء المحتوى عن صفحة معينة . سوف تقوم بغلق "
+#~ "كامل محتوى الصفحات لغاية تسجيل العضو دخوله . تستطيع السماح أو اغلاق  اي "
+#~ "صفحة تريدها "
+
+#~ msgid "Choose one or more pages to restrict"
+#~ msgstr "اختر صفحة أو أكثر لتقيد الوصول لها "

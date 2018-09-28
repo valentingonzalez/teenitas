@@ -326,7 +326,6 @@ class userpro_sc_api {
 		$count = number_format_i18n($count);
 		return sprintf(__('<span>%s</span> following','userpro'), $count);
 	}
-
 	// show following count plain
 	function following_count_plain($user_id){
 		$arr = get_user_meta($user_id, '_userpro_following_ids', true);
@@ -338,14 +337,12 @@ class userpro_sc_api {
 		$count = number_format_i18n($count);
 		return $count;
 	}
-
 	// remove a following user
 	function unset_following($user_id, $id_to_remove) {
 		$arr = get_user_meta($user_id, '_userpro_following_ids', true);
 		unset( $arr[ $id_to_remove ] );
 		update_user_meta($user_id, '_userpro_following_ids', $arr);
 	}
-
 	// show followers count
 	function followers_count($user_id){
 
@@ -359,7 +356,6 @@ class userpro_sc_api {
 		$count = number_format_i18n($count);
 		return sprintf(__('<span>%s</span> followers','userpro'), $count);
 	}
-
 	// show followers count plain
 	function followers_count_plain($user_id){
 		$arr = get_user_meta($user_id, '_userpro_followers_ids', true);

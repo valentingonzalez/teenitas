@@ -350,7 +350,7 @@
 
 
                 $output.='<div class="description">';
-                $output.=__(' Fields which user will see at time of registration.','userpro');
+                $output.=__('Fields which user will see at time of registration.','userpro');
                 $output.='</div>';
             }
             if($template=='edit')
@@ -358,14 +358,14 @@
 
 
                 $output.='<div class="description">';
-                $output.=__('  Fields which user will see at time of edit profile. ','userpro');
+                $output.=__('Fields which user will see at time of edit profile. ','userpro');
                 $output.='</div>';
             }
             if($template=='login')
             {
 
                 $output.='<div class="description">';
-                $output.=__(' Fields which user will see at time of login. ','userpro');
+                $output.=__('Fields which user will see at time of login. ','userpro');
                 $output.='</div>';
             }
 
@@ -373,7 +373,7 @@
             {
 
                 $output.='<div class="description">';
-                $output.= __(' Social Fields.','userpro');
+                $output.= __('Social Fields.','userpro');
                 $output.='</div>';
             }
         }

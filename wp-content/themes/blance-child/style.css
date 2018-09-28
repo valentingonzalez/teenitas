@@ -111,76 +111,119 @@ fieldset {
     margin: 0 150px;
 }
 
-.caldera-grid label {
+form label {
     color: #6A6A6A;
 }
-.caldera-grid .form-control,
-input:not([type=submit]):not([type=file]) {
+form input:not([type=submit]):not([type=file]) {
     border: none;
-    box-shadow: none;
+    box-shadow: none !important;
     border-bottom: 2px solid #686868;
-    padding-left: 0;
+    padding: 6px 0 !important;
     color: #000;
     transition: border .3s;
+    border-radius: 0;
 }
-.caldera-grid .form-control:focus,
-input:not([type=submit]):not([type=file]):focus {
-    border-color: #FF3CB5;
+form textarea {
+    border: none !important;
+    box-shadow: none !important;
+    border-bottom: 2px solid #686868 !important;
+    padding: 6px 0 !important;
+    color: #000;
+    transition: border .3s;
+    border-radius: 0 !important;
+    resize: none;
+}
+form input:not([type=submit]):not([type=file]):focus,
+form textarea:focus {
+    border-color: #FF3CB5 !important;
     box-shadow: none;
 }
-.caldera-grid .btn-default,
-input[type=submit].button,
-button[type=submit].button,
-input[type=button].button {
+form [type=submit] {
     transition: all .3s;
-    color: #FFF;
+    color: #FFF !important;
     background-color: #FF3CB5 !important;
     height: 51px;
     border: none !important;
     padding: 0 22px;
+    border-radius: 0;
+    min-width: 170px;
 }
-.caldera-grid .btn-default:hover,
-input[type=submit].button:hover,
-button[type=submit].button:hover,
-input[type=button].button:hover {
+form [type=submit]:hover {
     color: #FF3CB5 !important;
     border: 3px solid #FF3CB5 !important;
     background-color: #FFF !important;
     opacity: 1 !important;
 }
-.caldera-grid .btn {
-    border-radius: 0;
-    min-width: 170px;
-    border: none;
-}
-.caldera-grid .form-group {
+form .form-group,
+.caldera-grid .form-group{
     margin-bottom: 40px;
 }
-.caldera-grid .form-group:focus-within label {
+form .form-group:focus-within label {
     color: #000;
 }
 
+.form_login {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.form-separator {
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 20px;
+    font-size: 13px;
+    height: 18px;
+}
+.form-separator span {
+    position: relative;
+}
+.form-separator span:before,
+.form-separator span:after {
+    content: '';
+    top: 50%;
+    position: absolute;
+    border-bottom: 1px solid #bbbbbb;
+    width: 620px;
+}
+.form-separator span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+.form-separator span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+input[type=tel] {
+    text-indent: 50px;
+}
 
 @media only screen and (min-width: 981px) {
 
-    .caldera-grid .checkbox-inline, .caldera-grid .radio-inline {
-	padding-left: 32px;
-	margin-right: 20px;
-	font-weight: 700;
+    .caldera-grid .checkbox-inline,
+    .caldera-grid .radio-inline {
+        padding-left: 32px;
+        margin-right: 20px;
+        font-weight: 700;
     }
-
+    .caldera-grid .checkbox label {
+        padding-left: 36px !important;
+    }
+    .caldera-grid .checkbox input[type=checkbox],
+    .caldera-grid .checkbox-inline input[type=checkbox] {
+        margin-left: -35px !important;
+    }
     .caldera-grid .checkbox input[type=checkbox],
     .caldera-grid .checkbox-inline input[type=checkbox],
     .caldera-grid .radio input[type=radio],
     .caldera-grid .radio-inline input[type=radio] {
         width: 0;
-	margin-left: -32px;
+	    margin-left: -32px;
     }
     .caldera-grid input[type=checkbox]:hover,
     .caldera-grid input[type=radio]:hover {
         cursor: pointer;
     }
 
+    input[type=checkbox]:before,
     input[type=radio]:before {
         content: '';
         border-radius: 50%;
@@ -192,12 +235,12 @@ input[type=button].button:hover {
         height: 24px;
     }
     input[type=checkbox]:before {
+        border-radius: 0;
     }
-    input[type=radio]:checked:before {
-        border-color: #ff3cb5;
-	border-width: 7px;
-    }
+    input[type=radio]:checked:before,
     input[type=checkbox]:checked:before {
+        border-color: #ff3cb5;
+	    border-width: 7px;
     }
 }
 
@@ -383,4 +426,144 @@ input[type=button].button:hover {
 */
 
 
+/** LOOKBOOK **/
+/*
+#lookbook {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+#lookbook:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+#lookbook .lookbook-item {
+    float:left;
+    width: 20%;
+}
+#lookbook .lookbook-item a {
+    height: 350px;
+    background-size: cover;
+    display: block;
+    position: relative;
+}
+#lookbook .lookbook-item > a.item:before,
+#lookbook .lookbook-item > a.item:after  {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: all .3s ease-in-out;
+    z-index: 1;
+}
 
+#lookbook .lookbook-item > a.item:hover:before {
+    right: 50%;
+    left: 50%;
+    background-color: #fff;
+    opacity: 0.3;
+}
+#lookbook .lookbook-item > a.item:hover:after {
+    top: 50%;
+    bottom: 50%;
+    background-color: #fff;
+    opacity: 0.3;
+}
+*/
+.required {
+    float: left;
+    margin-right: 5px;
+}
+
+#stores-accordion {
+    border-bottom: 1px solid #E6E6E6;
+}
+#stores-accordion .vc_tta-panel {
+    border: 1px solid #E6E6E6 !important;
+    border-bottom: none !important;
+}
+#stores-accordion .vc_tta-panel-heading {
+    border: none !important;
+}
+#stores-accordion .vc_tta-panel-heading:hover {
+    background: transparent;
+}
+
+#stores-accordion .vc_tta-panel-heading h4 a {
+    font-size: 14px;
+    padding: 14px 20px;
+    color: #252525 !important;
+    transition: none;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 3px;
+}
+#stores-accordion .vc_tta-panel-heading h4 a:hover,
+#stores-accordion .vc_active .vc_tta-panel-heading h4 a {
+    color: #FF3CB5 !important;
+}
+#stores-accordion .vc_tta-panel-heading h4 a .vc_tta-controls-icon {
+}
+#stores-accordion .vc_tta-panel-heading h4 a .vc_tta-controls-icon:before,
+#stores-accordion .vc_tta-panel-heading h4 a .vc_tta-controls-icon:after {
+    border-color: #BBB !important;
+    transition: none;
+}
+#stores-accordion .vc_tta-panel-heading h4 a:hover .vc_tta-controls-icon:before,
+#stores-accordion .vc_active .vc_tta-panel-heading h4 a .vc_tta-controls-icon:before,
+#stores-accordion .vc_tta-panel-heading h4 a:hover .vc_tta-controls-icon:after,
+#stores-accordion .vc_active .vc_tta-panel-heading h4 a .vc_tta-controls-icon:after {
+    border-color: #FF3CB5 !important;
+}
+#stores-accordion .vc_tta-panel-body {
+    padding-top: 5px;
+}
+#stores-accordion .wpb_wrapper ul li {
+    line-height: 16px;
+    padding: 8px 0;
+    position: relative;
+    font-size: 12px;
+    color: #6A6A6A;
+}
+#stores-accordion .wpb_wrapper ul li:first-child {
+    padding-top: 0;
+}
+#stores-accordion .wpb_wrapper ul li:hover {
+    color: #000;
+}
+#stores-accordion .wpb_wrapper ul li:not(:last-child):after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 40px;
+    bottom: 0;
+    border-bottom: 1px solid #BBB;
+}
+#stores-accordion .wpb_wrapper ul li span:nth-child(1) {
+    font-weight: 600;
+}
+#stores-accordion .wpb_wrapper ul li span:nth-child(2) {
+    font-style: italic;
+}
+#stores-accordion .wpb_wrapper ul li span:nth-child(3) {
+    font-weight: 500;
+}
+
+.protected-post-form {
+    width: 600px;
+    display: table;
+    padding: 28px 60px 30px;
+    margin: 100px auto;
+    border: 1px solid #e0e0e0;
+}
+.protected-post-form .title {
+    margin-bottom: 20px;
+}
+.protected-post-form input[type=password] {
+    display: block;
+    width: 100%;
+}

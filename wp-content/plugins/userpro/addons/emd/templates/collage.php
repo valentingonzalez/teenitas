@@ -10,7 +10,7 @@
 		
 			
 		
-				<a href="<?php echo $userpro->permalink( $user_id ); ?>"><?php echo get_avatar( $user_id,100); ?><?php echo userpro_profile_data('display_name', $user_id); ?><?php do_action('userpro_after_profile_img' , $user_id); ?><?php echo userpro_show_badges( $user_id, true ); ?></a>
+				<a href="<?php echo $userpro->permalink( $user_id ); ?>">    <img src="<?php echo $userpro->profile_photo_url($user_id); ?>" alt="profile-pic"><?php echo userpro_profile_data('display_name', $user_id); ?><?php do_action('userpro_after_profile_img' , $user_id); ?><?php echo userpro_show_badges( $user_id, true ); ?></a>
 	
 	
 		<?php }} else { ?><div class="userpro-search-noresults"><?php _e('No users match your search. Please try again.','userpro'); ?></div><?php } ?></div>

@@ -1,5 +1,4 @@
 <?php
-
 	$profile_privacy = userpro_profile_data('profile_privacy', $user_id);
 	if( !empty($profile_privacy) && $user_id != get_current_user_id() && !current_user_can('manage_options') ){
 		?>
@@ -69,7 +68,9 @@
 	<div class="userpro-centered <?php if (isset($args['header_only']) && $args['header_only']) { echo 'userpro-centered-header-only'; } ?>">
 	
 		<?php if ( userpro_get_option('lightbox') && userpro_get_option('profile_lightbox') ) { ?>
-		<div class="userpro-profile-img" data-key="profilepicture"><a href="<?php echo $userpro->profile_photo_url($user_id); ?>" class="userpro-tip-fade lightview" data-lightview-caption="<?php echo $userpro->profile_photo_title( $user_id ); ?>" title="<?php _e('View member photo','userpro'); ?>"><?php echo get_avatar( $user_id, $profile_thumb_size ); ?></a></div>
+		<div class="userpro-profile-img" data-key="profilepicture"><a href="<?php echo $userpro->profile_photo_url($user_id); ?>" class="userpro-tip-fade lightview" data-lightview-caption="<?php echo $userpro->profile_photo_title( $user_id ); ?>" title="<?php _e('View member photo','userpro'); ?>">
+
+                <img src="<?php echo $userpro->profile_photo_url($user_id); ?>" /></a></div>
 		<?php } else { ?>
 		<div class="userpro-profile-img" data-key="profilepicture"><a href="<?php echo $userpro->permalink($user_id); ?>" title="<?php _e('View Profile','userpro'); ?>"><?php echo get_avatar( $user_id, $profile_thumb_size ); ?></a></div>
 		<?php } ?>

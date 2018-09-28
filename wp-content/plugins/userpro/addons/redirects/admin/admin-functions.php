@@ -27,13 +27,15 @@
 	/* Get fields */
 	function userpro_rd_get_fields() {
 		$fields = get_option('userpro_fields');
-		foreach($fields as $field => $arr) {
-			?>
-			<option value="<?php echo $field; ?>"><?php echo $arr['label']; ?></option>
-			<?php
+		if(!empty($fields)) {
+			foreach ($fields as $field => $arr) {
+
+				?>
+                <option value="<?php echo $field; ?>"><?php if(!empty($arr['label']))echo $arr['label']; ?></option>
+				<?php
+			}
 		}
 	}
-	
 	/* Check page exists */
 	function userpro_rd_admin_page_exists($template) {
 		$pages = get_option('userpro_rd_pages');
@@ -86,8 +88,10 @@
 			$redirects = array_reverse( $redirects, true);
 			foreach($redirects as $k => $info) {
 				$user = get_userdata($info['user']);
-				if ($user->ID) {
-					$info['user'] = '<a href="'.$userpro->permalink( $info['user'] ).'">'.$user->user_login.'</a>';
+				if(!empty($user)) {
+					if ($user->ID) {
+						$info['user'] = '<a href="' . $userpro->permalink($info['user']) . '">' . $user->user_login . '</a>';
+					}
 				}
 				$res .= '<tr valign="top">';
 				$res .= '<td>'.$info['user'].'</td>';

@@ -214,6 +214,7 @@ if(isset($argument['hide_content']) && $argument['hide_content'] && empty($_GET)
 		if( isset($_GET['a']) && $_GET['a']=='reset' ){
 				$template = 'change';
 		}
+
 		switch($template) {
 			
 			case 'publish':
@@ -595,6 +596,7 @@ if(isset($argument['hide_content']) && $argument['hide_content'] && empty($_GET)
 				break;
 				
 			case 'view':
+
 				if (isset($args['user'])){
 					if ($args['user'] == 'author') {
 						if (is_author()){
@@ -608,6 +610,7 @@ if(isset($argument['hide_content']) && $argument['hide_content'] && empty($_GET)
 				} else {
 					$user_id = userpro_get_view_user( get_query_var('up_username') );
 				}
+
 				if ($user_id == 'not_found' || $user_id == 'not_authorized') {
 					if (locate_template('userpro/' . $user_id . '.php') != '') {
 						include get_stylesheet_directory() . '/userpro/'. $user_id . '.php';
@@ -618,7 +621,8 @@ if(isset($argument['hide_content']) && $argument['hide_content'] && empty($_GET)
 						
 					/* attempt to view profile so force redirect to same page */
 					//$args['force_redirect_uri'] = 1;
-					$template = 'login';$args['template'] = 'login';
+					$template = 'login';
+					$args['template'] = 'login';
 					if (locate_template('userpro/' . $template . '.php') != '') {
 						include get_stylesheet_directory() . '/userpro/'. $template . '.php';
 					} else {

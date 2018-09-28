@@ -29,6 +29,19 @@
 		<th scope="row"><label for="slug_directory"><?php _e('"Member Directory" Slug','userpro'); ?></label></th>
 		<td><input type="text" name="slug_directory" id="slug_directory" class="regular-text" value="<?php echo userpro_get_option('slug_directory'); ?>" /></td>
 	</tr>
+    <tr valign="top">
+		<th scope="row"><label for="slug_connections"><?php _e('"Connections" Slug','userpro'); ?></label></th>
+		<td><input type="text" name="slug_connections" id="slug_connections" class="regular-text" value="<?php echo userpro_get_option('slug_connections'); ?>" /></td>
+	</tr>
+    <tr valign="top">
+		<th scope="row"><label for="slug_followers"><?php _e('"Followers" Slug','userpro'); ?></label></th>
+		<td><input type="text" name="slug_followers" id="slug_followers" class="regular-text" value="<?php echo userpro_get_option('slug_followers'); ?>" /></td>
+	</tr>
+
+    <tr valign="top">
+        <th scope="row"><label for="slug_following"><?php _e('"Following" Slug','userpro'); ?></label></th>
+        <td><input type="text" name="slug_following" id="slug_following" class="regular-text" value="<?php echo userpro_get_option('slug_following'); ?>" /></td>
+    </tr>
 	
 	<tr valign="top">
 		<th scope="row"><label for="slug_logout"><?php _e('"Logout" Slug','userpro'); ?></label></th>

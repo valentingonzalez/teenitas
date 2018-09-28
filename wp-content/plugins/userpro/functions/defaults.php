@@ -20,6 +20,7 @@
 	function userpro_get_option( $option ) {
 		$userpro_default_options = userpro_default_options();
 		$settings = get_option('userpro');
+
 		switch($option){
 		
 			default:
@@ -302,7 +303,6 @@
 		$array['twitter_connect'] = 1;
 		$array['twitter_autopost'] = 0;
 		$array['twitter_autopost_msg'] = '';
-		$array['twitter_signup_redirect'] = '';
 		$array['twitter_signin_redirect'] = '';
 		$array['google_client_id'] = '';
 		$array['google_client_secret'] = '';

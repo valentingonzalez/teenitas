@@ -51,15 +51,47 @@ $requests = array_reverse($requests);
 
 </div>
 
-<?php	$users = get_users(array(
-		'meta_key'     => '_account_status',
-		'meta_value'   => 'pending_admin',
-		'meta_compare' => '=',
-		'orderby'        => 'registered',
-	));
+<?php
+
+$total_users = get_users(array(
+
+	'meta_key'     => '_account_status',
+
+	'meta_value'   => 'pending_admin',
+
+	'meta_compare' => '=')); //get all the lists of users
+
+
+$total_users = count($total_users);
+
+/*
+ * Pagination query
+ */
+$number = 50;
+
+$paged = max( 1, (int) filter_input( INPUT_GET, 'paged' ) ); //current number of page
+
+$offset = ($paged - 1) * $number; //page offset
+
+$users = get_users(array(
+
+	'meta_key'     => '_account_status',
+
+	'meta_value'   => 'pending_admin',
+
+	'meta_compare' => '=',
+
+	'orderby'        => 'registered',
+
+	'offset' => $offset,
+
+	'number' => $number,
+
+));
+
 	?>
 	
-<h3><?php _e('Users Awaiting Manual Approval','userpro'); ?> <span><?php echo count($users); ?></span></h3>
+<h3><?php _e('Users Awaiting Manual Approval','userpro'); ?> <span><?php echo $total_users ?></span></h3>
 <div class="upadmin-panel" >
 <table>
 <tr valign="top">
@@ -99,6 +131,20 @@ $requests = array_reverse($requests);
 
 		<?php
 		$i=$i+1;}
+
+		if($total_users > $number){
+
+			$user_approval_paginate = array(
+				'base'         => '%_%',
+				'format'       => '?paged=%#%',
+				'show_all'     => false,
+				'total'    => ceil($total_users / $number),
+				'current'  => max(1, $paged),
+			);
+			echo '<div class="userpro-paginate ">';
+			echo paginate_links($user_approval_paginate);
+			echo '</div>';
+		}
 		?></div><?php
 	}
 ?>

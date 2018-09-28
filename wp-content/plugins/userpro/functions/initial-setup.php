@@ -20,15 +20,50 @@ return $link;
 }
 
 
+
+add_action('init', 'userpro_followers_page', 10);
+
+function userpro_followers_page(){
+
+
+	global $userpro;
+
+	if(!isset($followers) || !isset($following)){
+		userpro_set_option('slug_followers', 'followers');
+		userpro_set_option('slug_following', 'following');
+	}
+
+
+	$following = userpro_get_option('slug_following');
+	$slug_followers = userpro_get_option('slug_followers');
+
+
+	$slug = userpro_get_option('slug') ;
+
+// followers
+	add_rewrite_rule("$slug_followers/([^/]+)/?",'index.php?pagename='.$slug_followers.'&up_username=$matches[1]', 'top');
+	add_rewrite_rule("$slug/$slug_followers/([^/]+)/?",'index.php?pagename='.$slug.'/'.$slug_followers.'&up_username=$matches[1]', 'top');
+	add_rewrite_rule("$slug/$slug_followers",'index.php?pagename='.$slug.'/'.$slug_followers, 'top' );
+
+//	following
+	add_rewrite_rule("$following/([^/]+)/?",'index.php?pagename='.$following.'&up_username=$matches[1]', 'top');
+	add_rewrite_rule("$slug/$following/([^/]+)/?",'index.php?pagename='.$slug.'/'.$following.'&up_username=$matches[1]', 'top');
+	add_rewrite_rule("$slug/$following",'index.php?pagename='.$slug.'/'.$following, 'top' );
+
+	flush_rewrite_rules();
+
+}
+
+
 add_action('init', 'userpro_connections_page', 10);
 
 function userpro_connections_page()
 {
 	global $userpro;
-		$pages = get_option('userpro_connections');
-	
+	$pages = get_option('userpro_connections');
+
 	if (!isset($pages['connections'])) {
-		
+
 			$slug_connections = userpro_get_option('slug_connections');
 
 
@@ -45,26 +80,31 @@ function userpro_connections_page()
 			$pages['connections'] = $connections;
 			$post = get_post($connections, ARRAY_A);
 			userpro_set_option('slug_connections', $post['post_name']);
-			
-			
+
+
 			update_option('userpro_connections', $pages);
-			
+
 			/* Rewrite rules */
 			$slug_connections = userpro_get_option('slug_connections');
-			
+
 			add_rewrite_rule("$slug_connections/([^/]+)/?",'index.php?pagename='.$slug_connections.'&up_username=$matches[1]', 'top');
 
-			
+
+
 			flush_rewrite_rules();
-			
+
 		} else {
-		
+
 			// pages installed
 			$slug_connections = userpro_get_option('slug_connections');
 
-			add_rewrite_rule("$slug_connections/([^/]+)/?",'index.php?pagename='.$slug_connections.'&up_username=$matches[1]', 'top');
 
-			
+		$slug = userpro_get_option('slug');
+
+		add_rewrite_rule("$slug_connections/([^/]+)/?",'index.php?pagename='.$slug_connections.'&up_username=$matches[1]', 'top');
+		add_rewrite_rule("$slug_connections/([^/]+)/?",'index.php?pagename='.$slug.'/'.$slug_connections.'&up_username=$matches[1]', 'top');
+		add_rewrite_rule("$slug/$slug_connections",'index.php?pagename='.$slug.'/'.$slug_connections, 'top' );
+		flush_rewrite_rules();
 		}
 
 }
@@ -74,26 +114,26 @@ function userpro_connections_page()
 	function userpro_first_setup($rebuild=0) {
 		global $userpro;
 		$pages = get_option('userpro_pages');
-		
+
 		/* Rebuild */
 		if ($rebuild) {
-		
+
 			// delete existing pages for userpro
 			if (isset($pages) && is_array($pages)){
 				foreach( $pages as $page_id ) {
 					wp_delete_post( $page_id, true );
 				}
 			}
-			
+
 			// delete from DB
 			delete_option('userpro_pages');
-		
+
 		}
-			
-		
+
+
 		/* Create pages if they do not exist */
 		if (!isset($pages['profile'])) {
-		
+
 			$slug = userpro_get_option('slug');
 			$slug_edit = userpro_get_option('slug_edit');
 			$slug_register = userpro_get_option('slug_register');
@@ -128,7 +168,7 @@ function userpro_connections_page()
 			$pages['directory_page'] = $directory_page;
 			$post = get_post($directory_page, ARRAY_A);
 			userpro_set_option('slug_directory', $post['post_name']);
-			
+
 			$parent = array(
 				  'post_title'  		=> __('My Profile','userpro'),
 				  'post_content' 		=> '[userpro template=view]',
@@ -142,7 +182,7 @@ function userpro_connections_page()
 			$pages['profile'] = $parent;
 			$post = get_post($parent, ARRAY_A);
 			userpro_set_option('slug', $post['post_name']);
-			
+
 			$edit = array(
 				  'post_title'  		=> __('Edit Profile','userpro'),
 				  'post_content' 		=> '[userpro template=edit]',
@@ -157,7 +197,7 @@ function userpro_connections_page()
 			$pages['edit'] = $edit;
 			$post = get_post($edit, ARRAY_A);
 			userpro_set_option('slug_edit', $post['post_name']);
-			
+
 			$register = array(
 				  'post_title'  		=> __('Register','userpro'),
 				  'post_content' 		=> '[userpro template=register]',
@@ -172,7 +212,7 @@ function userpro_connections_page()
 			$pages['register'] = $register;
 			$post = get_post($register, ARRAY_A);
 			userpro_set_option('slug_register', $post['post_name']);
-			
+
 			$login = array(
 				  'post_title'  		=> __('Login','userpro'),
 				  'post_content' 		=> '[userpro template=login]',
@@ -187,9 +227,9 @@ function userpro_connections_page()
 			$pages['login'] = $login;
 			$post = get_post($login, ARRAY_A);
 			userpro_set_option('slug_login', $post['post_name']);
-			
+
 			update_option('userpro_pages', $pages);
-				
+
 			/* Rewrite rules */
 			$slug = userpro_get_option('slug');
 			$slug_edit = userpro_get_option('slug_edit');
@@ -202,11 +242,11 @@ function userpro_connections_page()
 			add_rewrite_rule("$slug/$slug_edit/([^/]+)/?",'index.php?pagename='.$slug.'/'.$slug_edit.'&up_username=$matches[1]', 'top' );
 			add_rewrite_rule("$slug/$slug_edit",'index.php?pagename='.$slug.'/'.$slug_edit, 'top' );
 			add_rewrite_rule("$slug/([^/]+)/?",'index.php?pagename='.$slug.'&up_username=$matches[1]', 'top');
-			
+
 			flush_rewrite_rules();
-			
+
 		} else {
-		
+
 			// pages installed
 			$slug = userpro_get_option('slug');
 			$slug_edit = userpro_get_option('slug_edit');
@@ -219,9 +259,23 @@ function userpro_connections_page()
 			add_rewrite_rule("$slug/$slug_edit/([^/]+)/?",'index.php?pagename='.$slug.'/'.$slug_edit.'&up_username=$matches[1]', 'top' );
 			add_rewrite_rule("$slug/$slug_edit",'index.php?pagename='.$slug.'/'.$slug_edit, 'top' );
 			add_rewrite_rule("$slug/([^/]+)/?",'index.php?pagename='.$slug.'&up_username=$matches[1]', 'top');
-			
+
+
+
+
+
+//			Followers
+//
+//			$slug = userpro_get_option('slug');
+//
+//			add_rewrite_rule("$slug_connections/([^/]+)/?",'index.php?pagename='.$slug_connections.'&up_username=$matches[1]', 'top');
+//			add_rewrite_rule(" c /$slug_connections/([^/]+)/?",'index.php?pagename='.$slug.'/'.$slug_connections.'&up_username=$matches[1]', 'top');
+//			add_rewrite_rule("$slug/$slug_connections",'index.php?pagename='.$slug.'/'.$slug_connections, 'top' );
+
+
+
 		}
-	
+
 	}
 
 	/* Setup query variables */

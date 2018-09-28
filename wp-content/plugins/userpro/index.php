@@ -3,7 +3,7 @@
 Plugin Name: UserPro
 Plugin URI: http://codecanyon.net/user/DeluxeThemes/portfolio?ref=DeluxeThemes
 Description: The ultimate user profiles and community plugin for WordPress.
-Version: 4.9.26
+Version: 4.9.27
 Author: Deluxe Themes
 Author URI: http://codecanyon.net/user/DeluxeThemes/portfolio?ref=DeluxeThemes
 */
@@ -11,7 +11,6 @@ define('userpro_url',plugin_dir_url(__FILE__ ));
 define('userpro_path',plugin_dir_path(__FILE__ ));
 
 	/* init */
-
 
 //Start Yogesh added usermeta entry for search members
 function userpro_add_userin_meta() {
@@ -49,7 +48,11 @@ register_activation_hook( __FILE__, 'userpro_add_userin_meta' );
 			update_option('userpro',$userpro_options);
 			update_option("userpro_invite_check","1");
 		}
-		if(get_option('userpro_publish_page_link')=='')
+
+		/* Page id where front end publisher exist */
+		$user_publisher_id = get_option('userpro_publish_page_link');
+
+		if(empty($user_publisher_id))
 		{
 			global $wpdb;
 			$userpropost = $wpdb->base_prefix."posts";
@@ -68,9 +71,6 @@ register_activation_hook( __FILE__, 'userpro_add_userin_meta' );
 		}
 
 	}
-
-
-
 		add_action('init', 'userpro_init');
 
 
@@ -126,5 +126,6 @@ register_activation_hook( __FILE__, 'userpro_add_userin_meta' );
 	require_once userpro_path . 'addons/userpro-google-map/userpro-google-map.php';
 	require_once userpro_path . 'addons/timeline/timeline.php';
 
-	//require_once(userpro_path . "admin/class-up-updates-plugin.php");
+
+//require_once(userpro_path . "admin/class-up-updates-plugin.php");
 	//new WPUpdatesPluginUpdater_1146( 'http://wp-updates.com/api/2/plugin', plugin_basename(__FILE__) );

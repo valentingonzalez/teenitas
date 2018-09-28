@@ -1,3 +1,50 @@
+============================
+Version 4.9.27 ( 10 Sept 2018 )
+============================
+
+    - Fixed bug : Message "Please correct field" can't be translated.
+    - Fixed bug : Facebook login works only after the second click.
+    - Fixed bug : Removed deprecated function openssl_encrypt.
+    - Fixed bug : Registration ajax bug. If display name was empty redirect not working.
+    - Fixed bug : UserPro settings can't be cleared ( Roles that can edit other users profile , Roles that can view other profiles )
+    - Fixed bug : If user haven't email address get an error ( Trying to get property of non-object )
+    - Fixed bug : Conditional fields not working with select fields. ( Trying to get property of non-object )
+
+============================
+Version 4.9.26 ( 25 July 2018 )
+============================
+
+    - Fixed bug : Avatar upload internal server error fix.
+    - Enhancement : View user profile button on default WordPress User section
+    - Enhancement : Pagination for User Request awaiting manual approval
+
+============================
+Version 4.9.25 ( 30 June 2018 )
+============================
+
+    - Fixed bug : LinkedIn social login redirect url setting validation fix.
+
+
+Version 4.9.24 ( 27 June 2018 )
+============================
+
+    - Enhancement : Linkedin social login update.
+    - Enhancement : Google+ social login update.
+    - Enhancement : Twitter social login update.
+    - Enhancement : Instagam social login update.
+
+============================
+
+Version 4.9.23 ( 25 May 2018 )
+============================
+
+    - Fixed bug : Followers and Connection pages can't have parent page.
+    - Fixed bug : Login redirect on [userpro template=login] shortcode not working.
+    - Fixed bug : Conditional rules not working with file input field.
+    - Fixed bug : Linkedin auth bug fix.
+    - Fixed bug : Post by user filter not working.
+    - Enhancement : Added translatable strings in input placeholders.
+
 Version 4.9.22 ( 16 Apr 2018 )
 ============================
 

@@ -22,6 +22,7 @@
 
             }else{
 
+            	if(!empty($post))
                 $page_id = $post->ID;
 
             }
@@ -238,8 +239,12 @@
 		global $userpro;
 		if ( is_page() || is_single() ) {
 			global $post;
+
 			$pages = get_option('userpro_pages');
-			if ($post->ID == $pages['logout_page'] ) {
+
+			$post_name = get_the_title( $pages['logout_page'] );
+
+			if ($post->ID == $pages['logout_page'] || $post_name == $post->post_title) {
 				if (userpro_is_logged_in()){
 				
 					$logout = userpro_get_option('logout_uri');

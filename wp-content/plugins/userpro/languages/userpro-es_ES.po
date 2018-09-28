@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: userpro-es_ES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-18 13:58+0200\n"
-"PO-Revision-Date: 2018-09-24 14:50+0000\n"
+"PO-Revision-Date: 2018-09-26 20:31+0000\n"
 "Last-Translator: admin <gonzalezvalencho@gmail.com>\n"
 "Language-Team: Español\n"
 "Language: es_ES\n"
@@ -1385,7 +1385,7 @@ msgstr ""
 
 #: addons/userpro-google-map/functions/defaults.php:30
 msgid "Hello,"
-msgstr "Hola,"
+msgstr ""
 
 #: addons/userpro-google-map/functions/defaults.php:31
 msgid "Thanks and Regards,"
@@ -4885,8 +4885,9 @@ msgid ""
 "To complete registration, you must read and agree to our <a href=\"#\">terms "
 "and conditions</a>. This text can be custom."
 msgstr ""
-"Para completar el registro, debe leer y aceptar nuestros <a href=\"#\">"
-"términos y condiciones</a>. Este texto se puede personalizar."
+"Para completar el registro, debe leer y aceptar nuestros <a "
+"target=\"_blank\" href=\"/terminos-y-condiciones\">términos y condiciones</a>"
+"."
 
 #: functions/defaults.php:337
 #, fuzzy
@@ -5237,7 +5238,7 @@ msgstr "Registre una cuenta"
 
 #: functions/shortcode-main.php:44 functions/shortcode-private-content.php:43
 msgid "Already a member?"
-msgstr "¿Ya es miembro?"
+msgstr "¿Ya tenés una cuenta?"
 
 #: functions/shortcode-main.php:54 functions/shortcode-private-content.php:53
 msgid "Forgot your password?"
@@ -5336,15 +5337,15 @@ msgstr ""
 
 #: functions/shortcode-social-connect.php:13 functions/social-connect.php:145
 msgid "Login with Facebook"
-msgstr "Iniciar sesión con Facebook"
+msgstr "Facebook"
 
 #: functions/shortcode-social-connect.php:16 functions/social-connect.php:154
 msgid "Login with Twitter"
-msgstr "Iniciar sesión con Twitter"
+msgstr "Twitter"
 
 #: functions/shortcode-social-connect.php:18 functions/social-connect.php:164
 msgid "Login with Google+"
-msgstr "Iniciar sesión con Google+"
+msgstr "Google"
 
 #: functions/shortcode-social-connect.php:20
 msgid "ВКонтакте"

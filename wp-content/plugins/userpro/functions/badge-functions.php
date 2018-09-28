@@ -19,7 +19,8 @@
 		global $current_user, $wp, $userpro, $userpro_vk;
 		$current_user=wp_get_current_user();
 		$output = null;
-		
+
+
 		/* verification beside name */
 		if ( !in_array( 'verified', $disallowed ) ){
 		if (userpro_get_option('verified_badge_by_name') && $userpro->get_verified_status($user_id) == 1 ){
@@ -58,7 +59,16 @@
 		if ($userpro->is_google_user($user_id)){
 			$output .= userpro_get_badge('google');
 		}
-		
+
+		/* Linkedin */
+		if ($userpro->is_linkedin_user($user_id)){
+			$output .= userpro_get_badge('linkedin');
+		}
+		/* Instagram */
+		if ($userpro->is_instagram_user($user_id)){
+			$output .= userpro_get_badge('instagram');
+		}
+
 		/* VK integration */
 		if (class_exists('userpro_vk_api') && $userpro_vk->is_vk_user($user_id)){
 			$output .= $userpro_vk->userpro_get_badge('vk');
@@ -186,6 +196,14 @@
 				
 			case 'google':
 				return '<img class="userpro-profile-badge userpro-profile-badge-'.$badge.'" src="'.$userpro->badges_url.'google.png" alt="" title="'.__('Google Linked','userpro').'" />';
+				break;
+
+			case 'linkedin':
+				return '<img class="userpro-profile-badge userpro-profile-badge-'.$badge.'" src="'.$userpro->badges_url.'linkedin.png" alt="" title="'.__('Linkedin Linked','userpro').'" />';
+				break;
+
+			case 'instagram':
+				return '<img class="userpro-profile-badge userpro-profile-badge-'.$badge.'" src="'.$userpro->badges_url.'instagram.png" alt="" title="'.__('Linkedin Linked','userpro').'" />';
 				break;
 				
 			case 'envato':

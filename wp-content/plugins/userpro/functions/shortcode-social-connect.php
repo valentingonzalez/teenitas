@@ -181,29 +181,29 @@
 				<?php
 			}
 if ( userpro_get_option('linkedin_connect') == 1 && userpro_get_option('linkedin_app_key') && userpro_get_option('linkedin_Secret_Key') ) {
-				include("linkedinPanel.php");
+	            $url = $userpro->linkedin_authorize();
 				?>
-			      <a class="userpro-social-linkedin wplLiLoginBtn" title="<?php echo Linkedin; ?>"><?php echo Linkedin ?></a>
+			      <a href="<?php echo $url ?>" class="userpro-social-linkedin wplLiLoginBtn" title="<?php _e('Login with Linkedin','userpro'); ?>"><?php _e('Login with Linkedin','userpro'); ?></a>
 						<?php
 	}
 	
 	/* Instagram */
 	
 	if ( userpro_get_option('instagram_connect') == 1 && userpro_get_option('instagram_app_key') && userpro_get_option('instagram_Secret_Key') ) {
-			
-		include("instagramPanel.php");
+
+		$url = $userpro->instagram_authorize();
 		?>
-				      <a class="userpro-social-instagram wpInLoginBtn" data-redirect="<?php echo $facebook_redirect; ?>" title="<?php echo Instagram; ?>"><?php echo Instagram ?></a>
+				      <a href="<?php echo $url ?>" class="userpro-social-instagram wpInLoginBtn" title="<?php _e('Login with Instagram','userpro'); ?>"><?php _e('Login with Instagram','userpro'); ?></a>
 							<?php
 		}
 			/* VK */
 			if ( $vk == 1 && class_exists('userpro_vk_api') && userpro_vk_get_option('vk_connect') == 1 && userpro_vk_get_option('vk_api_id') && userpro_vk_get_option('vk_api_secret')  ) {
 				global $userpro_vk;
-				$url = $userpro_vk->getAuthorizeURL();
+				$url = $userpro_vk->browserUrl();
 				?>
-				
-				<a href="<?php echo $userpro_vk->getAuthorizeURL(); ?>" class="userpro-social-vk" title="<?php echo $vk_title; ?>"><i class="userpro-icon-vk"></i><?php echo $vk_title; ?></a>
-				
+
+				<a href="<?php echo $url ?>" class="userpro-social-vk" title="<?php _e('Login with VK.com', 'userpro-vk'); ?>"><i class="userpro-icon-vk"></i><?php _e('Login with VK.com', 'userpro-vk'); ?></a>
+
 				<?php
 			}
 			
