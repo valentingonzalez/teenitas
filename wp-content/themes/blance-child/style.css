@@ -10,6 +10,9 @@ Version: 1.2.5
 Updated: 2018-01-02 11:27:28
 */
 
+*:focus {
+    outline: none !important;
+}
 /* TITLES */
 h1,h2,h3,h4,h5,h6 {
     color: #252525;
@@ -138,24 +141,32 @@ form textarea:focus {
     border-color: #FF3CB5 !important;
     box-shadow: none;
 }
-form [type=submit] {
+form:not(.instance-search) [type=submit],
+.button-primary {
     transition: all .3s;
+    font-weight: normal;
     color: #FFF !important;
     background-color: #FF3CB5 !important;
-    height: 51px;
-    border: none !important;
+    height: 51px !important;
+    border: 3px solid #FF3CB5 !important;
     padding: 0 22px;
     border-radius: 0;
     min-width: 170px;
+    line-height: normal !important;
 }
-form [type=submit]:hover {
+.button.cancel button {
+    background: none;
+    border: none;
+}
+form:not(.instance-search) [type=submit]:hover,
+.button-primary:hover {
     color: #FF3CB5 !important;
-    border: 3px solid #FF3CB5 !important;
     background-color: #FFF !important;
     opacity: 1 !important;
 }
 form .form-group,
-.caldera-grid .form-group{
+.caldera-grid .form-group,
+.form-row {
     margin-bottom: 40px;
 }
 form .form-group:focus-within label {
@@ -192,10 +203,30 @@ form .form-group:focus-within label {
     left: 100%;
     margin-left: 15px;
 }
-input[type=tel] {
+.intl-tel-input.allow-dropdown input[type=tel] {
     text-indent: 50px;
 }
 
+/* Select */
+form .selection .select2-selection--single {
+    border: 2px solid #686868 !important;
+}
+form span.select2-container--focus .select2-selection--single,
+form span.select2-container--open .select2-selection--single {
+    border-color: #FF3CB5 !important;
+}
+.select2-dropdown {
+    border: 2px solid #686868;
+    z-index: 0;
+    border-radius: 0;
+    top: 2px;
+}
+.select2-dropdown .select2-results__option.select2-results__option--highlighted {
+    
+}
+.select2-dropdown .select2-search.select2-search--dropdown {
+    display: none;
+}
 @media only screen and (min-width: 981px) {
 
     .caldera-grid .checkbox-inline,
@@ -223,6 +254,22 @@ input[type=tel] {
         cursor: pointer;
     }
 
+    input[type=checkbox],
+    input[type=radio] {
+        width: 0;
+        height: 25px;
+    }
+    input[type=checkbox] + label,
+    input[type=radio] + label {
+        cursor: pointer;
+        height: 30px;
+        line-height: 30px;
+        margin-left: 32px !important;
+    }
+    input[type=checkbox] + label img,
+    input[type=radio] + label img {
+        height: 30px !important;
+    }
     input[type=checkbox]:before,
     input[type=radio]:before {
         content: '';
@@ -233,6 +280,7 @@ input[type=tel] {
         display: block;
         width: 24px;
         height: 24px;
+        cursor: pointer;
     }
     input[type=checkbox]:before {
         border-radius: 0;
@@ -475,8 +523,7 @@ input[type=tel] {
 }
 */
 .required {
-    float: left;
-    margin-right: 5px;
+    color: #EE0000;
 }
 
 #stores-accordion {
@@ -566,4 +613,69 @@ input[type=tel] {
 .protected-post-form input[type=password] {
     display: block;
     width: 100%;
+}
+
+
+form.woocommerce-checkout {
+    overflow: hidden;
+}
+form.woocommerce-checkout.processing:after {
+    position: fixed;
+    margin-top: -100px;
+}
+.checkout-order-review .woocommerce-checkout-review-order,
+.checkout-order-review .woocommerce-checkout-review-order table thead {
+    background: none;
+}
+.checkout-your-order {
+    border-left: 2px dashed #686868;
+}
+form.checkout h3 {
+    margin-top: 0;
+    color: #FF3CB5;
+}
+form.checkout > [class^=col] {
+    padding: 0 40px;
+}
+form.checkout > [class^=col]:first-of-type {
+    padding-left: 0;
+}
+form.checkout > [class^=col].checkout-your-order {
+    padding-right: 0;
+}
+#order_review {
+    padding: 0;
+}
+
+
+/* HOOK FOR SHOP HEADER */
+.tax-product_cat .no_container,
+.post-type-archive-product .no_container {
+    padding: 0 !important;
+}
+
+/* ACCOUNT DROPDOWN */
+.jws-my-account .account-content {
+    background: #FFF;
+    padding: 0;
+    border-left: 1px solid #BBB;
+    border-right: 1px solid #BBB;
+}
+.jws-my-account .account-content .button {
+    border: none;
+    border-radius: 0;
+}
+.jws-my-account .account-content li {
+    line-height: 25px;
+    text-align: left;
+    margin-bottom: 0;
+}
+.jws-my-account .account-content .button a {
+    color: #000;
+    color: #000;
+    padding: 12px 22px;
+    border-bottom: 1px solid #BBB;
+}
+.jws-my-account .account-content .button a:hover {
+    color: #FF3CB5;
 }
