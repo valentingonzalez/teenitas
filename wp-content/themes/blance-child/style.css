@@ -72,6 +72,24 @@ h3 {
     color: #FFF !important;
 }
 
+/* ST THINGS */
+.vc_general.vc_btn3 {
+    border: 2px solid transparent !important;
+}
+.vc_general.vc_btn3:hover {
+    border-color: #FF3CB5 !important;
+    color: #FF3CB5 !important;
+    background: #FFF !important;
+}
+.color-scheme-center {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+}
+.wpb_button, .wpb_content_element, ul.wpb_thumbnails-fluid>li {
+    margin-bottom: 0;
+}
+
 /* SINGLE PRODUCT */
 .woocommerce div.product .content-product-right .shop-bottom form .variations tr td .tawcvs-swatches .swatch-color {
     margin: 2px 8px 0 2px;
@@ -372,8 +390,12 @@ form span.select2-container--open .select2-selection--single {
   ##Screen = B/w 320px to 479px
 */
 @media (min-width: 320px) and (max-width: 480px) {
-    .rev_slider .tp-caption, .rev_slider .caption, .tp-simpleresponsive img {
-        display: none;
+    #footer-jws {
+        padding-top: 20px;
+        margin-top: 20px;
+    }
+    #footer-jws .widget_social-widget-2 {
+        margin-top: 0;
     }
 }
 
@@ -637,12 +659,14 @@ form.checkout h3 {
 form.checkout > [class^=col] {
     padding: 0 40px;
 }
+/*
 form.checkout > [class^=col]:first-of-type {
     padding-left: 0;
 }
 form.checkout > [class^=col].checkout-your-order {
     padding-right: 0;
 }
+*/
 #order_review {
     padding: 0;
 }
@@ -678,4 +702,34 @@ form.checkout > [class^=col].checkout-your-order {
 }
 .jws-my-account .account-content .button a:hover {
     color: #FF3CB5;
+}
+
+
+/* MEDIA QUERIES */
+@media (max-width: 991px) {
+    #media_image-2 {
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1425px) {
+    #jws_header.jws-header-v3 .ml,
+    #jws_header.jws-header-v4 .ml {
+        margin-left: 10px;
+    }
+    .acount-tt {
+        display: none !important;
+    }
+    .jws-my-account.logged .account i {
+        margin-right: 0;
+    }
+    .mainmenu-area .row.mainmenu > div[class^=col]:nth-child(3) {
+        width: 15%;
+    }
+    .mainmenu-area .row.mainmenu > div[class^=col]:nth-child(2) {
+        width: 60%;
+    }
+    .jws-my-account.logged .account-content {
+        left: -70px;
+    }
 }
