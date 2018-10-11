@@ -19,8 +19,8 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-
 if ( 'no' === get_option( 'woocommerce_enable_shipping_calc' ) || ! WC()->cart->needs_shipping() ) {
+	echo 'PORONGA';
 	return;
 }
 
@@ -30,7 +30,7 @@ if ( 'no' === get_option( 'woocommerce_enable_shipping_calc' ) || ! WC()->cart->
 
 <form class="woocommerce-shipping-calculator" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 
-	<!--p><a href="#" class="shipping-calculator-button"><?php _e( 'Calculate Shipping', 'blance' ); ?></a></p-->
+	<p><a href="#" class="shipping-calculator-button"><?php _e( 'Calculate Shipping', 'blance' ); ?></a></p>
 
 	<!--section class="shipping-calculator-form" style="display:none;"-->
 

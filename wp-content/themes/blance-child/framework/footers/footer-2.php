@@ -4,7 +4,7 @@
  * Preview Image: /assets/images/footers/footer-blance-v1.jpg
 **/
 ?>
-	<div id="footer-jws" class="footer-v2">
+	<div id="footer-jws" class="footer-v1">
         <div class="container">
             <div class="row row-same-height footer-top"> 
 		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 email">
@@ -28,10 +28,10 @@
 		          }
             ?>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 help">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 instagram">
              <?php
-		          if ( is_active_sidebar( 'jws-help-sidebar' ) ) {
-		              dynamic_sidebar( 'jws-help-sidebar' );
+		          if ( is_active_sidebar( 'jws-instagram-sidebar' ) ) {
+		              dynamic_sidebar( 'jws-instagram-sidebar' );
 		          }
             ?>
         </div>
